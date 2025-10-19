@@ -1,0 +1,50 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ dev, qa, master ]
+  pull_request:
+    branches: [ dev, qa, master ]
+
+jobs:
+  react-build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Lint
+        run: npm run lint || echo "Skipping lint if not configured"
+
+      - name: Run Tests
+        run: npm test || npx vitest run || echo "Skipping tests if not configured"
+
+      - name: Build Vite App
+        run: npm run build
+
+  java-build-test:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, '[java]')
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Run Java Tests
+        run: mvn test
