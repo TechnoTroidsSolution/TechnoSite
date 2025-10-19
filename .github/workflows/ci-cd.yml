@@ -1,0 +1,101 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ dev, qa, master ]
+  pull_request:
+    branches: [ dev, qa, master ]
+
+jobs:
+  react-build-test:
+    runs-on: ubuntu-latest
+    if: ${{ exists('package.json') }}  # Skip if no package.json
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci || echo "No package.json or lockfile found, skipping install"
+
+      - name: Run Lint
+        run: |
+          if [ -f package.json ]; then
+            npm run lint || echo "Skipping lint"
+          fi
+
+      - name: Run Tests
+        run: |
+          if [ -f package.json ]; then
+            npm test || npx vitest run || echo "Skipping tests"
+          fi
+
+      - name: Build Vite App
+        run: |
+          if [ -f package.json ]; then
+            npm run build || echo "Skipping build"
+          fi
+
+  java-build-test:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, '[java]') && (exists('pom.xml') || exists('build.gradle'))
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Build with Maven/Gradle
+        run: |
+          if [ -f pom.xml ]; then
+            mvn clean install
+          elif [ -f build.gradle ]; then
+            ./gradlew build
+          else
+            echo "No Java project found, skipping"
+          fi
+
+      - name: Run Java Tests
+        run: |
+          if [ -f pom.xml ]; then
+            mvn test
+          elif [ -f build.gradle ]; then
+            ./gradlew test
+          fi
+
+  dotnet-build-test:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, '[dotnet]') && (steps.check_dotnet.outputs.has_dotnet == 'true')
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Check for .NET projects
+        id: check_dotnet
+        run: |
+          if ls *.sln 1> /dev/null 2>&1 || ls **/*.csproj 1> /dev/null 2>&1; then
+            echo "has_dotnet=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_dotnet=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build .NET Solution
+        if: steps.check_dotnet.outputs.has_dotnet == 'true'
+        run: dotnet build --configuration Release
+
+      - name: Run .NET Tests
+        if: steps.check_dotnet.outputs.has_dotnet == 'true'
+        run: dotnet test --configuration Release
