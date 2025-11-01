@@ -1,0 +1,83 @@
+project_info:
+  name: "TechnoTroids Website Content"
+  version: "1.0"
+  last_updated: "2024-11-01"
+  description: "Complete, production-ready website content for TechnoTroids software development company"
+
+file_structure:
+  files:
+    - filename: "00-README.yaml"
+      description: "This file - structure guide and implementation notes"
+
+    - filename: "hero-navigation.yaml"
+      description: "Hero section, navigation menu, site info, CTAs, and power phrases"
+      sections:
+        - "Site Information"
+        - "Navigation Menu"
+        - "Hero Section"
+        - "CTA Variations"
+        - "Power Phrases Library"
+
+    - filename: "services.yaml"
+      description: "All service offerings and capabilities"
+      sections:
+        - "6 Core Services (Web, Mobile, SaaS, Automation, APIs, UI/UX)"
+        - "Advanced Capabilities (AI/ML)"
+        - "Technology Stack Details"
+        - "Use Cases for Each Service"
+
+    - filename: "why-choose-us.yaml"
+      description: "Differentiators and value propositions"
+      sections:
+        - "6 Key Differentiators"
+        - "Impact Statements"
+        - "Trust Builders"
+
+    - filename: "process.yaml"
+      description: "7-step development process"
+      sections:
+        - "Process Overview"
+        - "7 Detailed Steps"
+        - "Deliverables per Step"
+        - "Outcomes per Step"
+
+    - filename: "industries.yaml"
+      description: "Industries served with solutions"
+      sections:
+        - "8 Industry Verticals"
+        - "Industry-Specific Challenges"
+        - "Tailored Solutions"
+
+    - filename: "faq.yaml"
+      description: "Comprehensive FAQ section"
+      sections:
+        - "Getting Started (3 questions)"
+        - "Our Capabilities (3 questions)"
+        - "Timeline & Process (3 questions)"
+        - "Working Together (3 questions)"
+        - "Investment & Value (4 questions)"
+        - "After Launch (3 questions)"
+
+    - filename: "about-philosophy.yaml"
+      description: "Company philosophy and values"
+      sections:
+        - "Core Belief Statement"
+        - "5 Key Principles"
+        - "Commitment Statement"
+
+    - filename: "contact.yaml"
+      description: "Contact form and inquiry process"
+      sections:
+        - "Contact Form Fields"
+        - "Alternative Contact Methods"
+        - "Project Inquiry Process"
+        - "What Clients Receive"
+
+    - filename: "trust-seo-metadata.yaml"
+      description: "Trust elements, SEO, and technical metadata"
+      sections:
+        - "Trust Elements & Guarantees"
+        - "SEO Meta Tags"
+        - "Social Media Metadata"
+        - "Structured Data"
+        - "Analytics Placeholders"

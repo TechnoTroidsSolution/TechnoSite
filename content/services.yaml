@@ -1,0 +1,118 @@
+services:
+  section_title: "Solutions Built for Impact"
+  section_subtitle: "We create software that doesn't just function—it elevates your entire operation. From first click to final deployment, excellence is our standard."
+
+  offerings:
+    - id: "web_apps"
+      title: "Enterprise-Grade Web Applications"
+      description: "Powerful web platforms engineered for performance and built to scale. We craft applications that handle complexity with elegance—turning your business processes into streamlined digital experiences your team will actually want to use."
+      icon: "monitor"
+      technologies:
+        - "Modern React/Next.js architecture"
+        - "Scalable Node.js/Python backends"
+        - "Real-time data synchronization"
+        - "Optimized database architecture"
+      use_cases:
+        - "Command centers that give you complete visibility"
+        - "Customer portals that build loyalty"
+        - "Internal systems that eliminate busywork"
+        - "Analytics platforms that reveal insights"
+      highlight: "Built to perform under pressure"
+
+    - id: "mobile_apps"
+      title: "Mobile Experiences That Matter"
+      description: "Native-quality mobile applications that users love. One codebase, two platforms, zero compromises. We build apps that feel right at home on iOS and Android—fast, intuitive, and built to last."
+      icon: "smartphone"
+      technologies:
+        - "React Native for unified development"
+        - "Native performance optimization"
+        - "Seamless offline capabilities"
+        - "Smart notification systems"
+      use_cases:
+        - "Customer apps that drive retention"
+        - "Field tools that boost productivity"
+        - "Mobile commerce that converts"
+        - "On-demand platforms that scale"
+      highlight: "Performance that users notice, quality they trust"
+
+    - id: "saas_platforms"
+      title: "SaaS Platforms Built to Scale"
+      description: "Cloud-native platforms designed for growth from day one. Multi-tenant architecture, bulletproof security, and infrastructure that scales with your ambitions. We build the foundation for your next-generation business model."
+      icon: "cloud"
+      technologies:
+        - "Enterprise-grade multi-tenancy"
+        - "Bank-level security protocols"
+        - "Integrated payment systems"
+        - "Intelligent analytics engine"
+      use_cases:
+        - "Subscription businesses that compound"
+        - "Team platforms that multiply productivity"
+        - "Vertical SaaS that owns the niche"
+        - "White-label solutions ready to resell"
+      highlight: "Your recurring revenue engine, engineered right"
+
+    - id: "automation"
+      title: "Intelligent Process Automation"
+      description: "Transform manual work into automated workflows. We eliminate the repetitive, error-prone tasks that drain your team's potential—giving you back time to focus on what actually moves your business forward."
+      icon: "workflow"
+      technologies:
+        - "Seamless API orchestration"
+        - "Smart workflow engines"
+        - "Real-time data synchronization"
+        - "Intelligent task scheduling"
+      use_cases:
+        - "Reporting that writes itself"
+        - "Data entry that never existed"
+        - "Systems that talk to each other"
+        - "Alerts that anticipate problems"
+      highlight: "Save hours. Eliminate errors. Scale without limits."
+
+    - id: "api_development"
+      title: "APIs That Power Growth"
+      description: "Rock-solid APIs that become the backbone of your digital ecosystem. Whether you're connecting systems, enabling partners, or building a platform—we create APIs that are fast, secure, and built to handle whatever you throw at them."
+      icon: "code"
+      technologies:
+        - "RESTful & GraphQL standards"
+        - "Comprehensive documentation"
+        - "Military-grade security"
+        - "Performance monitoring built-in"
+      use_cases:
+        - "Partner integrations that just work"
+        - "Mobile backends built for speed"
+        - "Microservices that scale independently"
+        - "Platform APIs that unlock revenue"
+      highlight: "The invisible infrastructure that makes everything possible"
+
+    - id: "ui_ux_design"
+      title: "Design That Converts"
+      description: "Interfaces so intuitive, your users won't need training. We design with psychology and data—creating experiences that guide users effortlessly from first touch to desired action. Beautiful is nice. Effective is essential."
+      icon: "palette"
+      technologies:
+        - "User research and behavior analysis"
+        - "Rapid prototyping and testing"
+        - "Mobile-first responsive design"
+        - "Systematic design frameworks"
+      use_cases:
+        - "Redesigns that double conversion"
+        - "Dashboards people actually understand"
+        - "User flows that eliminate friction"
+        - "Brands that feel premium"
+      highlight: "Where aesthetics meet conversion psychology"
+
+  advanced_capabilities:
+    title: "When Your Ambitions Demand More"
+    subtitle: "Advanced technologies deployed strategically, never superficially."
+    items:
+      - capability: "Artificial Intelligence Integration"
+        value: "Predictive insights, intelligent automation, and decision support that learns from your data"
+
+      - capability: "Computer Vision Systems"
+        value: "Image recognition, quality control, and visual analytics that see what humans miss"
+
+      - capability: "Natural Language Processing"
+        value: "Text analysis, sentiment detection, and conversational interfaces that understand context"
+
+      - capability: "Predictive Analytics"
+        value: "Forecasting models, pattern recognition, and recommendations that spot opportunities"
+
+    philosophy: "We deploy AI and machine learning when they create measurable business value—not to check a box on your feature list. Every advanced technology we recommend solves a real problem and justifies its complexity."
