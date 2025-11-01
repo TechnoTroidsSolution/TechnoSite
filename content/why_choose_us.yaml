@@ -1,0 +1,34 @@
+why_us:
+  section_title: "Why Exceptional Clients Choose Us"
+  section_subtitle: "When your project is too important to compromise."
+
+  differentiators:
+    - title: "Direct Access to Decision Makers"
+      description: "Speak directly with the engineers and architects building your solution. No telephone game. No lost context. No waiting days for answers. Your questions reach the people who matter, instantly."
+      icon: "users"
+      impact: "Decisions in hours, not weeks"
+
+    - title: "Uncompromising Quality Standards"
+      description: "We build software we'd be proud to put our names on. Every line reviewed. Every component tested. Every edge case considered. We don't ship until it's right—because your reputation depends on ours."
+      icon: "shield-check"
+      impact: "Code that stands the test of time"
+
+    - title: "Milestone-Driven Certainty"
+      description: "Complete visibility into progress. Clear deliverables at every stage. You'll know exactly what's been built, what's coming next, and when you'll see it. No surprises. No scope creep. Just predictable, measurable progress."
+      icon: "target"
+      impact: "Launch confidence, guaranteed"
+
+    - title: "Radical Honesty, Always"
+      description: "We tell you what you need to hear, not what you want to hear. If a simpler solution exists, we recommend it. If your timeline is unrealistic, we say so. If we're not the right fit, we'll tell you. Your success matters more than our sale."
+      icon: "lightbulb"
+      impact: "Trust built on truth"
+
+    - title: "Modern Stack, Future-Proof Results"
+      description: "We use battle-tested, actively maintained technologies—not yesterday's trends or tomorrow's gambles. Your software stays relevant, secure, and supportable for years without constant rebuilds."
+      icon: "layers"
+      impact: "Technology that ages gracefully"
+
+    - title: "Complete Transparency"
+      description: "You'll always know where your investment goes. Detailed breakdowns. Clear explanations. Regular updates. We believe opacity breeds distrust—transparency builds partnerships."
+      icon: "eye"
+      impact: "Clarity you can count on"
