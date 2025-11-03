@@ -1,0 +1,129 @@
+contact:
+  section_title: "Ready to Start Something Great?"
+  section_subtitle: "Tell us about your project. We'll respond within 24 hours with next steps."
+
+  form_intro: "Whether you have a fully formed project plan or just a nagging problem that needs solving, we want to hear from you. Start the conversation—no commitment required."
+
+  form_fields:
+    - name: "full_name"
+      label: "Your Name"
+      type: "text"
+      required: true
+
+    - name: "email"
+      label: "Email Address"
+      type: "email"
+      required: true
+
+    - name: "phone"
+      label: "Phone Number"
+      type: "tel"
+      required: false
+      helper: "Optional—but helpful if you prefer talking to typing"
+
+    - name: "company"
+      label: "Company or Organization"
+      type: "text"
+      required: false
+
+    - name: "project_type"
+      label: "What are you looking to build?"
+      type: "select"
+      required: true
+      options:
+        - "Custom web application"
+        - "Mobile app (iOS & Android)"
+        - "SaaS platform"
+        - "Process automation"
+        - "API or integration"
+        - "Complete digital transformation"
+        - "Not sure yet—need guidance"
+
+    - name: "timeline"
+      label: "When do you need this?"
+      type: "select"
+      required: false
+      options:
+        - "Urgent—ASAP"
+        - "Within 2-3 months"
+        - "Within 6 months"
+        - "Flexible timeline"
+        - "Just exploring options"
+
+    - name: "description"
+      label: "Tell us about your project"
+      type: "textarea"
+      required: true
+      placeholder: "What problem are you trying to solve? Who will use this software? What does success look like? What's driving your timeline? The more context you provide, the more useful our response will be."
+      rows: 6
+
+    - name: "referral"
+      label: "How did you hear about us?"
+      type: "text"
+      required: false
+
+  alternative_contact:
+    title: "Prefer to Talk First?"
+    subtitle: "Some conversations are better live."
+    methods:
+      - type: "Email"
+        value: "hello@technotroids.com"
+        icon: "mail"
+        note: "Best for detailed project information"
+
+      - type: "WhatsApp"
+        value: "+91-XXXXX-XXXXX"
+        icon: "message-circle"
+        note: "Quick questions or scheduling"
+
+      - type: "Phone"
+        value: "+91-XXXXX-XXXXX"
+        icon: "phone"
+        note: "Let's talk through your needs"
+
+  response_commitment:
+    promise: "We respond to every serious inquiry within 24 hours."
+    note: "Usually much sooner. If you don't hear from us, check your spam folder or send a follow-up—we want to hear from you."
+
+# Project Inquiry Details
+project_inquiry:
+  section_title: "Let's Build Something Exceptional"
+  section_subtitle: "Every great project starts with a conversation. Let's have ours."
+
+  approach:
+    headline: "Our Proposal Process"
+    description: "We don't send generic estimates. We invest time understanding your needs, then craft a detailed proposal that addresses your specific situation. You'll get a document you can actually use to make informed decisions."
+
+  what_we_explore:
+    title: "In our initial discussions, we'll explore:"
+    items:
+      - point: "Your business objectives and success metrics"
+        why: "So we build toward outcomes, not just outputs"
+
+      - point: "Your users and their actual needs"
+        why: "So we solve real problems, not assumed ones"
+
+      - point: "Your technical landscape and constraints"
+        why: "So we integrate smoothly with your world"
+
+      - point: "Your timeline and what's driving it"
+        why: "So we plan realistically, not optimistically"
+
+      - point: "Your competitive position and differentiation"
+        why: "So we build advantages, not just features"
+
+  what_you_receive:
+    title: "Your Custom Proposal Will Include:"
+    items:
+      - "Detailed scope with clear deliverables at each milestone"
+      - "Technology recommendations with honest trade-offs"
+      - "Realistic timeline based on proven velocity"
+      - "Investment breakdown with complete transparency"
+      - "Risk assessment and mitigation strategies"
+      - "Success criteria and measurement approach"
+
+  commitment:
+    text: "We respond to serious inquiries within 24 hours. Usually sooner."
+    note: "If your project matters to you, it matters to us."
+
+  cta: "Start the Conversation"

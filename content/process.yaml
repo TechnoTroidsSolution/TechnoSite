@@ -1,0 +1,82 @@
+process:
+  section_title: "Our Proven Process"
+  section_subtitle: "Seven stages that transform vision into reality."
+  intro: "We've refined this approach over dozens of successful projects. Each phase builds on the last, ensuring nothing gets overlooked and everything delivers value."
+
+  steps:
+    - number: 1
+      title: "Deep Discovery"
+      description: "We start by truly understanding your world. Not just what you want to build, but why it matters. Who it serves. What success looks like. What keeps you up at night. This isn't a requirements checklist—it's the foundation everything else builds on."
+      deliverables:
+        - "Complete problem statement and opportunity analysis"
+        - "User personas and journey mapping"
+        - "Technical feasibility and risk assessment"
+        - "Preliminary roadmap and effort projection"
+      duration: "3-5 days"
+      outcome: "Crystal-clear alignment on goals and approach"
+
+    - number: 2
+      title: "Strategic Planning"
+      description: "Armed with deep understanding, we architect your solution. We map features to business value. We identify the 20% that delivers 80% of the impact. We plan for growth, security, and scale from day one—so you never outgrow what we build."
+      deliverables:
+        - "Comprehensive project blueprint"
+        - "Technology stack with clear justification"
+        - "Phased milestone structure"
+        - "Detailed proposal with complete transparency"
+      duration: "2-3 days"
+      outcome: "A roadmap you can believe in"
+
+    - number: 3
+      title: "Intentional Design"
+      description: "Form follows function, but both matter. We design interfaces that guide users naturally toward their goals. We architect systems that handle complexity without becoming complex. Every decision documented. Every choice justified."
+      deliverables:
+        - "User flow optimization"
+        - "High-fidelity interface designs"
+        - "System architecture documentation"
+        - "Database schema and API contracts"
+      duration: "1-2 weeks"
+      outcome: "A blueprint for excellence"
+
+    - number: 4
+      title: "Disciplined Development"
+      description: "This is where vision becomes reality. We build in focused sprints, delivering working software weekly. You see tangible progress. You provide feedback early. We adapt quickly. No waiting months to see if we understood correctly."
+      deliverables:
+        - "Production-ready feature increments"
+        - "Weekly live demonstrations"
+        - "Comprehensive code documentation"
+        - "Transparent progress tracking"
+      duration: "Scales with complexity"
+      outcome: "Steady, visible progress toward launch"
+
+    - number: 5
+      title: "Rigorous Quality Assurance"
+      description: "We test like we're trying to break it—because better we find the issues than your users. Performance under load. Security against threats. Usability across devices. Edge cases you never thought of. This is where good becomes great."
+      deliverables:
+        - "Complete test coverage documentation"
+        - "Performance benchmarks and optimization"
+        - "Security audit and hardening"
+        - "Cross-platform compatibility verification"
+      duration: "1-2 weeks"
+      outcome: "Confidence in every corner"
+
+    - number: 6
+      title: "Seamless Deployment"
+      description: "Launch day should be boring—and ours usually are. That's by design. We handle infrastructure, monitoring, security hardening, and contingencies. Your users experience a smooth transition. You sleep soundly knowing we're watching."
+      deliverables:
+        - "Zero-downtime production deployment"
+        - "Real-time monitoring and alerting"
+        - "Complete technical documentation"
+        - "Team training and knowledge transfer"
+      duration: "3-5 days"
+      outcome: "From beta to production, seamlessly"
+
+    - number: 7
+      title: "Ongoing Partnership"
+      description: "Launch is just the beginning. We stay engaged—fixing bugs immediately, adding features strategically, and optimizing continuously. Your software evolves with your business because we build for the long term."
+      deliverables:
+        - "Rapid bug resolution"
+        - "Performance optimization"
+        - "Feature development and enhancement"
+        - "Strategic technology guidance"
+      duration: "As long as you need us"
+      outcome: "A partner in your continued success"

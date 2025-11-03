@@ -1,0 +1,78 @@
+industries:
+  section_title: "Industries We Transform"
+  section_subtitle: "Deep experience across sectors where software creates competitive advantage."
+
+  intro: "We don't just understand technology—we understand your business. Every industry has unique challenges, regulations, and opportunities. We bring both technical excellence and domain insight."
+
+  sectors:
+    - name: "Healthcare & Life Sciences"
+      icon: "heart-pulse"
+      challenge: "Patient care demands security, compliance, and reliability"
+      solutions:
+        - "HIPAA-compliant patient management platforms"
+        - "Telemedicine solutions that scale with demand"
+        - "Health tracking apps that improve outcomes"
+        - "Practice management systems that streamline operations"
+
+    - name: "E-commerce & Retail"
+      icon: "shopping-cart"
+      challenge: "Every second of friction costs you customers"
+      solutions:
+        - "High-conversion storefronts that drive revenue"
+        - "Inventory systems that prevent stockouts"
+        - "Loyalty platforms that increase lifetime value"
+        - "Order management that delights customers"
+
+    - name: "Education & EdTech"
+      icon: "graduation-cap"
+      challenge: "Engagement and outcomes matter more than features"
+      solutions:
+        - "Learning platforms that increase completion rates"
+        - "Student information systems that reduce admin burden"
+        - "Course delivery that works on any device"
+        - "Assessment tools that provide real insights"
+
+    - name: "Financial Services"
+      icon: "banknote"
+      challenge: "Trust and security are non-negotiable"
+      solutions:
+        - "Payment systems built to banking standards"
+        - "Expense platforms that save time and catch errors"
+        - "Financial dashboards that enable decisions"
+        - "Compliance-ready accounting integrations"
+
+    - name: "Logistics & Transportation"
+      icon: "truck"
+      challenge: "Optimization and visibility drive profitability"
+      solutions:
+        - "Fleet management that reduces costs"
+        - "Real-time tracking that builds trust"
+        - "Warehouse systems that maximize efficiency"
+        - "Route optimization that saves fuel and time"
+
+    - name: "SaaS & Technology"
+      icon: "monitor"
+      challenge: "Your product is your business"
+      solutions:
+        - "Subscription platforms that reduce churn"
+        - "CRM systems that convert and retain"
+        - "Project tools that teams actually adopt"
+        - "Collaboration software that multiplies productivity"
+
+    - name: "Real Estate & Property"
+      icon: "building"
+      challenge: "Connecting buyers and sellers efficiently"
+      solutions:
+        - "Listing platforms that showcase properties beautifully"
+        - "Tenant management that reduces friction"
+        - "Virtual tours that save time and increase interest"
+        - "CRM built for the real estate workflow"
+
+    - name: "Manufacturing & Industrial"
+      icon: "factory"
+      challenge: "Downtime and waste are profit killers"
+      solutions:
+        - "Production tracking for complete visibility"
+        - "Quality systems that catch defects early"
+        - "Maintenance scheduling that prevents failures"
+        - "Supply chain tools that optimize inventory"
