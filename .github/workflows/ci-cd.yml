@@ -1,5 +1,7 @@
 name: Next.js TypeScript CI/CD Pipeline
 
+permissions:
+  contents: read
 on:
   push:
     branches: [ dev, qa, master ]
