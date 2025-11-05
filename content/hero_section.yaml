@@ -1,0 +1,70 @@
+site_info:
+  name: "TechnoTroids"
+  tagline: "Where Technology Meets Purpose"
+  location: "India"
+  contact_email: "hello@technotroids.com"
+  phone: "+91-XXXXX-XXXXX"
+
+navigation:
+  primary:
+    - label: "Home"
+      link: "#home"
+    - label: "Services"
+      link: "#services"
+    - label: "Process"
+      link: "#process"
+    - label: "Industries"
+      link: "#industries"
+    - label: "About"
+      link: "#about"
+    - label: "FAQ"
+      link: "#faq"
+
+  cta_button:
+    text: "Start Your Project"
+    link: "#contact"
+
+# Hero Section
+hero:
+  headline: "Your vision deserves software that works as hard as you do"
+  subheadline: "We don't just write code—we build digital solutions that transform how you do business. Every line purposeful. Every feature intentional. Every outcome measurable."
+
+  primary_cta:
+    text: "Build Something Remarkable"
+    link: "#contact"
+
+  secondary_cta:
+    text: "Explore Our Work"
+    link: "#services"
+
+  trust_badge: "Trusted by businesses that demand excellence"
+
+# Call to Action Variations
+cta_variations:
+  primary: "Build Something Remarkable"
+  secondary: "Start the Conversation"
+  tertiary: "Get Your Custom Proposal"
+  supportive: "Explore Possibilities"
+  urgent: "Let's Talk Today"
+  collaborative: "Partner With Us"
+
+# Powerful Phrases Library
+power_phrases:
+  taglines:
+    - "Where vision meets execution"
+    - "Software that moves your business forward"
+    - "Excellence engineered, results delivered"
+    - "Your success, our obsession"
+    - "Building digital advantages"
+
+  section_closers:
+    - "Ready to see what's possible?"
+    - "Let's build something that matters"
+    - "Your next competitive advantage starts here"
+    - "Transform potential into performance"
+
+  trust_builders:
+    - "We do what we say. Every time."
+    - "Your success is our scorecard"
+    - "Built on trust, delivered with excellence"
+    - "Partnership means we win together"

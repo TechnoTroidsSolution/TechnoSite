@@ -1,5 +1,7 @@
-name: CI/CD Pipeline
+name: Next.js TypeScript CI/CD Pipeline
 
+permissions:
+  contents: read
 on:
   push:
     branches: [ dev, qa, master ]
@@ -7,95 +9,76 @@ on:
     branches: [ dev, qa, master ]
 
 jobs:
-  react-build-test:
+  nextjs-build-test:
+    name: Build & Test Next.js (TypeScript)
     runs-on: ubuntu-latest
-    if: ${{ exists('package.json') }}  # Skip if no package.json
+
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      # 1️⃣ Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2️⃣ Setup Node.js (with caching for npm)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # 4️⃣ TypeScript type check
+      - name: Run TypeScript check
+        run: npm run type-check || npx tsc --noEmit
+
+      # 5️⃣ Run lint check
+      - name: Run ESLint
+        run: npm run lint || echo "Lint skipped"
+
+      # 6️⃣ Run unit tests (Jest or Vitest)
+      - name: Run tests
+        run: npm test || npx vitest run || echo "Tests skipped"
+
+      # 7️⃣ Build Next.js app
+      - name: Build Next.js project
+        run: npm run build
+
+      # 8️⃣ Upload build output as artifact (optional)
+      - name: Upload production build
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nextjs-build
+          path: .next/
+
+  # ✅ Optional: Deploy job (runs only on master)
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: nextjs-build-test
+    if: github.ref == 'refs/heads/master'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install Dependencies
-        run: npm ci || echo "No package.json or lockfile found, skipping install"
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Run Lint
-        run: |
-          if [ -f package.json ]; then
-            npm run lint || echo "Skipping lint"
-          fi
+      - name: Build Next.js
+        run: npm run build
 
-      - name: Run Tests
-        run: |
-          if [ -f package.json ]; then
-            npm test || npx vitest run || echo "Skipping tests"
-          fi
-
-      - name: Build Vite App
-        run: |
-          if [ -f package.json ]; then
-            npm run build || echo "Skipping build"
-          fi
-
-  java-build-test:
-    runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.message, '[java]') && (exists('pom.xml') || exists('build.gradle'))
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Setup Java
-        uses: actions/setup-java@v3
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
         with:
-          distribution: temurin
-          java-version: 17
-
-      - name: Build with Maven/Gradle
-        run: |
-          if [ -f pom.xml ]; then
-            mvn clean install
-          elif [ -f build.gradle ]; then
-            ./gradlew build
-          else
-            echo "No Java project found, skipping"
-          fi
-
-      - name: Run Java Tests
-        run: |
-          if [ -f pom.xml ]; then
-            mvn test
-          elif [ -f build.gradle ]; then
-            ./gradlew test
-          fi
-
-  dotnet-build-test:
-    runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.message, '[dotnet]') && (steps.check_dotnet.outputs.has_dotnet == 'true')
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: 8.0.x
-
-      - name: Check for .NET projects
-        id: check_dotnet
-        run: |
-          if ls *.sln 1> /dev/null 2>&1 || ls **/*.csproj 1> /dev/null 2>&1; then
-            echo "has_dotnet=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_dotnet=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Build .NET Solution
-        if: steps.check_dotnet.outputs.has_dotnet == 'true'
-        run: dotnet build --configuration Release
-
-      - name: Run .NET Tests
-        if: steps.check_dotnet.outputs.has_dotnet == 'true'
-        run: dotnet test --configuration Release
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./
