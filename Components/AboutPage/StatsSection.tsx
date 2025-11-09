@@ -4,10 +4,10 @@ import React from 'react';
 
 export default function StatsSection() {
   const stats = [
-    { id: 'projects', value: '50+', label: 'Projects Delivered', icon: '🚀' },
+    { id: 'projects', value: '10+', label: 'Projects Delivered', icon: '🚀' },
     { id: 'satisfaction', value: '98%', label: 'Client Satisfaction', icon: '⭐' },
-    { id: 'team', value: '50+', label: 'Team Members', icon: '👥' },
-    { id: 'experience', value: '15+', label: 'Years Experience', icon: '🏆' },
+    { id: 'team', value: '20+', label: 'Team Members', icon: '👥' },
+    { id: 'experience', value: '10+', label: 'Years Experience', icon: '🏆' },
   ];
 
   return (
