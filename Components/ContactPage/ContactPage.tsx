@@ -774,15 +774,15 @@ export default function ContactPage({
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-linear-to-br from-teal-50 to-teal-100 rounded-xl p-8 border border-teal-200">
+            <div className="bg-linear-to-br from-teal-50 to-teal-100 rounded-xl p-8 border border-teal-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Your Privacy Matters</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-teal-700 transition-colors duration-300">Your Privacy Matters</h3>
                   <p className="text-gray-600 leading-relaxed">
                     We take data privacy seriously. All information you share with us is encrypted and stored securely. We never share your personal data with third parties without your explicit consent.
                   </p>
@@ -810,15 +810,15 @@ export default function ContactPage({
               </ul>
             </div>
 
-            <div className="bg-linear-to-br from-blue-50 to-blue-100 rounded-xl p-8 border border-blue-200">
+            <div className="bg-linear-to-br from-blue-50 to-blue-100 rounded-xl p-8 border border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise-Grade Security</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">Enterprise-Grade Security</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Our infrastructure is built with security at its core. We follow industry best practices and maintain the highest standards of data protection.
                   </p>
