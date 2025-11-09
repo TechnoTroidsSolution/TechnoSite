@@ -52,7 +52,7 @@ export default function PhilosophySection({ headline, text }: PhilosophySectionP
               </div>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">
               {headline}
             </h2>
             

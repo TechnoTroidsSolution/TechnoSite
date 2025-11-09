@@ -1,118 +1,238 @@
-services:
-  section_title: "Solutions Built for Impact"
-  section_subtitle: "We create software that doesn't just function—it elevates your entire operation. From first click to final deployment, excellence is our standard."
+hero_section:
+  badgeText: "Our Services"
+  title: "Solutions Built for Impact"
+  subtitle: "We provide high-performance, scalable, and secure digital solutions tailored to your business."
 
-  offerings:
-    - id: "web_apps"
-      title: "Enterprise-Grade Web Applications"
-      description: "Powerful web platforms engineered for performance and built to scale. We craft applications that handle complexity with elegance—turning your business processes into streamlined digital experiences your team will actually want to use."
-      icon: "monitor"
-      technologies:
-        - "Modern React/Next.js architecture"
-        - "Scalable Node.js/Python backends"
-        - "Real-time data synchronization"
-        - "Optimized database architecture"
-      use_cases:
-        - "Command centers that give you complete visibility"
-        - "Customer portals that build loyalty"
-        - "Internal systems that eliminate busywork"
-        - "Analytics platforms that reveal insights"
-      highlight: "Built to perform under pressure"
+services_grid:
+  - icon: "education"
+    title: "Education Site Building"
+    description: "Custom e-learning platforms and LMS solutions tailored for educational institutions."
+    tags:
+      - "LMS Development"
+      - "Student Portals"
+      - "Course Management"
+      - "Video Integration"
+    slug: "education-site-building"
 
-    - id: "mobile_apps"
-      title: "Mobile Experiences That Matter"
-      description: "Native-quality mobile applications that users love. One codebase, two platforms, zero compromises. We build apps that feel right at home on iOS and Android—fast, intuitive, and built to last."
-      icon: "smartphone"
-      technologies:
-        - "React Native for unified development"
-        - "Native performance optimization"
-        - "Seamless offline capabilities"
-        - "Smart notification systems"
-      use_cases:
-        - "Customer apps that drive retention"
-        - "Field tools that boost productivity"
-        - "Mobile commerce that converts"
-        - "On-demand platforms that scale"
-      highlight: "Performance that users notice, quality they trust"
+  - icon: "n8n"
+    title: "N8N Automation"
+    description: "Powerful workflow automation to streamline your business processes."
+    tags:
+      - "Workflow Design"
+      - "API Integration"
+      - "Process Automation"
+      - "Custom Nodes"
+    slug: "n8n-automation"
 
-    - id: "saas_platforms"
-      title: "SaaS Platforms Built to Scale"
-      description: "Cloud-native platforms designed for growth from day one. Multi-tenant architecture, bulletproof security, and infrastructure that scales with your ambitions. We build the foundation for your next-generation business model."
-      icon: "cloud"
-      technologies:
-        - "Enterprise-grade multi-tenancy"
-        - "Bank-level security protocols"
-        - "Integrated payment systems"
-        - "Intelligent analytics engine"
-      use_cases:
-        - "Subscription businesses that compound"
-        - "Team platforms that multiply productivity"
-        - "Vertical SaaS that owns the niche"
-        - "White-label solutions ready to resell"
-      highlight: "Your recurring revenue engine, engineered right"
+  - icon: "sap"
+    title: "SAP Automation"
+    description: "Enterprise-grade SAP integration and automation solutions."
+    tags:
+      - "SAP Fiori"
+      - "ABAP Development"
+      - "RPA Integration"
+      - "Business Process"
+    slug: "sap-automation"
 
-    - id: "automation"
-      title: "Intelligent Process Automation"
-      description: "Transform manual work into automated workflows. We eliminate the repetitive, error-prone tasks that drain your team's potential—giving you back time to focus on what actually moves your business forward."
-      icon: "workflow"
-      technologies:
-        - "Seamless API orchestration"
-        - "Smart workflow engines"
-        - "Real-time data synchronization"
-        - "Intelligent task scheduling"
-      use_cases:
-        - "Reporting that writes itself"
-        - "Data entry that never existed"
-        - "Systems that talk to each other"
-        - "Alerts that anticipate problems"
-      highlight: "Save hours. Eliminate errors. Scale without limits."
+  - icon: "fullstack"
+    title: "Full-Stack Web Development"
+    description: "End-to-end web applications with modern frameworks and scalable architecture."
+    tags:
+      - "React/Next.js"
+      - "Node.js/Python"
+      - "Database Design"
+      - "Cloud Deployment"
+    slug: "full-stack-web-development"
 
-    - id: "api_development"
-      title: "APIs That Power Growth"
-      description: "Rock-solid APIs that become the backbone of your digital ecosystem. Whether you're connecting systems, enabling partners, or building a platform—we create APIs that are fast, secure, and built to handle whatever you throw at them."
-      icon: "code"
-      technologies:
-        - "RESTful & GraphQL standards"
-        - "Comprehensive documentation"
-        - "Military-grade security"
-        - "Performance monitoring built-in"
-      use_cases:
-        - "Partner integrations that just work"
-        - "Mobile backends built for speed"
-        - "Microservices that scale independently"
-        - "Platform APIs that unlock revenue"
-      highlight: "The invisible infrastructure that makes everything possible"
+  - icon: "mobile"
+    title: "Mobile Applications"
+    description: "Native and cross-platform mobile apps for iOS and Android."
+    tags:
+      - "React Native"
+      - "Flutter"
+      - "iOS/Android"
+      - "App Store Deploy"
+    slug: "mobile-applications"
 
-    - id: "ui_ux_design"
-      title: "Design That Converts"
-      description: "Interfaces so intuitive, your users won't need training. We design with psychology and data—creating experiences that guide users effortlessly from first touch to desired action. Beautiful is nice. Effective is essential."
-      icon: "palette"
-      technologies:
-        - "User research and behavior analysis"
-        - "Rapid prototyping and testing"
-        - "Mobile-first responsive design"
-        - "Systematic design frameworks"
-      use_cases:
-        - "Redesigns that double conversion"
-        - "Dashboards people actually understand"
-        - "User flows that eliminate friction"
-        - "Brands that feel premium"
-      highlight: "Where aesthetics meet conversion psychology"
+  - icon: "blockchain"
+    title: "Blockchain Solutions"
+    description: "Decentralized applications and smart contract development."
+    tags:
+      - "Smart Contracts"
+      - "Web3 Integration"
+      - "DeFi"
+      - "NFT Platforms"
+    slug: "blockchain-solutions"
 
-  advanced_capabilities:
-    title: "When Your Ambitions Demand More"
-    subtitle: "Advanced technologies deployed strategically, never superficially."
-    items:
-      - capability: "Artificial Intelligence Integration"
-        value: "Predictive insights, intelligent automation, and decision support that learns from your data"
+  - icon: "uiux"
+    title: "UI/UX Design"
+    description: "User-centered design that converts visitors into loyal customers."
+    tags:
+      - "Wireframing"
+      - "Prototyping"
+      - "User Testing"
+      - "Design Systems"
+    slug: "ui-ux-design"
 
-      - capability: "Computer Vision Systems"
-        value: "Image recognition, quality control, and visual analytics that see what humans miss"
+  - icon: "devops"
+    title: "Cloud & DevOps"
+    description: "Scalable cloud infrastructure with CI/CD pipelines and monitoring."
+    tags:
+      - "AWS/Azure/GCP"
+      - "Docker/K8s"
+      - "CI/CD"
+      - "Infrastructure as Code"
+    slug: "cloud-devops"
 
-      - capability: "Natural Language Processing"
-        value: "Text analysis, sentiment detection, and conversational interfaces that understand context"
+  - icon: "ai"
+    title: "AI/ML Integration"
+    description: "Intelligent solutions powered by machine learning and AI."
+    tags:
+      - "ChatGPT Integration"
+      - "Computer Vision"
+      - "Predictive Analytics"
+      - "NLP"
+    slug: "ai-ml-integration"
+cta_section:
+  title: "Ready to Transform Your Ideas Into Reality?"
+  subtitle: "Let's discuss your project and craft a digital experience that stands out."
+  button_text: "Start Your Project Today"
+  button_link: "/contact"
 
-      - capability: "Predictive Analytics"
-        value: "Forecasting models, pattern recognition, and recommendations that spot opportunities"
+final_cta_section:
+  title: "Let's Build Something Amazing Together"
+  subtitle: "Your vision, our expertise. Together, we create digital solutions that make a measurable impact."
+  button1_text: "Get Free Consultation"
+  button1_link: "/contact"
+  button2_text: "View Our Portfolio"
+  button2_link: "/about"
 
-    philosophy: "We deploy AI and machine learning when they create measurable business value—not to check a box on your feature list. Every advanced technology we recommend solves a real problem and justifies its complexity."
+collaborative_section:
+  title: "Transparent & Collaborative Approach"
+  subtitle: "Every step of our process is designed for transparency and collaboration. You'll have full visibility into progress, regular updates, and direct communication with our team throughout the entire journey."
+
+advanced_capabilities:
+  title: "When Your Ambitions Demand More"
+  subtitle: "Advanced technologies deployed strategically, never superficially."
+  philosophy: "We deploy AI and machine learning when they create measurable business value—not to check a box on your feature list. Every advanced technology we recommend solves a real problem and justifies its complexity."
+  items:
+    - icon: "ai"
+      capability: "Artificial Intelligence Integration"
+      value: "Predictive insights, intelligent automation, and decision support that learns from your data"
+    - icon: "vision"
+      capability: "Computer Vision Systems"
+      value: "Image recognition, quality control, and visual analytics that see what humans miss"
+    - icon: "nlp"
+      capability: "Natural Language Processing"
+      value: "Text analysis, sentiment detection, and conversational interfaces that understand context"
+    - icon: "analytics"
+      capability: "Predictive Analytics"
+      value: "Forecasting models, pattern recognition, and recommendations that spot opportunities"
+
+why_choose_us:
+  title: "Why Choose Techno Troids?"
+  subtitle: "We combine engineering excellence with deep business understanding to deliver impactful digital solutions."
+  items:
+    - icon: "rocket"
+      title: "Fast Delivery"
+      description: "Agile development approach ensures quick and reliable turnaround."
+    - icon: "target"
+      title: "Result-Oriented"
+      description: "Every feature is crafted to deliver real, measurable outcomes."
+    - icon: "check"
+      title: "Quality Engineering"
+      description: "Clean, scalable, maintainable code following industry best practices."
+    - icon: "support"
+      title: "24/7 Support"
+      description: "Dedicated long-term support with fast response and continuous monitoring."
+
+process_section:
+  badge: "Our Process"
+  title: "A → Z Solution Promise"
+  subtitle: "We partner with you at every phase — from ideation to long-term evolution."
+  steps:
+    - number: 1
+      icon: "search"
+      title: "Research & Discovery"
+      description: "Deep dive into your business needs, target audience, and market requirements."
+      tags:
+        - "Stakeholder Interviews"
+        - "Market analysis"
+        - "Technical feasibility"
+        - "Risk assessment"
+
+    - number: 2
+      icon: "strategy"
+      title: "Strategy & Roadmap"
+      description: "Create a comprehensive plan with clear milestones and deliverables."
+      tags:
+        - "Project roadmap"
+        - "Technology stack"
+        - "Resource allocation"
+        - "Timeline planning"
+
+    - number: 3
+      icon: "design"
+      title: "UX/UI Design"
+      description: "Design intuitive interfaces that delight users and drive engagement."
+      tags:
+        - "Wireframing"
+        - "Prototyping"
+        - "User testing"
+        - "Design systems"
+
+    - number: 4
+      icon: "development"
+      title: "Agile Development"
+      description: "Build robust, scalable solutions using modern development practices."
+      tags:
+        - "Sprint planning"
+        - "Code reviews"
+        - "Version control"
+        - "Documentation"
+
+    - number: 5
+      icon: "qa"
+      title: "QA & Testing"
+      description: "Rigorous testing to ensure quality, security, and performance."
+      tags:
+        - "Unit testing"
+        - "Integration testing"
+        - "Security audits"
+        - "Performance optimization"
+
+    - number: 6
+      icon: "launch"
+      title: "Deployment & Launch"
+      description: "Smooth deployment with monitoring and performance optimization."
+      tags:
+        - "CI/CD setup"
+        - "Infrastructure setup"
+        - "Go-live support"
+        - "Monitoring"
+
+    - number: 7
+      icon: "support"
+      title: "Support & Iterate"
+      description: "Ongoing maintenance, updates, and continuous improvement."
+      tags:
+        - "24/7 monitoring"
+        - "Bug fixes"
+        - "Feature updates"
+        - "Optimization"
+industries_section:
+  title: "Industries We Serve"
+  subtitle: "We deliver tailored digital solutions across diverse industries, helping businesses innovate and scale."
+  industries:
+    - name: "Healthcare"
+      icon: "healthcare"
+    - name: "Finance"
+      icon: "finance"
+    - name: "Education"
+      icon: "education"
+    - name: "E-commerce"
+      icon: "ecommerce"
+    - name: "Logistics"
+      icon: "logistics"
+    - name: "SaaS"
+      icon: "saas"
