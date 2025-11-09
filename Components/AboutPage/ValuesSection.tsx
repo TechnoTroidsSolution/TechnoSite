@@ -43,19 +43,19 @@ export default function ValuesSection() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-white dark:bg-gray-900">
+    <section className="py-20 md:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <div className="bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
               Core Values
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Built on Strong Foundations
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our values aren&apos;t just words on a wall—they&apos;re lived every day in every interaction
           </p>
         </div>
@@ -65,26 +65,23 @@ export default function ValuesSection() {
           {values.map((value, index) => (
             <div 
               key={index}
-              className="group relative bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-800 hover:border-teal-500 dark:hover:border-teal-400 overflow-hidden"
+              className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200"
             >
               {/* Icon with solid background */}
-              <div className="relative mb-6">
-                <div className="w-20 h-20 bg-teal-100 dark:bg-teal-900/30 rounded-2xl flex items-center justify-center text-teal-600 dark:text-teal-400 shadow-lg group-hover:scale-110 transition-all duration-500">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-teal-500 rounded-lg flex items-center justify-center text-white">
                   {value.icon}
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 {value.title}
               </h3>
               
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 {value.description}
               </p>
-
-              {/* Decorative line */}
-              <div className="mt-6 h-1 w-20 bg-teal-500 dark:bg-teal-400 rounded-full group-hover:w-40 transition-all duration-500"></div>
             </div>
           ))}
         </div>
