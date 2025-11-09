@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,12 +61,7 @@ const Header = () => {
                   isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`}></span>
               </Link>
-            ))}
-            
-            {/* Theme Switcher */}
-            <div className="ml-4">
-              <ThemeSwitcher />
-            </div>
+            ))}           
             
             {/* CTA Button */}
             <Link
@@ -83,7 +77,6 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeSwitcher />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2.5 rounded-lg text-gray-700 hover:text-teal-600 hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200"

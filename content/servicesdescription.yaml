@@ -1,0 +1,422 @@
+services:
+  - id: education-site-building
+    title: "Education Site Building"
+    subtitle: "Custom LMS platforms, student portals, and e-learning ecosystems."
+    description: >
+      We build modern, scalable education websites and LMS platforms for institutes, schools,
+      coaching centers, and e-learning startups. From student management to course delivery,
+      we ensure a seamless digital learning experience.
+
+    process:
+      - "Requirement analysis and user persona mapping"
+      - "Information architecture & LMS workflow planning"
+      - "UI/UX design for students, teachers, and admins"
+      - "Development of course modules, progress tracking, and assessments"
+      - "Video streaming integration and resource management"
+      - "Student portal + teacher dashboard development"
+      - "Testing for performance and multi-device usage"
+      - "Deployment, onboarding, and long-term support"
+
+    deliverables:
+      - "Fully functional LMS"
+      - "Admin dashboard"
+      - "Course builder"
+      - "Student & teacher portals"
+      - "Video content delivery setup"
+      - "Assessment/quiz module"
+      - "Payment gateway integration"
+      - "Reports & analytics"
+
+    tech_stack:
+      - "Next.js"
+      - "Node.js / Django"
+      - "PostgreSQL / MongoDB"
+      - "AWS S3 / Cloudflare"
+      - "Stripe / Razorpay"
+      - "WebRTC / Vimeo / YouTube API"
+
+    benefits:
+      - "Scalable architecture"
+      - "High-conversion designs"
+      - "Secure student data handling"
+      - "Fast performance even with high traffic"
+      - "Future-ready modular LMS"
+
+    ideal_for:
+      - "Schools"
+      - "Universities"
+      - "E-learning startups"
+      - "Coaching centers"
+
+    seo:
+      keywords: "LMS development, education website, e-learning platform"
+      meta_description: "Custom education platforms and LMS development for institutes and EdTech startups."
+
+  - id: n8n-automation
+    title: "N8N Automation"
+    subtitle: "Automate your business workflows without limits."
+    description: >
+      We create intelligent automation workflows that reduce manual work, boost productivity,
+      and streamline operations. N8N enables flexible, scalable automation for any department.
+
+    process:
+      - "Business workflow analysis"
+      - "Automation mapping and triggers setup"
+      - "API integrations & custom node creation"
+      - "Workflow testing and optimization"
+      - "Error handling logic"
+      - "Security and permission setup"
+      - "Automation deployment"
+      - "Training & documentation"
+
+    deliverables:
+      - "Automation workflows"
+      - "Custom N8N nodes"
+      - "API integrations"
+      - "Monitoring dashboard"
+      - "Task automation scripts"
+      - "Error-handling logic"
+      - "Complete documentation"
+
+    tech_stack:
+      - "N8N"
+      - "Node.js"
+      - "REST APIs"
+      - "Webhook triggers"
+      - "OAuth integrations"
+
+    benefits:
+      - "Reduces manual tasks"
+      - "Fast automation setup"
+      - "Low-code yet powerful"
+      - "Highly scalable flows"
+
+    ideal_for:
+      - "Marketing teams"
+      - "Operations"
+      - "E-commerce"
+      - "Startups needing automation"
+
+    seo:
+      keywords: "n8n automation, workflow automation, no-code automation"
+      meta_description: "Automate business workflows using N8N with custom nodes and integrations."
+
+  - id: sap-automation
+    title: "SAP Automation"
+    subtitle: "Streamline enterprise workflows with SAP + automation."
+    description: >
+      We help enterprises automate SAP processes using integrations, RPA, and customized workflows.
+      Improve business efficiency and reduce bottlenecks.
+
+    process:
+      - "SAP workflow analysis"
+      - "Integration strategy planning"
+      - "SAP Fiori or ABAP-based development"
+      - "Automation connectors setup"
+      - "RPA integration"
+      - "Testing & validation"
+      - "Deployment & employee training"
+      - "Continuous optimization"
+
+    deliverables:
+      - "SAP automation scripts"
+      - "ABAP/Fiori components"
+      - "Custom workflows"
+      - "RPA integration"
+      - "Documentation & training"
+
+    tech_stack:
+      - "SAP BTP"
+      - "SAP Fiori"
+      - "ABAP"
+      - "RPA (UIPath/Power Automate)"
+      - "SAP APIs"
+
+    benefits:
+      - "Eliminates repetitive SAP tasks"
+      - "Improves enterprise productivity"
+      - "Reduces errors"
+      - "Enhances reporting visibility"
+
+    ideal_for:
+      - "Large enterprises"
+      - "Manufacturing companies"
+      - "Finance & HR departments"
+
+    seo:
+      keywords: "SAP automation, SAP integration, SAP workflow automation"
+      meta_description: "Enterprise-grade SAP automation and RPA integration for efficient operations."
+
+  - id: full-stack-web-development
+    title: "Full-Stack Web Development"
+    subtitle: "High-performance, scalable web applications from front to back."
+    description: >
+      We build modern full-stack web applications that are fast, secure, and built for growth.
+      Whether it's a SaaS platform, internal dashboard, or enterprise system, we deliver end-to-end solutions.
+
+    process:
+      - "Requirement gathering"
+      - "System architecture design"
+      - "UI/UX prototyping"
+      - "Frontend & backend development"
+      - "Database & API setup"
+      - "Testing & QA"
+      - "Deployment & DevOps"
+      - "Post-launch maintenance"
+
+    deliverables:
+      - "Frontend UI"
+      - "Backend APIs"
+      - "Database schema"
+      - "Admin dashboard"
+      - "Authentication system"
+      - "Cloud deployment"
+
+    tech_stack:
+      - "Next.js / React"
+      - "Node.js / Python"
+      - "MongoDB / PostgreSQL"
+      - "AWS / Vercel"
+      - "Redis / Docker"
+
+    benefits:
+      - "Clean, scalable code"
+      - "SEO-friendly"
+      - "High performance"
+      - "Secure architecture"
+
+    ideal_for:
+      - "Startups"
+      - "SaaS platforms"
+      - "Enterprise dashboards"
+
+    seo:
+      keywords: "full-stack development, web development company"
+      meta_description: "Custom full-stack app development using Next.js, Node.js, and scalable cloud architecture."
+
+  - id: mobile-applications
+    title: "Mobile Applications"
+    subtitle: "iOS and Android apps built for performance and user engagement."
+    description: >
+      We design and develop mobile applications that are fast, intuitive, and user-centered.
+      From concept to deployment, we deliver complete mobile solutions.
+
+    process:
+      - "Wireframing & UX planning"
+      - "UI design for multiple screens"
+      - "Core feature development"
+      - "API integration"
+      - "Device testing"
+      - "App Store & Play Store setup"
+      - "Deployment"
+      - "Post-launch improvements"
+
+    deliverables:
+      - "iOS & Android apps"
+      - "Source code"
+      - "API integration"
+      - "Crash monitoring setup"
+      - "High-quality UI screens"
+
+    tech_stack:
+      - "React Native"
+      - "Flutter"
+      - "Firebase"
+      - "Node.js"
+      - "App Store Connect / Google Console"
+
+    benefits:
+      - "Fast and responsive apps"
+      - "Cross-platform support"
+      - "Lower development cost"
+      - "Optimized UI/UX"
+
+    ideal_for:
+      - "Startups"
+      - "E-commerce"
+      - "SaaS mobile tools"
+
+    seo:
+      keywords: "mobile app development, react native apps"
+      meta_description: "Build mobile apps using React Native and Flutter with seamless performance."
+
+  - id: blockchain-solutions
+    title: "Blockchain Solutions"
+    subtitle: "Future-ready decentralized applications and smart contract systems."
+    description: >
+      We build secure, efficient blockchain solutions including smart contracts, NFTs,
+      DeFi applications, token systems, and enterprise blockchain integrations.
+
+    process:
+      - "Use-case and tokenomics planning"
+      - "Smart contract architecture"
+      - "UI/UX for dApps"
+      - "Web3 & wallet integration"
+      - "Contract audits"
+      - "Deployment to testnet/mainnet"
+      - "Performance optimization"
+      - "Monitoring & analytics"
+
+    deliverables:
+      - "Smart contracts"
+      - "DApp frontend"
+      - "Admin dashboard"
+      - "Wallet integrations"
+      - "Audit report"
+
+    tech_stack:
+      - "Solidity"
+      - "Web3.js / Ethers.js"
+      - "Polygon / Ethereum"
+      - "IPFS"
+      - "Hardhat / Foundry"
+
+    benefits:
+      - "Secure blockchain architecture"
+      - "Transparent transactions"
+      - "Decentralized user experience"
+
+    ideal_for:
+      - "Web3 startups"
+      - "NFT platforms"
+      - "DeFi systems"
+
+    seo:
+      keywords: "blockchain development, smart contract company"
+      meta_description: "Blockchain and smart contract development with secure scalable architecture."
+
+  - id: ui-ux-design
+    title: "UI/UX Design"
+    subtitle: "Human-centered designs that convert users into customers."
+    description: >
+      We create intuitive interfaces backed by user research and modern design systems.
+      Our design approach ensures usability, consistency, and high engagement.
+
+    process:
+      - "User research & personas"
+      - "Wireframing"
+      - "Prototyping"
+      - "User testing"
+      - "High-fidelity designs"
+      - "Design system creation"
+      - "Developer handoff"
+
+    deliverables:
+      - "Wireframes"
+      - "UI screens"
+      - "Style guides"
+      - "Design systems"
+      - "Clickable prototypes"
+
+    tech_stack:
+      - "Figma"
+      - "Adobe XD"
+      - "Notion"
+      - "Miro"
+
+    benefits:
+      - "Improved user engagement"
+      - "Higher conversions"
+      - "Consistent branding"
+
+    ideal_for:
+      - "Web apps"
+      - "Mobile apps"
+      - "SaaS platforms"
+
+    seo:
+      keywords: "ui ux design agency, product design"
+      meta_description: "Professional UI/UX design with user-centered principles and modern design systems."
+
+  - id: cloud-devops
+    title: "Cloud & DevOps"
+    subtitle: "Automated, scalable infrastructure for modern applications."
+    description: >
+      We build cloud-native systems with CI/CD pipelines, containerization, monitoring,
+      and fully automated deployment environments.
+
+    process:
+      - "Infrastructure planning"
+      - "Cloud architecture setup"
+      - "Docker/Kubernetes deployment"
+      - "CI/CD pipeline development"
+      - "Security implementation"
+      - "Performance monitoring"
+      - "Cost optimization"
+      - "Scaling strategy"
+
+    deliverables:
+      - "Cloud infrastructure"
+      - "CI/CD pipelines"
+      - "Monitoring dashboards"
+      - "Security setup"
+      - "Containerized applications"
+
+    tech_stack:
+      - "AWS / GCP / Azure"
+      - "Docker / Kubernetes"
+      - "GitHub Actions"
+      - "Terraform"
+      - "Prometheus / Grafana"
+
+    benefits:
+      - "Faster deployments"
+      - "Reduced downtime"
+      - "Lower cloud costs"
+      - "Scalable architecture"
+
+    ideal_for:
+      - "SaaS companies"
+      - "Enterprises"
+      - "High-traffic applications"
+
+    seo:
+      keywords: "devops services, cloud infrastructure"
+      meta_description: "DevOps automation and cloud infrastructure setup with CI/CD and Kubernetes."
+
+  - id: ai-ml-integration
+    title: "AI/ML Integration"
+    subtitle: "Smart solutions powered by AI and deep learning."
+    description: >
+      We integrate AI capabilities such as computer vision, NLP, predictive analytics,
+      and chatbot automation tailored to your business workflow.
+
+    process:
+      - "Data collection & preprocessing"
+      - "AI model selection"
+      - "Training & evaluation"
+      - "API development"
+      - "Integration with existing systems"
+      - "Testing & validation"
+      - "Deployment"
+      - "Monitoring & retraining"
+
+    deliverables:
+      - "AI model"
+      - "Prediction APIs"
+      - "Monitoring dashboard"
+      - "Dataset structuring"
+      - "Complete documentation"
+
+    tech_stack:
+      - "Python"
+      - "TensorFlow / PyTorch"
+      - "OpenAI APIs"
+      - "FastAPI / Node.js"
+      - "AWS Sagemaker"
+
+    benefits:
+      - "Automates complex tasks"
+      - "Provides business insights"
+      - "Improves decision-making"
+
+    ideal_for:
+      - "Enterprises"
+      - "Healthcare systems"
+      - "E-commerce"
+      - "FinTech"
+
+    seo:
+      keywords: "ai ml services, machine learning company"
+      meta_description: "AI/ML integration with predictive analytics, NLP, and business intelligence systems."
+

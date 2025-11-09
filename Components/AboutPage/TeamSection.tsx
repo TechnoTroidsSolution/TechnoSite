@@ -40,7 +40,7 @@ export default function TeamSection() {
               Leadership Team
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             Meet the Minds Behind the Magic
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
