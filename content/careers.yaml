@@ -1,0 +1,326 @@
+careers:
+  hero:
+    title: "Join Our Team"
+    subtitle: "Build the future with us. We're looking for talented individuals who are passionate about technology and innovation."
+    cta_text: "Explore Opportunities"
+
+  stats:
+    - label: "Open Positions"
+      value: "12+"
+    - label: "Team Members"
+      value: "50+"
+    - label: "Countries"
+      value: "15+"
+    - label: "Growth Rate"
+      value: "200%"
+
+  benefits:
+    - title: "Competitive Salary"
+      description: "Industry-leading compensation packages with performance bonuses and equity options."
+      icon: "💰"
+    - title: "Remote First"
+      description: "Work from anywhere in the world. We believe in flexibility and work-life balance."
+      icon: "🌍"
+    - title: "Learning Budget"
+      description: "$2000 annual budget for courses, conferences, and professional development."
+      icon: "📚"
+    - title: "Health & Wellness"
+      description: "Comprehensive health insurance, mental health support, and gym memberships."
+      icon: "❤️"
+    - title: "Flexible Hours"
+      description: "Set your own schedule. We care about results, not when you're online."
+      icon: "⏰"
+    - title: "Team Events"
+      description: "Regular team building activities, hackathons, and annual company retreats."
+      icon: "🎉"
+
+  jobs:
+    - id: "senior-full-stack-developer"
+      title: "Senior Full Stack Developer"
+      department: "Engineering"
+      location: "Remote"
+      type: "Full-time"
+      experience: "5+ years"
+      salary: "$120k - $160k"
+      posted_date: "2025-01-15"
+      description: "We're looking for an experienced Full Stack Developer to join our engineering team and help build scalable web applications."
+      
+      responsibilities:
+        - "Design and develop robust, scalable web applications using modern technologies"
+        - "Collaborate with cross-functional teams to define and implement new features"
+        - "Write clean, maintainable code with comprehensive test coverage"
+        - "Mentor junior developers and conduct code reviews"
+        - "Optimize application performance and ensure security best practices"
+        - "Participate in technical discussions and architectural decisions"
+      
+      requirements:
+        - "5+ years of experience in full-stack web development"
+        - "Strong proficiency in React, Node.js, and TypeScript"
+        - "Experience with Next.js, Express, and modern web frameworks"
+        - "Solid understanding of RESTful APIs and microservices architecture"
+        - "Experience with SQL and NoSQL databases (PostgreSQL, MongoDB)"
+        - "Familiarity with cloud platforms (AWS, Azure, or GCP)"
+        - "Strong problem-solving skills and attention to detail"
+        - "Excellent communication and collaboration abilities"
+      
+      nice_to_have:
+        - "Experience with GraphQL and Apollo"
+        - "Knowledge of Docker and Kubernetes"
+        - "Contributions to open-source projects"
+        - "Experience with CI/CD pipelines"
+        - "Understanding of system design and scalability patterns"
+      
+      key_skills:
+        - "React"
+        - "Node.js"
+        - "TypeScript"
+        - "Next.js"
+        - "PostgreSQL"
+        - "AWS"
+        - "Docker"
+        - "REST APIs"
+
+    - id: "devops-engineer"
+      title: "DevOps Engineer"
+      department: "Engineering"
+      location: "Remote"
+      type: "Full-time"
+      experience: "4+ years"
+      salary: "$110k - $150k"
+      posted_date: "2025-01-10"
+      description: "Join our infrastructure team to build and maintain scalable, reliable cloud infrastructure and deployment pipelines."
+      
+      responsibilities:
+        - "Design and implement CI/CD pipelines for automated testing and deployment"
+        - "Manage and optimize cloud infrastructure on AWS/Azure/GCP"
+        - "Implement monitoring, logging, and alerting solutions"
+        - "Automate infrastructure provisioning using IaC tools"
+        - "Ensure system security, reliability, and performance"
+        - "Collaborate with development teams to improve deployment processes"
+        - "Troubleshoot production issues and implement solutions"
+      
+      requirements:
+        - "4+ years of experience in DevOps or Site Reliability Engineering"
+        - "Strong experience with AWS, Azure, or Google Cloud Platform"
+        - "Proficiency in Docker, Kubernetes, and container orchestration"
+        - "Experience with Infrastructure as Code (Terraform, CloudFormation)"
+        - "Strong scripting skills (Python, Bash, or Go)"
+        - "Knowledge of CI/CD tools (Jenkins, GitLab CI, GitHub Actions)"
+        - "Understanding of networking, security, and system administration"
+        - "Experience with monitoring tools (Prometheus, Grafana, ELK stack)"
+      
+      nice_to_have:
+        - "Kubernetes certification (CKA/CKAD)"
+        - "Experience with service mesh (Istio, Linkerd)"
+        - "Knowledge of GitOps practices (ArgoCD, Flux)"
+        - "Experience with multi-cloud deployments"
+        - "Understanding of FinOps and cost optimization"
+      
+      key_skills:
+        - "AWS"
+        - "Kubernetes"
+        - "Docker"
+        - "Terraform"
+        - "Python"
+        - "CI/CD"
+        - "Monitoring"
+        - "Linux"
+
+    - id: "ui-ux-designer"
+      title: "UI/UX Designer"
+      department: "Design"
+      location: "Remote"
+      type: "Full-time"
+      experience: "3+ years"
+      salary: "$90k - $130k"
+      posted_date: "2025-01-12"
+      description: "We're seeking a creative UI/UX Designer to craft beautiful, intuitive user experiences for our products."
+      
+      responsibilities:
+        - "Design user interfaces for web and mobile applications"
+        - "Create wireframes, prototypes, and high-fidelity mockups"
+        - "Conduct user research and usability testing"
+        - "Develop and maintain design systems and component libraries"
+        - "Collaborate with developers to ensure design implementation quality"
+        - "Present design concepts and iterate based on feedback"
+        - "Stay updated with latest design trends and best practices"
+      
+      requirements:
+        - "3+ years of experience in UI/UX design"
+        - "Strong portfolio showcasing web and mobile design work"
+        - "Proficiency in Figma, Sketch, or Adobe XD"
+        - "Understanding of user-centered design principles"
+        - "Experience with design systems and component libraries"
+        - "Knowledge of HTML/CSS and responsive design principles"
+        - "Strong communication and presentation skills"
+        - "Ability to work in an agile development environment"
+      
+      nice_to_have:
+        - "Motion design and animation skills"
+        - "Experience with design tokens and automated design systems"
+        - "Knowledge of accessibility standards (WCAG)"
+        - "Illustration or icon design capabilities"
+        - "Experience with user research methodologies"
+      
+      key_skills:
+        - "Figma"
+        - "UI Design"
+        - "UX Research"
+        - "Prototyping"
+        - "Design Systems"
+        - "User Testing"
+        - "Wireframing"
+        - "Responsive Design"
+
+    - id: "product-manager"
+      title: "Product Manager"
+      department: "Product"
+      location: "Remote"
+      type: "Full-time"
+      experience: "5+ years"
+      salary: "$130k - $170k"
+      posted_date: "2025-01-08"
+      description: "Lead product strategy and execution for our core products, working closely with engineering and design teams."
+      
+      responsibilities:
+        - "Define product vision, strategy, and roadmap"
+        - "Gather and prioritize product requirements from stakeholders"
+        - "Work with engineering and design to deliver features"
+        - "Analyze product metrics and user feedback for improvements"
+        - "Conduct market research and competitive analysis"
+        - "Create product specifications and user stories"
+        - "Coordinate product launches and go-to-market strategies"
+        - "Communicate product updates to stakeholders"
+      
+      requirements:
+        - "5+ years of product management experience in B2B SaaS"
+        - "Strong analytical and problem-solving skills"
+        - "Experience with agile development methodologies"
+        - "Proven track record of launching successful products"
+        - "Excellent stakeholder management and communication skills"
+        - "Data-driven decision making approach"
+        - "Understanding of technical concepts and architecture"
+        - "Experience with product analytics tools (Mixpanel, Amplitude)"
+      
+      nice_to_have:
+        - "Technical background or CS degree"
+        - "Experience with AI/ML products"
+        - "MBA or relevant certification"
+        - "Experience in enterprise software"
+        - "Product management certification"
+      
+      key_skills:
+        - "Product Strategy"
+        - "Roadmap Planning"
+        - "Agile"
+        - "Data Analysis"
+        - "Stakeholder Management"
+        - "User Research"
+        - "A/B Testing"
+        - "Go-to-Market"
+
+    - id: "data-scientist"
+      title: "Data Scientist"
+      department: "Data"
+      location: "Remote"
+      type: "Full-time"
+      experience: "3+ years"
+      salary: "$100k - $140k"
+      posted_date: "2025-01-14"
+      description: "Join our data team to build ML models and data pipelines that drive business insights and product decisions."
+      
+      responsibilities:
+        - "Design and implement machine learning models for various use cases"
+        - "Build data pipelines for processing and analyzing large datasets"
+        - "Conduct exploratory data analysis and statistical modeling"
+        - "Collaborate with product teams to integrate ML solutions"
+        - "Develop A/B testing frameworks and analyze experiment results"
+        - "Create dashboards and visualizations for business insights"
+        - "Document methodologies and maintain model performance"
+      
+      requirements:
+        - "3+ years of experience in data science or machine learning"
+        - "Strong proficiency in Python and ML libraries (scikit-learn, TensorFlow, PyTorch)"
+        - "Experience with SQL and data warehousing solutions"
+        - "Knowledge of statistics, probability, and experimental design"
+        - "Experience with big data technologies (Spark, Hadoop)"
+        - "Strong analytical and problem-solving skills"
+        - "Ability to communicate complex findings to non-technical audiences"
+        - "Bachelor's or Master's degree in Computer Science, Statistics, or related field"
+      
+      nice_to_have:
+        - "PhD in related field"
+        - "Experience with deep learning and NLP"
+        - "Knowledge of MLOps and model deployment"
+        - "Experience with cloud ML platforms (AWS SageMaker, Azure ML)"
+        - "Contributions to data science community or research publications"
+      
+      key_skills:
+        - "Python"
+        - "Machine Learning"
+        - "SQL"
+        - "TensorFlow"
+        - "Data Analysis"
+        - "Statistics"
+        - "Spark"
+        - "A/B Testing"
+
+    - id: "customer-success-manager"
+      title: "Customer Success Manager"
+      department: "Customer Success"
+      location: "Remote"
+      type: "Full-time"
+      experience: "3+ years"
+      salary: "$80k - $110k"
+      posted_date: "2025-01-11"
+      description: "Help our customers achieve their goals and drive product adoption as a trusted advisor and advocate."
+      
+      responsibilities:
+        - "Onboard new customers and ensure successful product adoption"
+        - "Build and maintain strong relationships with key stakeholders"
+        - "Conduct regular business reviews and strategic planning sessions"
+        - "Identify upsell and expansion opportunities"
+        - "Advocate for customer needs internally and drive product improvements"
+        - "Monitor customer health metrics and proactively address risks"
+        - "Create and deliver training materials and documentation"
+        - "Collaborate with sales, product, and support teams"
+      
+      requirements:
+        - "3+ years of experience in customer success or account management"
+        - "Experience with B2B SaaS products"
+        - "Strong relationship-building and communication skills"
+        - "Proven track record of improving customer retention and satisfaction"
+        - "Ability to understand technical products and explain to non-technical users"
+        - "Experience with CRM and customer success platforms (Salesforce, Gainsight)"
+        - "Data-driven approach to measuring success"
+        - "Bachelor's degree in Business or related field"
+      
+      nice_to_have:
+        - "Technical background or ability to understand APIs"
+        - "Experience in the software development industry"
+        - "Customer Success Manager certification"
+        - "Experience managing enterprise accounts"
+        - "Knowledge of change management principles"
+      
+      key_skills:
+        - "Customer Success"
+        - "Account Management"
+        - "Relationship Building"
+        - "Training"
+        - "CRM"
+        - "Data Analysis"
+        - "Communication"
+        - "Problem Solving"
+
+  departments:
+    - "All"
+    - "Engineering"
+    - "Design"
+    - "Product"
+    - "Data"
+    - "Customer Success"
+
+  cta:
+    title: "Don't see the right role?"
+    description: "We're always looking for talented people. Send us your resume and we'll keep you in mind for future opportunities."
+    email: "careers@technosoft.com"

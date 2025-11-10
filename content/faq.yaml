@@ -1,0 +1,73 @@
+faq:
+  section_title: "Questions Answered"
+  section_subtitle: "Everything you need to know before we start working together."
+
+  questions:
+    - category: "Getting Started"
+      items:
+        - q: "How do we begin?"
+          a: "Reach out with your project idea—even if it's not fully formed yet. We'll schedule a call within 24-48 hours to understand your needs deeply. No sales pitch, just genuine conversation about what you're trying to achieve. After that, we'll craft a detailed proposal specifically for your situation—usually within 3-5 days."
+
+        - q: "What do you need from us to provide an accurate proposal?"
+          a: "Honesty more than details. Tell us what problem you're solving and why it matters to your business. Describe your users and their pain points. Share your constraints—timeline, budget realities, technical environment. The more transparent you are with us, the more useful our proposal will be to you."
+
+        - q: "Will you sign an NDA?"
+          a: "Absolutely. We'll sign yours or provide ours before any detailed discussions. Your intellectual property and competitive insights are safe with us."
+
+    - category: "Our Capabilities"
+      items:
+        - q: "What makes your technical approach different?"
+          a: "We choose technology based on what will serve your business five years from now, not what's trending today. We use React, Next.js, React Native, Node.js, Python, and PostgreSQL because they're proven, actively maintained, and have massive communities. We add advanced capabilities like AI when they create measurable value—not to pad the feature list."
+
+        - q: "Can you integrate with our existing systems?"
+          a: "Most likely yes. We've integrated with everything from modern SaaS platforms to legacy enterprise systems. We'll assess your current infrastructure during discovery and be completely honest about what's feasible, what's advisable, and what might need reimagining."
+
+        - q: "Do you take on projects in our specific industry?"
+          a: "We work across industries, but we don't pretend to know your business better than you do. What we bring is deep technical expertise combined with the ability to learn your domain quickly. We'll be transparent if we think another firm with vertical specialization would serve you better."
+
+    - category: "Timeline & Process"
+      items:
+        - q: "How long will our project take?"
+          a: "Honest answer: it depends on scope and complexity. Simple projects might take 3-4 weeks. Complex platforms can take 4-6 months. We'll give you a specific, realistic timeline in our proposal—one we're confident we can meet. We'd rather underpromise and overdeliver than the reverse."
+
+        - q: "Can you expedite our timeline?"
+          a: "Speed and quality have a complex relationship. We can optimize timelines through smart prioritization and parallel workstreams—but we won't compromise quality to hit an arbitrary date. If your timeline is driven by a real business deadline, tell us. We'll be honest about what's achievable."
+
+        - q: "How will we stay informed during development?"
+          a: "Weekly demos of working software. Daily progress updates via your preferred channel. Instant access to the development team for questions. You'll have complete visibility—not because we're trying to impress you, but because transparency prevents surprises."
+
+    - category: "Working Together"
+      items:
+        - q: "Who will we actually work with?"
+          a: "The people building your software. No account managers buffering communication. No junior developers learning on your dime while seniors review occasionally. You get direct access to the architects and engineers making decisions about your product."
+
+        - q: "What if we need changes mid-project?"
+          a: "Change is inevitable in software development. We handle minor adjustments within sprint planning. Larger scope changes get assessed honestly—timeline impact, cost implications, and whether they're truly necessary. We'll never nickel-and-dime you on small iterations, but we'll be clear when something is genuinely new scope."
+
+        - q: "How do you handle disagreements or concerns?"
+          a: "We address them immediately and directly. If you're concerned about something, we want to know right away. If we think you're heading in the wrong direction, we'll tell you respectfully but clearly. The best client relationships are built on mutual respect and honest communication."
+
+    - category: "Investment & Value"
+      items:
+        - q: "How is the project investment determined?"
+          a: "We estimate based on complexity, required expertise, and realistic time requirements. You'll receive a complete breakdown—not a mysterious black-box number. We explain what drives cost and where flexibility exists. Our goal is to help you make an informed decision, not to maximize our fee."
+
+        - q: "How does payment work?"
+          a: "Structured around milestones tied to working software. You pay for completed, verified deliverables—not promises. Typical structure starts with a project initiation payment, then milestone-based payments as features are completed and approved. Details are clearly specified in every proposal."
+
+        - q: "What's included in the investment?"
+          a: "Everything required to deliver working software: discovery, design, development, testing, deployment, and documentation. Third-party costs (cloud infrastructure, payment processing, app stores) are clearly itemized separately. No hidden fees. No surprise charges."
+
+        - q: "How do we know we're getting value?"
+          a: "You see working software at every stage. You can measure progress against clear milestones. You own all code and documentation—so even if you decided to continue with someone else, you'd have real assets. Plus, our work either improves your business metrics or we haven't succeeded."
+
+    - category: "After Launch"
+      items:
+        - q: "What happens after launch?"
+          a: "We provide 30 days of priority support—bug fixes, performance tuning, and stabilization at no additional cost. After that, you can engage us for ongoing maintenance, feature development, or strategic guidance. Or take it in-house. You own everything we build, so you're never locked in."
+
+        - q: "Who owns the code and intellectual property?"
+          a: "You do. Completely and absolutely. All code, designs, documentation, and intellectual property created for your project belongs to you. We retain no rights, no licensing agreements, no strings attached. You're free to modify it, extend it, or hire anyone else to work on it."
+
+        - q: "Will you be available for future enhancements?"
+          a: "We'd welcome the opportunity. We prioritize existing clients for ongoing work because we already understand your system and your business. But we're also realistic—sometimes you'll need capabilities we don't offer, or you'll want to bring development in-house. We'll support whatever path makes sense for you."

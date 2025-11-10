@@ -1,0 +1,26 @@
+about:
+  section_title: "Our Philosophy"
+  section_subtitle: "How we think about software, clients, and doing work that matters."
+
+  core_belief:
+    headline: "Software Should Serve, Not Complicate"
+    text: "Too much software is built to impress other developers or check boxes on a feature matrix. We build software that serves real people solving real problems. If it doesn't make someone's work easier, their business more profitable, or their life better—we question why we're building it."
+
+  principles:
+    - title: "Client Success Over Project Completion"
+      description: "Launching on time means nothing if the software doesn't achieve your business objectives. We measure success by whether your investment generated returns—more revenue, lower costs, happier customers, competitive advantage. The code is a means, not the end."
+
+    - title: "Honesty Over Agreement"
+      description: "We're not here to tell you what you want to hear. If your idea has flaws, we'll point them out—constructively. If a simpler solution exists, we'll recommend it even if it means less revenue for us. Trust is built on truth, not on pleasantness."
+
+    - title: "Craftsmanship Over Convenience"
+      description: "There's always a faster way to build something. Usually, it involves cutting corners, accumulating technical debt, or shipping something that barely works. We choose the path that results in software you can build on for years—even if it takes a bit longer."
+
+    - title: "Clarity Over Jargon"
+      description: "Technology is complex enough without drowning you in acronyms and buzzwords. We explain things in plain language. If we can't make a technical decision understandable to you, we probably haven't thought it through clearly enough ourselves."
+
+    - title: "Partnership Over Transactions"
+      description: "The best client relationships outlast individual projects. We're not trying to maximize profit per engagement—we're trying to become your trusted technology partner for years. That means doing right by you even when it costs us short-term."
+
+  commitment:
+    text: "We believe the software industry can do better. Better communication. Better transparency. Better alignment with client success. We're committed to being the firm we wish existed when we needed one."

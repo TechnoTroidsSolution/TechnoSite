@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "authorName": "Emma Rodriguez",
+    "authorTitle": "Founder",
+    "company": "GreenTech Solutions",
+    "avatarSrc": "https://randomuser.me/api/portraits/women/68.jpg",
+    "quote": "Outstanding communication, exceptional quality, and delivered ahead of schedule. DevStudio doesn't just build software, they build lasting partnerships.",
+    "project": "Mobile App Development",
+    "results": "4.9⭐ App Store rating",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "authorName": "John Doe",
+    "authorTitle": "CEO",
+    "company": "Innovate Corp",
+    "avatarSrc": "https://randomuser.me/api/portraits/men/32.jpg",
+    "quote": "Their team took our complex ideas and turned them into a user-friendly, robust platform. Truly impressed with their technical expertise and dedication.",
+    "project": "Enterprise SaaS Platform",
+    "results": "20% increase in user engagement",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "authorName": "Maria Garcia",
+    "authorTitle": "Product Manager",
+    "company": "DataFlow Analytics",
+    "avatarSrc": "https://randomuser.me/api/portraits/women/45.jpg",
+    "quote": "DevStudio delivered a flawless data visualization tool that exceeded our expectations. Their agile approach made the entire process smooth and efficient.",
+    "project": "Data Dashboard for Web",
+    "results": "Improved data analysis time by 30%",
+    "featured": false
+  }
+]

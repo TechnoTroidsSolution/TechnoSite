@@ -1,0 +1,94 @@
+trust_elements:
+  guarantees:
+    - text: "Milestone-based delivery"
+      detail: "Clear checkpoints with working software"
+
+    - text: "Complete ownership transfer"
+      detail: "All code and IP belongs to you"
+
+    - text: "30-day launch support"
+      detail: "We stand behind our work"
+
+    - text: "NDA protection"
+      detail: "Your ideas stay confidential"
+
+  proof_points:
+    - text: "Years of production experience"
+      detail: "Building systems that handle real users and real stakes"
+
+    - text: "Direct team access"
+      detail: "Talk to the people building your software"
+
+    - text: "Modern technology stack"
+      detail: "Tools that won't become obsolete tomorrow"
+
+    - text: "Quality-first mindset"
+      detail: "We don't ship until it's right"
+
+seo:
+  homepage:
+    title: "TechnoTroids - Software Development That Delivers Results | Web & Mobile"
+    description: "Custom software development focused on your success. Enterprise-grade web applications, mobile apps, and SaaS platforms built by a team that treats your project like it's our own."
+    keywords: "custom software development, web application development, mobile app development, SaaS platform, React Native, enterprise software, digital transformation, India"
+
+  value_proposition: "We build software that works as hard as you do—delivered on time, engineered for scale, and designed to give you competitive advantage."
+
+  services_page:
+    title: "Software Development Services - Web, Mobile, SaaS, APIs | TechnoTroids"
+    description: "Enterprise-grade software solutions including custom web applications, mobile apps, SaaS platforms, process automation, and API development. Built to scale."
+    keywords: "web development, mobile app development, SaaS development, API development, process automation, enterprise software"
+
+  about_page:
+    title: "Our Approach to Software Development | TechnoTroids"
+    description: "Quality-first software development with direct team communication, transparent processes, and a commitment to your success over project completion."
+    keywords: "software development philosophy, client-focused development, quality software, transparent development"
+
+  contact_page:
+    title: "Start Your Software Project Today | Contact TechnoTroids"
+    description: "Get a detailed proposal for your custom software project. Direct access to our development team. Response within 24 hours."
+    keywords: "software development inquiry, custom software quote, project proposal"
+
+social:
+  og_image: "/images/technotroids-og-image.jpg"
+  og_image_alt: "TechnoTroids - Where Technology Meets Purpose"
+  twitter_card: "summary_large_image"
+  twitter_handle: "@technotroids"
+
+structured_data:
+  organization:
+    type: "Organization"
+    name: "TechnoTroids"
+    url: "https://technotroids.com"
+    logo: "https://technotroids.com/logo.png"
+    description: "Custom software development company specializing in web applications, mobile apps, and SaaS platforms"
+    address:
+      country: "India"
+    contact_point:
+      type: "ContactPoint"
+      email: "hello@technotroids.com"
+      contact_type: "Customer Service"
+
+  services_offered:
+    - "Web Application Development"
+    - "Mobile Application Development"
+    - "SaaS Platform Development"
+    - "API Development"
+    - "Process Automation"
+    - "UI/UX Design"
+
+analytics:
+  google_analytics_id: "G-XXXXXXXXXX"
+  google_tag_manager_id: "GTM-XXXXXXX"
+  facebook_pixel_id: "XXXXXXXXXXXXXXX"
+
+technical_seo:
+  canonical_url: "https://technotroids.com"
+  robots: "index, follow"
+  sitemap_url: "https://technotroids.com/sitemap.xml"
+  language: "en"
+  geo_region: "IN"
+
+content_freshness:
+  last_updated: "2024-11-01"
+  update_frequency: "monthly"
+  version: "1.0"
