@@ -180,18 +180,27 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="max-w-md mx-auto lg:mx-0">
             <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+
             <p className="text-gray-400 text-sm mb-4">
               Subscribe to our newsletter for the latest tech insights and updates.
             </p>
-            <form className="flex gap-2">
+
+            {/* Responsive Form */}
+            <form className="flex flex-col sm:flex-row gap-3 sm:gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg 
+                          text-white placeholder-gray-400 focus:outline-none 
+                          focus:ring-2 focus:ring-teal-500 focus:border-transparent
+                          text-sm"
               />
+
               <button
                 type="submit"
-                className="px-6 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg font-medium transition-colors duration-200 whitespace-nowrap"
+                className="px-6 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg 
+                          font-medium transition-colors duration-200 whitespace-nowrap 
+                          text-sm sm:text-base"
               >
                 Subscribe
               </button>
