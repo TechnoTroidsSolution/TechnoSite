@@ -6,24 +6,24 @@ import Link from "next/link";
 import CompanyStatsSection from "@/Components/HomePage/stats/CompanyStatsSection";
 import { TestimonialsSection } from "@/Components/HomePage/Testimonials/TestimonialsSection";
 import Services from "@/Components/HomePage/services/Services";
+import WhyChooseUs from "@/Components/HomePage/WhyChooseUs";
+
+import AiAutomationSection from "@/Components/HomePage/AiAutomationSection";
 export default function Home() {
   return (
     <div className="bg-gray-50">
-      <div className="min-h-screen bg-white text-gray-800 p-8 lg:p-16">
-        <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left Column */}
+      <div className="bg-gray-50 text-gray-900 py-16">
+        <main className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <IntroSection />
-          {/* Right Column */}
-          {/* <ServicesSection />
-           */}
           <ServicesSection />
         </main>
       </div>
-      <section className="bg-linear-to-br from-teal-400 to-teal-500 text-white py-20">
+
+      {/* <section className="bg-linear-to-br bg-white text-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Transform Your Business with
-            <span className="block text-yellow-300">Innovative Technology</span>
+            <span className="block text-black">Innovative Technology</span>
           </h1>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto">
             We build cutting-edge solutions that drive growth, enhance
@@ -32,22 +32,26 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-teal-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-200 shadow-lg hover:shadow-xl"
+              className="bg-black text-white hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-200 shadow-lg hover:shadow-xl"
             >
               Get Started Today
             </Link>
             <Link
               href="/services"
-              className="border-2 border-white text-white hover:bg-white hover:text-teal-600 font-semibold py-3 px-8 rounded-lg transition duration-200"
+              className="border-2 border-black text-black hover:bg-white hover:text-teal-600 font-semibold py-3 px-8 rounded-lg transition duration-200"
             >
               Explore Services
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
+      <Services />
+      <AiAutomationSection />
+
+      <WhyChooseUs />
+
       <CompanyStatsSection />
 
-      <Services />
       <TestimonialsSection />
 
       {/* Hero Section */}

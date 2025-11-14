@@ -11,7 +11,7 @@ type TestimonialCardProps = {
 export const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   return (
     // Card container
-    <div className="relative w-full max-w-4xl rounded-2xl bg-white p-8 shadow-xl md:p-12">
+    <div className="relative w-full max-w-4xl rounded-2xl bg-white p-1 shadow-xl md:p-12">
       {/* Quotation Mark Icon */}
       <div className="absolute left-8 top-8 flex h-10 w-10 items-center justify-center rounded-full bg-teal-100 text-2xl font-bold text-teal-500 md:left-12 md:top-12">
         “
