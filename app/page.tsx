@@ -1,3 +1,4 @@
+"use client";
 import IntroSection from "@/Components/HomePage/IntroSection";
 import ServicesSection from "@/Components/HomePage/ServicesSection";
 
@@ -7,6 +8,7 @@ import CompanyStatsSection from "@/Components/HomePage/stats/CompanyStatsSection
 import { TestimonialsSection } from "@/Components/HomePage/Testimonials/TestimonialsSection";
 import Services from "@/Components/HomePage/services/Services";
 import WhyChooseUs from "@/Components/HomePage/WhyChooseUs";
+import { motion } from "framer-motion";
 
 import AiAutomationSection from "@/Components/HomePage/AiAutomationSection";
 export default function Home() {
@@ -14,8 +16,22 @@ export default function Home() {
     <div className="bg-gray-50">
       <div className="bg-gray-50 text-gray-900 py-16">
         <main className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <IntroSection />
-          <ServicesSection />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <IntroSection />
+          </motion.div>
+
+          {/* SERVICES SECTION ANIMATION (slight delay) */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >
+            <ServicesSection />
+          </motion.div>
         </main>
       </div>
 
