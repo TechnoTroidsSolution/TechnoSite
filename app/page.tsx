@@ -9,31 +9,17 @@ import { TestimonialsSection } from "@/Components/HomePage/Testimonials/Testimon
 import Services from "@/Components/HomePage/services/Services";
 import WhyChooseUs from "@/Components/HomePage/WhyChooseUs";
 import { motion } from "framer-motion";
+import Faqs from "@/Components/HomePage/Faq/Faqs";
 
 import AiAutomationSection from "@/Components/HomePage/AiAutomationSection";
+import MonochromeCta from "@/Components/HomePage/CTA/MonochromeCta";
+import FeatureHighlightSection from "@/Components/HomePage/FeatureHighlightSection";
 export default function Home() {
   return (
     <div className="bg-gray-50">
-      <div className="bg-gray-50 text-gray-900 py-16">
-        <main className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <IntroSection />
-          </motion.div>
+      <IntroSection />
 
-          {/* SERVICES SECTION ANIMATION (slight delay) */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          >
-            <ServicesSection />
-          </motion.div>
-        </main>
-      </div>
+      <AiAutomationSection />
 
       {/* <section className="bg-linear-to-br bg-white text-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -62,36 +48,19 @@ export default function Home() {
         </div>
       </section> */}
       <Services />
-      <AiAutomationSection />
 
       <WhyChooseUs />
+      {/* <FeatureHighlightSection /> */}
 
       <CompanyStatsSection />
 
       <TestimonialsSection />
+      <Faqs />
+      <MonochromeCta />
 
       {/* Hero Section */}
 
       {/* Services Overview */}
-
-      {/* CTA Section */}
-      <section className="py-16 bg-linear-to-r from-teal-600 to-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how we can help transform your business with the
-            right technology solutions.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-white text-teal-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-200 shadow-lg hover:shadow-xl inline-block"
-          >
-            Contact Us Today
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

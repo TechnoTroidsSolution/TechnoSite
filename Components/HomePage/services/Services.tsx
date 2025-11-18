@@ -83,7 +83,7 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
@@ -103,6 +103,7 @@ export default function Services() {
               key={i}
               custom={i}
               variants={cardVariants}
+              viewport={{ once: false, amount: 0.3 }}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -133,7 +134,7 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.4 }}
           className="text-center mt-14"
         >

@@ -4,17 +4,17 @@ import {
   HiOutlineCloud,
   HiOutlineCog,
 } from "react-icons/hi";
-import { FaArrowRight } from "react-icons/fa";
-import ServiceItem from "./ServiceItem";
+import ServiceItem from "./ServiceItem"; // Assumes the updated ServiceItem above
 import Link from "next/link";
-export default function ServicesSection() {
+
+export default function ServicesContent() {
   return (
-    <div className="flex flex-col justify-center mt-10 lg:mt-0">
-      <h2 className="text-sm font-semibold tracking-widest text-blue-600 uppercase mb-6">
-        What We Offer
+    <div className="flex flex-col justify-center">
+      <h2 className="text-sm font-bold tracking-widest text-gray-800 uppercase mb-8">
+        Core Competencies
       </h2>
 
-      <div className="space-y-10">
+      <div className="space-y-8">
         <ServiceItem
           icon={HiOutlineDesktopComputer}
           title="Web Application Development"
@@ -42,9 +42,22 @@ export default function ServicesSection() {
 
       <Link
         href="/services"
-        className="mt-10 font-medium text-blue-600 underline underline-offset-4 hover:text-blue-800 transition"
+        className="mt-10 font-medium text-gray-800 hover:text-black transition flex items-center space-x-2"
       >
-        Explore all services →
+        <span>Explore all services</span>
+        <svg
+          className="w-4 h-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+          />
+        </svg>
       </Link>
     </div>
   );
