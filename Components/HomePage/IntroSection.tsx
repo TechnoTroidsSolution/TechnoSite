@@ -34,7 +34,7 @@ export default function IntroSection() {
 
         {/* Fallback placeholder if you don't have the image */}
         {/* <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-          <span className="text-gray-500">Illustration Placeholder</span>
+          <span className="text-slate-500">Illustration Placeholder</span>
         </div> 
         */}
       </div>

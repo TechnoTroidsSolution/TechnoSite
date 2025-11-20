@@ -1,4 +1,5 @@
-import { Landmark, Link } from "lucide-react"; // Used as a placeholder for the temple illustration
+import Image from "next/image";
+import Link from "next/link";
 
 const StatItem = ({ value, label }: { value: string; label: string }) => (
   <div>
@@ -9,19 +10,9 @@ const StatItem = ({ value, label }: { value: string; label: string }) => (
 
 export default function CompanyStatsSection() {
   return (
-    <main className="relative min-h-screen w-full bg-white text-gray-800 overflow-hidden">
-      {/* Background Illustration (Desktop only)
-        This 'Landmark' icon is a placeholder. 
-        For the best result, replace it with your own SVG illustration.
-      */}
-      <div className="absolute bottom-0 right-0 hidden lg:block opacity-10 pointer-events-none">
-        <Landmark size={600} strokeWidth={0.5} />
-      </div>
-
-      {/* Content Section */}
-      <div className="relative z-10 container mx-auto px-8 py-20 lg:py-32 flex flex-col justify-center min-h-screen">
-        {/* Constrain the content width */}
-        <div className="max-w-2xl">
+    <main className="w-full bg-white text-gray-800">
+      <div className="container mx-auto px-8 py-20 lg:py-32 flex flex-col-reverse lg:flex-row items-center lg:items-start gap-16">
+        <div className="max-w-2xl w-full">
           {/* Headings */}
           <h1 className="text-5xl lg:text-7xl font-bold">Made in India.</h1>
           <h2 className="text-5xl lg:text-7xl font-bold mb-16">
@@ -40,15 +31,26 @@ export default function CompanyStatsSection() {
           </div>
 
           {/* Button */}
-          <a
-            href="#"
-            className="inline-block px-8 py-3 border border-gray-800 rounded-md text-lg font-semibold
+          <Link
+            href="/about"
+            className="inline-flex items-center px-8 py-3 border border-gray-800 rounded-md text-lg font-semibold
                        hover:bg-gray-800 hover:text-white transition-colors
                        focus:outline-none focus:ring-2 focus:ring-gray-800"
           >
             MORE ABOUT US &gt;
-          </a>
+          </Link>
         </div>
+
+          <div className="w-full max-w-xl lg:max-w-2xl animate-float-slow">
+            <Image
+              src="/Images/homepage/india.png"
+              alt="Stylized illustration representing India"
+              width={720}
+              height={720}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
       </div>
     </main>
   );

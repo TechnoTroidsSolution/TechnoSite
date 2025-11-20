@@ -55,10 +55,10 @@ export const TestimonialsSection = () => {
           Client Success Stories
         </span>
       </div>
-      <h2 className="mt-6 text-center text-4xl font-bold text-gray-900 md:text-5xl">
+      <h2 className="mt-6 text-center text-4xl font-bold text-slate-900 md:text-5xl">
         What Our Clients Say
       </h2>
-      <p className="mt-4 max-w-xl text-center text-lg text-gray-600">
+      <p className="mt-4 max-w-xl text-center text-lg text-slate-600">
         Don&apos;t just take our word for it. Here&apos;s what industry leaders
         say about working with DevStudio.
       </p>

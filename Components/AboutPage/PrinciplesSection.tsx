@@ -36,19 +36,19 @@ export default function PrinciplesSection({ principles }: PrinciplesSectionProps
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-20 md:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <div className="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">
               Our Guiding Principles
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             What Drives Us Forward
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             These principles shape every decision we make and guide how we work with our clients
           </p>
         </div>
@@ -57,20 +57,20 @@ export default function PrinciplesSection({ principles }: PrinciplesSectionProps
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {principles.map((principle, index) => (
             <div 
-              key={index}
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200"
+              key={principle.title}
+              className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-border/60"
             >
               {/* Icon */}
-              <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-5 text-teal-600">
+              <div className="w-14 h-14 bg-primary/20 rounded-lg flex items-center justify-center mb-5 text-primary">
                 {icons[index % icons.length]}
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-foreground mb-3">
                 {principle.title}
               </h3>
               
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-foreground/80 leading-relaxed text-sm">
                 {principle.description}
               </p>
             </div>
