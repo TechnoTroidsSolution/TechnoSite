@@ -43,43 +43,43 @@ export default function ValuesSection() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-gray-50">
+    <section className="py-20 md:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <div className="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">
               Core Values
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Built on Strong Foundations
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             Our values aren&apos;t just words on a wall—they&apos;re lived every day in every interaction
           </p>
         </div>
 
         {/* Values Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {values.map((value, index) => (
+          {values.map((value) => (
             <div 
-              key={index}
-              className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200"
+              key={value.title}
+              className="bg-card rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-border/60"
             >
               {/* Icon with solid background */}
               <div className="mb-6">
-                <div className="w-16 h-16 bg-teal-500 rounded-lg flex items-center justify-center text-white">
+                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center text-primary-foreground">
                   {value.icon}
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              <h3 className="text-2xl font-bold text-foreground mb-3">
                 {value.title}
               </h3>
               
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-foreground/80 leading-relaxed">
                 {value.description}
               </p>
             </div>

@@ -38,7 +38,7 @@ export default function AboutPage({ data }: AboutPageProps) {
   const { about } = data;
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <HeroSection 
         title={about.section_title}

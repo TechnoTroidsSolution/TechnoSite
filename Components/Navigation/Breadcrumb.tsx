@@ -51,7 +51,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = '' }) => {
 
   return (
     <nav 
-      className={`bg-gray-50 border-b border-gray-200 ${className}`} 
+      className={`bg-slate-50 border-b border-gray-200 ${className}`} 
       aria-label="Breadcrumb"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -76,12 +76,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = '' }) => {
               {item.href ? (
                 <Link
                   href={item.href}
-                  className="text-gray-600 hover:text-teal-600 transition-colors duration-200"
+                  className="text-slate-600 hover:text-primary transition-colors duration-200"
                 >
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-gray-900 font-medium" aria-current="page">
+                <span className="text-slate-900 font-medium" aria-current="page">
                   {item.label}
                 </span>
               )}

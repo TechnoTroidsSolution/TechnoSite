@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function ThemeSwitcher() {
   return (
-    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200">
+    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100 hover:bg-gray-200 transition-colors duration-200">
       {/* Moon Icon */}
       <svg
-        className="w-6 h-6 text-gray-700"
+        className="w-6 h-6 text-slate-700"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
