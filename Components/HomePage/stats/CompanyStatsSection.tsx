@@ -1,5 +1,8 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+import { Reveal, RevealContainer, RevealItem } from '@/Components/Animations/Reveal';
 
 const StatItem = ({ value, label }: { value: string; label: string }) => (
   <div>
@@ -12,35 +15,44 @@ export default function CompanyStatsSection() {
   return (
     <main className="w-full bg-white text-gray-800">
       <div className="container mx-auto px-8 py-20 lg:py-32 flex flex-col-reverse lg:flex-row items-center lg:items-start gap-16">
-        <div className="max-w-2xl w-full">
+        <RevealContainer className="max-w-2xl w-full">
           {/* Headings */}
-          <h1 className="text-5xl lg:text-7xl font-bold">Made in India.</h1>
-          <h2 className="text-5xl lg:text-7xl font-bold mb-16">
-            Made for the World.
-          </h2>
+          <RevealItem>
+            <h1 className="text-5xl lg:text-7xl font-bold">Made in India.</h1>
+          </RevealItem>
+          <RevealItem>
+            <h2 className="text-5xl lg:text-7xl font-bold mb-16">
+              Made for the World.
+            </h2>
+          </RevealItem>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 gap-x-12 gap-y-10 mb-16">
-            <StatItem value="130M+" label="Users Globally" />
-            <StatItem value="150+" label="Countries Served" />
-            <StatItem value="18K+" label="Employees Worldwide" />
-            <StatItem value="29+" label="Years in Business" />
-            <StatItem value="55+" label="Products" />
+          <RevealItem>
+            <div className="grid grid-cols-2 gap-x-12 gap-y-10 mb-16">
+              <StatItem value="130M+" label="Users Globally" />
+              <StatItem value="150+" label="Countries Served" />
+              <StatItem value="18K+" label="Employees Worldwide" />
+              <StatItem value="29+" label="Years in Business" />
+              <StatItem value="55+" label="Products" />
 
-            {/* The 6th grid item is empty, allowing the button to appear after */}
-          </div>
+              {/* The 6th grid item is empty, allowing the button to appear after */}
+            </div>
+          </RevealItem>
 
           {/* Button */}
-          <Link
-            href="/about"
-            className="inline-flex items-center px-8 py-3 border border-gray-800 rounded-md text-lg font-semibold
-                       hover:bg-gray-800 hover:text-white transition-colors
-                       focus:outline-none focus:ring-2 focus:ring-gray-800"
-          >
-            MORE ABOUT US &gt;
-          </Link>
-        </div>
+          <RevealItem>
+            <Link
+              href="/about"
+              className="inline-flex items-center px-8 py-3 border border-gray-800 rounded-md text-lg font-semibold
+                         hover:bg-gray-800 hover:text-white transition-colors
+                         focus:outline-none focus:ring-2 focus:ring-gray-800"
+            >
+              MORE ABOUT US &gt;
+            </Link>
+          </RevealItem>
+        </RevealContainer>
 
+        <Reveal>
           <div className="w-full max-w-xl lg:max-w-2xl animate-float-slow">
             <Image
               src="/Images/homepage/india.png"
@@ -51,6 +63,7 @@ export default function CompanyStatsSection() {
               priority
             />
           </div>
+        </Reveal>
       </div>
     </main>
   );

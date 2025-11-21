@@ -21,22 +21,22 @@ export default function PhilosophySection({ headline, text }: PhilosophySectionP
               </div>
               
               {/* Floating cards */}
-              <div className="absolute top-16 left-12 w-64 h-32 bg-[linear-gradient(135deg,var(--primary),var(--accent))] rounded-2xl shadow-xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
-                <div className="p-6 text-primary-foreground">
+              <div className="absolute top-16 left-12 w-64 h-32 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl shadow-xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
+                <div className="p-6 text-white">
                   <div className="text-3xl font-bold mb-2">Innovation</div>
                   <div className="text-sm opacity-90">First & Foremost</div>
                 </div>
               </div>
               
-              <div className="absolute top-48 right-12 w-64 h-32 bg-[linear-gradient(135deg,var(--primary),var(--secondary))] rounded-2xl shadow-xl transform -rotate-3 hover:-rotate-6 transition-transform duration-300">
-                <div className="p-6 text-primary-foreground">
+              <div className="absolute top-48 right-12 w-64 h-32 bg-gradient-to-br from-blue-700 to-indigo-600 rounded-2xl shadow-xl transform -rotate-3 hover:-rotate-6 transition-transform duration-300">
+                <div className="p-6 text-white">
                   <div className="text-3xl font-bold mb-2">Excellence</div>
                   <div className="text-sm opacity-90">In Every Detail</div>
                 </div>
               </div>
               
-              <div className="absolute bottom-12 left-24 w-64 h-32 bg-[linear-gradient(135deg,var(--secondary),var(--accent))] rounded-2xl shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
-                <div className="p-6 text-primary-foreground">
+              <div className="absolute bottom-12 left-24 w-64 h-32 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                <div className="p-6 text-white">
                   <div className="text-3xl font-bold mb-2">Impact</div>
                   <div className="text-sm opacity-90">That Matters</div>
                 </div>
@@ -47,7 +47,7 @@ export default function PhilosophySection({ headline, text }: PhilosophySectionP
           {/* Right side - Content */}
           <div>
             <div className="inline-block mb-6">
-              <div className="bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-semibold">
+              <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
                 Our Core Belief
               </div>
             </div>
@@ -66,8 +66,8 @@ export default function PhilosophySection({ headline, text }: PhilosophySectionP
             <div className="mt-10 grid grid-cols-3 gap-4">
               {['Quality', 'Speed', 'Value'].map((pillar) => (
                 <div key={pillar} className="text-center">
-                  <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm">
-                    <svg className="w-6 h-6 text-secondary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>

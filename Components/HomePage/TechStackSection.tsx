@@ -17,7 +17,7 @@ export default function TechStackSection() {
           {/* Left Column - Image */}
           <Reveal>
             <div className="relative mx-auto flex w-full max-w-xl justify-center">
-              <div className="relative z-10 w-full animate-float bg-white">
+              <div className="relative z-10 w-full animate-float">
                 <Image
                   src="/Images/homepage/tc.png"
                   alt="Technology Stack - Modern tools and frameworks we use"
