@@ -48,7 +48,7 @@ export default function ValuesSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <div className="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
               Core Values
             </div>
           </div>
@@ -65,11 +65,11 @@ export default function ValuesSection() {
           {values.map((value) => (
             <div 
               key={value.title}
-              className="bg-card rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-border/60"
+              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-glow transition-all duration-300 border border-gray-200"
             >
               {/* Icon with solid background */}
               <div className="mb-6">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center text-primary-foreground">
+                <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white">
                   {value.icon}
                 </div>
               </div>

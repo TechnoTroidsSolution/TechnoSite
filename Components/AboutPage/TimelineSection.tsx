@@ -48,7 +48,7 @@ export default function TimelineSection() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="inline-block mb-4">
-            <div className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
               Our Journey
             </div>
           </div>
@@ -63,7 +63,7 @@ export default function TimelineSection() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 h-full w-[3px] bg-[linear-gradient(180deg,var(--color-primary),var(--color-accent),var(--color-secondary))] opacity-80 pointer-events-none"></div>
+          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 h-full w-[3px] bg-gradient-to-b from-blue-600 via-cyan-500 to-blue-400 opacity-80 pointer-events-none"></div>
 
           {/* Milestones */}
           <div className="space-y-8">
@@ -74,9 +74,9 @@ export default function TimelineSection() {
               >
                 {/* Content Card */}
                 <div className="w-full md:w-5/12">
-                  <div className="bg-card rounded-lg p-6 shadow-md border border-border/60">
+                  <div className="bg-white rounded-2xl p-6 shadow-soft border border-gray-200">
                     {/* Year badge */}
-                    <div className="inline-block bg-primary text-primary-foreground px-3 py-1 rounded text-sm font-bold mb-3">
+                    <div className="inline-block bg-blue-600 text-white px-3 py-1 rounded text-sm font-bold mb-3">
                       {milestone.year}
                     </div>
                     
@@ -92,7 +92,7 @@ export default function TimelineSection() {
 
                 {/* Center circle indicator */}
                 <div className="hidden md:flex w-2/12 justify-center relative z-10">
-                  <div className="w-4 h-4 bg-primary rounded-full border-4 border-card shadow-md"></div>
+                  <div className="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-md"></div>
                 </div>
 
                 {/* Spacer for alternating layout */}
@@ -104,8 +104,8 @@ export default function TimelineSection() {
 
         {/* Bottom decoration */}
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-3 bg-card text-foreground/80 px-6 py-3 rounded-lg border border-border/60">
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <div className="inline-flex items-center gap-3 bg-white text-gray-700 px-6 py-3 rounded-lg border border-gray-200">
+            <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
             <span className="font-semibold">Continuing our journey of innovation</span>
           </div>
         </div>
