@@ -36,7 +36,7 @@ export default function TeamSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <div className="bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
               Leadership Team
             </div>
           </div>
@@ -53,14 +53,14 @@ export default function TeamSection() {
           {team.map((member) => (
             <div 
               key={member.name}
-              className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-border/60 text-center"
+              className="bg-white rounded-2xl p-6 shadow-soft hover:shadow-glow transition-all duration-300 border border-gray-200 text-center"
             >
               {/* Name & Role */}
               <h3 className="text-lg font-bold text-foreground mb-1">
                 {member.name}
               </h3>
               
-              <div className="text-sm font-semibold text-primary mb-3">
+              <div className="text-sm font-semibold text-blue-600 mb-3">
                 {member.role}
               </div>
 
@@ -86,14 +86,14 @@ export default function TeamSection() {
         </div>
 
         {/* Join Team CTA */}
-        <div className="bg-primary rounded-lg p-10 text-center text-primary-foreground shadow-lg">
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 rounded-2xl p-10 text-center text-white shadow-lg">
           <h3 className="text-3xl font-bold mb-3">
             Want to Join Our Team?
           </h3>
           <p className="text-lg mb-6 opacity-95 max-w-2xl mx-auto">
             We&apos;re always looking for talented individuals who share our passion for innovation and excellence.
           </p>
-          <button className="bg-primary-foreground text-primary hover:bg-foreground/90 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 inline-flex items-center gap-2">
+          <button className="bg-white text-blue-900 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 inline-flex items-center gap-2">
             View Open Positions
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />

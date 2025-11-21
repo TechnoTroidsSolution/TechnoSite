@@ -41,7 +41,7 @@ export default function PrinciplesSection({ principles }: PrinciplesSectionProps
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <div className="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
               Our Guiding Principles
             </div>
           </div>
@@ -58,10 +58,10 @@ export default function PrinciplesSection({ principles }: PrinciplesSectionProps
           {principles.map((principle, index) => (
             <div 
               key={principle.title}
-              className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-border/60"
+              className="bg-white rounded-2xl p-6 shadow-soft hover:shadow-glow transition-all duration-300 border border-gray-200"
             >
               {/* Icon */}
-              <div className="w-14 h-14 bg-primary/20 rounded-lg flex items-center justify-center mb-5 text-primary">
+              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-5 text-blue-600">
                 {icons[index % icons.length]}
               </div>
 

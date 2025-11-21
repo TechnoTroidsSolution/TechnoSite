@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react"; // 2. Import hooks
 import { testimonials } from "../../../data/testimonials";
 import { TestimonialCard } from "./TestimonialCard";
+import { Reveal } from '@/Components/Animations/Reveal';
 
 // Simple Arrow SVG component
 const ArrowIcon = ({ className }: { className?: string }) => (
@@ -50,21 +51,27 @@ export const TestimonialsSection = () => {
   return (
     <section className="flex w-full flex-col items-center justify-center bg-brand-faint py-20 md:py-32">
       {/* ... (Chip, Heading, Subheading remain the same) ... */}
-      <div className="rounded-full bg-blue-100 px-4 py-1.5">
-        <span className="font-medium text-blue-700">
-          Client Success Stories
-        </span>
-      </div>
-      <h2 className="mt-6 text-center text-4xl font-bold text-slate-900 md:text-5xl">
-        What Our Clients Say
-      </h2>
-      <p className="mt-4 max-w-xl text-center text-lg text-slate-600">
-        Don&apos;t just take our word for it. Here&apos;s what industry leaders
-        say about working with DevStudio.
-      </p>
+      <Reveal>
+        <div className="rounded-full bg-blue-100 px-4 py-1.5">
+          <span className="font-medium text-blue-700">
+            Client Success Stories
+          </span>
+        </div>
+      </Reveal>
+      <Reveal>
+        <h2 className="mt-6 text-center text-4xl font-bold text-slate-900 md:text-5xl">
+          What Our Clients Say
+        </h2>
+      </Reveal>
+      <Reveal>
+        <p className="mt-4 max-w-xl text-center text-lg text-slate-600">
+          Don&apos;t just take our word for it. Here&apos;s what industry leaders
+          say about working with DevStudio.
+        </p>
+      </Reveal>
 
       {/* 6. Slider implementation */}
-      <div className="mt-16 w-full px-4 flex justify-center">
+      <Reveal className="mt-16 w-full px-4 flex justify-center">
         {/* Relative container for arrows and slider viewport */}
         <div className="relative w-full max-w-4xl">
           {/* Slider Viewport: Hides the non-active slides */}
@@ -107,7 +114,7 @@ export const TestimonialsSection = () => {
             </>
           )}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };
