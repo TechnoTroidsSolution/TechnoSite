@@ -41,7 +41,7 @@ export default function PrinciplesSection({ principles }: PrinciplesSectionProps
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-gradient-to-r from-[var(--primary)]/20 to-[var(--accent)]/20 text-[var(--primary)] border border-[var(--primary)]/30 px-4 py-2 rounded-full text-sm font-semibold">
               Our Guiding Principles
             </div>
           </div>
@@ -58,10 +58,10 @@ export default function PrinciplesSection({ principles }: PrinciplesSectionProps
           {principles.map((principle, index) => (
             <div
               key={principle.title}
-              className="bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] rounded-2xl p-6 shadow-soft hover:shadow-glow hover:-translate-y-2 transition-all duration-300 border border-white/10"
+              className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:shadow-[var(--primary)]/20 hover:-translate-y-2 transition-all duration-300 border-2 border-[var(--primary)]/30 hover:border-[var(--accent)]/50"
             >
               {/* Icon */}
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-5 text-blue-600">
+              <div className="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-lg flex items-center justify-center mb-5 text-white shadow-lg shadow-[var(--primary)]/30">
                 {icons[index % icons.length]}
               </div>
 

@@ -36,7 +36,7 @@ export default function TeamSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-gradient-to-r from-[var(--primary)]/20 to-[var(--accent)]/20 text-[var(--primary)] border border-[var(--primary)]/30 px-4 py-2 rounded-full text-sm font-semibold">
               Leadership Team
             </div>
           </div>
@@ -53,14 +53,14 @@ export default function TeamSection() {
           {team.map((member) => (
             <div
               key={member.name}
-              className="bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] rounded-2xl p-6 shadow-soft hover:shadow-glow hover:-translate-y-2 transition-all duration-300 border border-white/10 text-center"
+              className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:shadow-[var(--primary)]/20 hover:-translate-y-2 transition-all duration-300 border-2 border-[var(--primary)]/30 hover:border-[var(--accent)]/50 text-center"
             >
               {/* Name & Role */}
               <h3 className="text-lg font-bold text-foreground mb-1">
                 {member.name}
               </h3>
 
-              <div className="text-sm font-semibold text-blue-600 mb-3">
+              <div className="text-sm font-semibold text-[var(--primary)] mb-3">
                 {member.role}
               </div>
 
@@ -86,14 +86,14 @@ export default function TeamSection() {
         </div>
 
         {/* Join Team CTA */}
-        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 rounded-2xl p-10 text-center text-white shadow-lg">
+        <div className="bg-gradient-to-br from-[var(--primary)] via-[var(--accent)] to-[var(--primary-dark)] rounded-2xl p-10 text-center text-white shadow-2xl shadow-[var(--primary)]/30 border border-white/10">
           <h3 className="text-3xl font-bold mb-3">
             Want to Join Our Team?
           </h3>
           <p className="text-lg mb-6 opacity-95 max-w-2xl mx-auto">
             We&apos;re always looking for talented individuals who share our passion for innovation and excellence.
           </p>
-          <button className="bg-white text-blue-900 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 inline-flex items-center gap-2">
+          <button className="bg-white text-[var(--primary)] hover:bg-white/90 hover:scale-105 font-semibold py-3 px-6 rounded-lg transition-all duration-200 inline-flex items-center gap-2 shadow-lg">
             View Open Positions
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />

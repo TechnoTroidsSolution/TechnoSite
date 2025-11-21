@@ -48,7 +48,7 @@ export default function ValuesSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-gradient-to-r from-[var(--accent)]/20 to-[var(--primary)]/20 text-[var(--accent)] border border-[var(--accent)]/30 px-4 py-2 rounded-full text-sm font-semibold">
               Core Values
             </div>
           </div>
@@ -65,11 +65,11 @@ export default function ValuesSection() {
           {values.map((value) => (
             <div
               key={value.title}
-              className="bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] rounded-2xl p-8 shadow-soft hover:shadow-glow hover:-translate-y-2 transition-all duration-300 border border-white/10"
+              className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-[var(--accent)]/20 hover:-translate-y-2 transition-all duration-300 border-2 border-[var(--accent)]/30 hover:border-[var(--primary)]/50"
             >
-              {/* Icon with solid background */}
+              {/* Icon with gradient background */}
               <div className="mb-6">
-                <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+                <div className="w-16 h-16 bg-gradient-to-br from-[var(--accent)] to-[var(--primary)] rounded-lg flex items-center justify-center text-white shadow-lg shadow-[var(--accent)]/30">
                   {value.icon}
                 </div>
               </div>

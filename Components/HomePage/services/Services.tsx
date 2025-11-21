@@ -20,7 +20,7 @@ export default function Services() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
-            Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">Tech Solutions</span>
+            Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-muted-foreground">Tech Solutions</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -33,17 +33,20 @@ export default function Services() {
 
           {/* Service 1: Web Development */}
           <RevealItem>
-            <div className="group relative h-full p-8 rounded-2xl bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] border border-white/10 shadow-soft hover:shadow-glow hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-              {/* Hover Gradient Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative h-full p-8 rounded-2xl border border-white/10 bg-card overflow-hidden hover:border-primary/20 transition-colors duration-300">
+              {/* Spotlight Effect */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(600px_circle_at_center,rgba(var(--primary),0.1),transparent_40%)] pointer-events-none" />
+
+              {/* Grid Pattern Overlay */}
+              <div className="absolute inset-0 opacity-[0.03] bg-grid-white pointer-events-none" />
 
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm">
+                <div className="w-14 h-14 rounded-xl bg-primary/5 border border-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm">
                   <svg className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">Web Development</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight">Web Development</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Building scalable, high-performance web applications using modern frameworks like React, Next.js, and Node.
                 </p>
@@ -53,16 +56,17 @@ export default function Services() {
 
           {/* Service 2: Mobile Apps */}
           <RevealItem>
-            <div className="group relative h-full p-8 rounded-2xl bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] border border-white/10 shadow-soft hover:shadow-glow hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative h-full p-8 rounded-2xl border border-white/10 bg-card overflow-hidden hover:border-primary/20 transition-colors duration-300">
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(600px_circle_at_center,rgba(var(--primary),0.1),transparent_40%)] pointer-events-none" />
+              <div className="absolute inset-0 opacity-[0.03] bg-grid-white pointer-events-none" />
 
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm">
+                <div className="w-14 h-14 rounded-xl bg-primary/5 border border-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm">
                   <svg className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">Mobile Apps</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight">Mobile Apps</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Native and cross-platform mobile experiences tailored for iOS and Android using Flutter and React Native.
                 </p>
@@ -72,16 +76,17 @@ export default function Services() {
 
           {/* Service 3: Cloud Solutions */}
           <RevealItem>
-            <div className="group relative h-full p-8 rounded-2xl bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] border border-white/10 shadow-soft hover:shadow-glow hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative h-full p-8 rounded-2xl border border-white/10 bg-card overflow-hidden hover:border-primary/20 transition-colors duration-300">
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(600px_circle_at_center,rgba(var(--primary),0.1),transparent_40%)] pointer-events-none" />
+              <div className="absolute inset-0 opacity-[0.03] bg-grid-white pointer-events-none" />
 
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm">
+                <div className="w-14 h-14 rounded-xl bg-primary/5 border border-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm">
                   <svg className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">Cloud Solutions</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight">Cloud Solutions</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Secure and scalable cloud architecture design, migration services, and DevOps automation on AWS and Azure.
                 </p>
@@ -91,16 +96,17 @@ export default function Services() {
 
           {/* Service 4: AI & ML */}
           <RevealItem>
-            <div className="group relative h-full p-8 rounded-2xl bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] border border-white/10 shadow-soft hover:shadow-glow hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative h-full p-8 rounded-2xl border border-white/10 bg-card overflow-hidden hover:border-primary/20 transition-colors duration-300">
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(600px_circle_at_center,rgba(var(--primary),0.1),transparent_40%)] pointer-events-none" />
+              <div className="absolute inset-0 opacity-[0.03] bg-grid-white pointer-events-none" />
 
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm">
+                <div className="w-14 h-14 rounded-xl bg-primary/5 border border-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm">
                   <svg className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">AI & ML</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight">AI & ML</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Leveraging Artificial Intelligence to automate processes, analyze data, and create intelligent predictive models.
                 </p>

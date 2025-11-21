@@ -24,7 +24,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-background/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-border">
+    <header className="bg-background/70 backdrop-blur-xl shadow-sm sticky top-0 z-50 border-b border-border/50 supports-[backdrop-filter]:bg-background/60">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           {/* Logo */}
@@ -51,8 +51,8 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 className={`relative px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 group ${isActive(item.href)
-                    ? 'text-primary'
-                    : 'text-muted-foreground hover:text-primary'
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-primary'
                   }`}
               >
                 {item.name}
@@ -103,8 +103,8 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 ${isActive(item.href)
-                      ? 'text-primary bg-primary/10 border-l-4 border-primary'
-                      : 'text-muted-foreground hover:text-primary hover:bg-primary/10 border-l-4 border-transparent'
+                    ? 'text-primary bg-primary/10 border-l-4 border-primary'
+                    : 'text-muted-foreground hover:text-primary hover:bg-primary/10 border-l-4 border-transparent'
                     }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
