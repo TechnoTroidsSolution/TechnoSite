@@ -5,40 +5,53 @@
 ------------------------------------------------ */
 @layer base {
   :root {
-    /* Light mode */
-    --background: #3B82F6;
-    --foreground: #0f172a;
-    --primary: #2563eb;
-    --primary-foreground: #ffffff;
+    /* Cursor AI Inspired Theme - Always Dark */
+    --background: #000000;
+    --foreground: #ededed;
 
-    --secondary: #1E40AF;
+    --primary: #ffffff;
+    --primary-foreground: #000000;
+
+    --secondary: #18181b;
     --secondary-foreground: #ffffff;
 
-    --accent: #E879F9;
-    --muted: #e2e8f0;
-    --card: #f8fafc;
-    --border: #e5e7eb;
+    --accent: #27272a;
+    --accent-foreground: #ffffff;
+
+    --muted: #71717a;
+    --muted-foreground: #a1a1aa;
+
+    --card: #09090b;
+    --card-foreground: #ededed;
+
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #ffffff;
   }
 
   .dark {
-    /* Dark mode */
-    --background: #0f172a;
-    --foreground: #f8fafc;
-    --primary: #3b82f6;
-    --primary-foreground: #0f172a;
-
-    --secondary: #475569;
-    --secondary-foreground: #f8fafc;
-
-    --accent: #60a5fa;
-    --muted: #1e293b;
-    --card: #1e293b;
-    --border: #334155;
+    /* Same as root since we are enforcing dark mode */
+    --background: #000000;
+    --foreground: #ededed;
+    --primary: #ffffff;
+    --primary-foreground: #000000;
+    --secondary: #18181b;
+    --secondary-foreground: #ffffff;
+    --accent: #27272a;
+    --accent-foreground: #ffffff;
+    --muted: #71717a;
+    --muted-foreground: #a1a1aa;
+    --card: #09090b;
+    --card-foreground: #ededed;
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #ffffff;
   }
 
   body {
     background-color: var(--background);
     color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
@@ -60,7 +73,8 @@
 
 /* Soft vertical float */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -70,7 +84,8 @@
 
 /* Gentle up-down hover wobble */
 @keyframes hover-bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -80,7 +95,8 @@
 
 /* Minimal pulse */
 @keyframes soft-pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -109,4 +125,9 @@
 
 .animate-soft-pulse {
   animation: soft-pulse 2s ease-in-out infinite;
+}
+
+/* Background with gradient from CSS variables */
+.bg-theme {
+  background: var(--background);
 }

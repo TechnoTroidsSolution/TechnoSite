@@ -38,9 +38,9 @@ export default function AboutPage({ data }: AboutPageProps) {
   const { about } = data;
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <HeroSection 
+      <HeroSection
         title={about.section_title}
         subtitle={about.section_subtitle}
       />
@@ -49,7 +49,7 @@ export default function AboutPage({ data }: AboutPageProps) {
       <StatsSection />
 
       {/* Philosophy Section */}
-      <PhilosophySection 
+      <PhilosophySection
         headline={about.core_belief.headline}
         text={about.core_belief.text}
       />

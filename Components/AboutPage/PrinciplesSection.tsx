@@ -56,9 +56,9 @@ export default function PrinciplesSection({ principles }: PrinciplesSectionProps
         {/* Principles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {principles.map((principle, index) => (
-            <div 
+            <div
               key={principle.title}
-              className="bg-white rounded-2xl p-6 shadow-soft hover:shadow-glow transition-all duration-300 border border-gray-200"
+              className="bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] rounded-2xl p-6 shadow-soft hover:shadow-glow hover:-translate-y-2 transition-all duration-300 border border-white/10"
             >
               {/* Icon */}
               <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-5 text-blue-600">
@@ -69,7 +69,7 @@ export default function PrinciplesSection({ principles }: PrinciplesSectionProps
               <h3 className="text-xl font-bold text-foreground mb-3">
                 {principle.title}
               </h3>
-              
+
               <p className="text-foreground/80 leading-relaxed text-sm">
                 {principle.description}
               </p>

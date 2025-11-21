@@ -8,7 +8,7 @@ interface HeroProps {
 
 export default function HeroSection({ hero }: HeroProps) {
   return (
-    <section className="bg-linear-to-br from-primary via-secondary to-accent text-primary-foreground py-24 relative overflow-hidden">
+    <section className="bg-background bg-hero-radial text-foreground py-24 relative overflow-hidden">
 
       {/* Background animations */}
       <div className="absolute inset-0 overflow-hidden">

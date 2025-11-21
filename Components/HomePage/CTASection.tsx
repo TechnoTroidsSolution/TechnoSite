@@ -5,11 +5,11 @@ import { Reveal } from '@/Components/Animations/Reveal';
 
 export default function CTASection() {
   return (
-    <section className="py-20 bg-[#0a1e42] bg-hero-radial text-white relative overflow-hidden">
+    <section className="py-20 bg-background bg-hero-radial text-foreground relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-10 right-10 w-32 h-32 bg-blue-600 rounded-full opacity-10 blur-3xl"></div>
       <div className="absolute bottom-10 left-10 w-40 h-40 bg-cyan-500 rounded-full opacity-10 blur-3xl"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <Reveal>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">

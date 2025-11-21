@@ -68,22 +68,22 @@ export default function TimelineSection() {
           {/* Milestones */}
           <div className="space-y-8">
             {milestones.map((milestone, index) => (
-              <div 
+              <div
                 key={milestone.year}
                 className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8`}
               >
                 {/* Content Card */}
                 <div className="w-full md:w-5/12">
-                  <div className="bg-white rounded-2xl p-6 shadow-soft border border-gray-200">
+                  <div className="bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] rounded-2xl p-6 shadow-soft hover:shadow-glow hover:-translate-y-2 transition-all duration-300 border border-white/10">
                     {/* Year badge */}
                     <div className="inline-block bg-blue-600 text-white px-3 py-1 rounded text-sm font-bold mb-3">
                       {milestone.year}
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-foreground mb-2">
                       {milestone.title}
                     </h3>
-                    
+
                     <p className="text-foreground/80 leading-relaxed text-sm">
                       {milestone.description}
                     </p>
@@ -104,7 +104,7 @@ export default function TimelineSection() {
 
         {/* Bottom decoration */}
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-3 bg-white text-gray-700 px-6 py-3 rounded-lg border border-gray-200">
+          <div className="inline-flex items-center gap-3 bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] text-foreground px-6 py-3 rounded-lg border border-white/10 shadow-soft hover:shadow-glow transition-all duration-300">
             <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
             <span className="font-semibold">Continuing our journey of innovation</span>
           </div>

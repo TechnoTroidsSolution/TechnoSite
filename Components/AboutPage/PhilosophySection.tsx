@@ -1,15 +1,18 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 interface PhilosophySectionProps {
   readonly headline: string;
   readonly text: string;
 }
 
-export default function PhilosophySection({ headline, text }: PhilosophySectionProps) {
+export default function PhilosophySection({
+  headline,
+  text,
+}: PhilosophySectionProps) {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-20 md:py-28 bg-theme">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Decorative element */}
@@ -19,7 +22,7 @@ export default function PhilosophySection({ headline, text }: PhilosophySectionP
               <div className="absolute top-0 left-0 text-[200px] font-serif text-primary/10 leading-none select-none">
                 &ldquo;
               </div>
-              
+
               {/* Floating cards */}
               <div className="absolute top-16 left-12 w-64 h-32 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl shadow-xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
                 <div className="p-6 text-white">
@@ -27,14 +30,14 @@ export default function PhilosophySection({ headline, text }: PhilosophySectionP
                   <div className="text-sm opacity-90">First & Foremost</div>
                 </div>
               </div>
-              
+
               <div className="absolute top-48 right-12 w-64 h-32 bg-gradient-to-br from-blue-700 to-indigo-600 rounded-2xl shadow-xl transform -rotate-3 hover:-rotate-6 transition-transform duration-300">
                 <div className="p-6 text-white">
                   <div className="text-3xl font-bold mb-2">Excellence</div>
                   <div className="text-sm opacity-90">In Every Detail</div>
                 </div>
               </div>
-              
+
               <div className="absolute bottom-12 left-24 w-64 h-32 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
                 <div className="p-6 text-white">
                   <div className="text-3xl font-bold mb-2">Impact</div>
@@ -51,24 +54,34 @@ export default function PhilosophySection({ headline, text }: PhilosophySectionP
                 Our Core Belief
               </div>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
               {headline}
             </h2>
-            
-            <div className="prose prose-lg prose-invert max-w-none">
-              <p className="text-lg text-foreground/80 leading-relaxed">
+
+            <div className="max-w-none">
+              <p className="text-lg text-foreground leading-relaxed opacity-80">
                 {text}
               </p>
             </div>
 
             {/* Key pillars */}
             <div className="mt-10 grid grid-cols-3 gap-4">
-              {['Quality', 'Speed', 'Value'].map((pillar) => (
+              {["Quality", "Speed", "Value"].map((pillar) => (
                 <div key={pillar} className="text-center">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-2 shadow-sm">
+                    <svg
+                      className="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                   </div>
                   <div className="font-semibold text-foreground text-sm">

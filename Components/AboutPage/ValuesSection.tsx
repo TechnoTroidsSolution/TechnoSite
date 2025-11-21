@@ -63,9 +63,9 @@ export default function ValuesSection() {
         {/* Values Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {values.map((value) => (
-            <div 
+            <div
               key={value.title}
-              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-glow transition-all duration-300 border border-gray-200"
+              className="bg-[linear-gradient(135deg,rgba(var(--primary),0.1),rgba(var(--accent),0.1),var(--background))] rounded-2xl p-8 shadow-soft hover:shadow-glow hover:-translate-y-2 transition-all duration-300 border border-white/10"
             >
               {/* Icon with solid background */}
               <div className="mb-6">
@@ -78,7 +78,7 @@ export default function ValuesSection() {
               <h3 className="text-2xl font-bold text-foreground mb-3">
                 {value.title}
               </h3>
-              
+
               <p className="text-foreground/80 leading-relaxed">
                 {value.description}
               </p>
