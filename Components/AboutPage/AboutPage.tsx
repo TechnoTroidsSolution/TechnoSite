@@ -5,7 +5,6 @@ import HeroSection from './HeroSection';
 import PhilosophySection from './PhilosophySection';
 import PrinciplesSection from './PrinciplesSection';
 import TeamSection from './TeamSection';
-import StatsSection from './StatsSection';
 import TimelineSection from './TimelineSection';
 import ValuesSection from './ValuesSection';
 import CTASection from './CTASection';
@@ -38,23 +37,21 @@ export default function AboutPage({ data }: AboutPageProps) {
   const { about } = data;
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <HeroSection 
+      <HeroSection
         title={about.section_title}
         subtitle={about.section_subtitle}
       />
 
-      {/* Stats Section */}
-      <StatsSection />
-
+    
       {/* Philosophy Section */}
-      <PhilosophySection 
+      <PhilosophySection
         headline={about.core_belief.headline}
         text={about.core_belief.text}
       />
 
-      {/* Principles Section */}
+       {/* Principles Section */}
       <PrinciplesSection principles={about.principles} />
 
       {/* Values Section */}

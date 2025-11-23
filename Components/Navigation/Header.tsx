@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
   const navigation = [
@@ -16,110 +18,116 @@ const Header = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const isActive = (href: string) => {
-    if (href === '/') {
-      return pathname === '/';
-    }
+    if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
   };
 
   return (
-    <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-background/80 backdrop-blur-xl shadow-md' : 'bg-transparent'
+      }`}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="shrink-0">
-              <div className="flex items-center group">
-                <div className="w-12 h-12 bg-linear-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div className="ml-3">
-                  <span className="text-xl font-bold bg-linear-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">TechnoTroids</span>
-                  <div className="text-xs text-gray-500 font-medium">Innovation Labs</div>
-                </div>
-              </div>
-            </Link>
-          </div>
+          <Link href="/" className="flex items-center group">
+            <div className="w-10 h-10 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-primary/40 transition-all duration-300 group-hover:scale-110">
+              <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v18m0 0l-6-6m6 6l6-6" />
+              </svg>
+            </div>
+            <span className="ml-3 text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+              TechnoTroids
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 group ${
+                className={`relative px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
                   isActive(item.href)
-                    ? 'text-teal-600'
-                    : 'text-gray-700 hover:text-teal-600'
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-primary'
                 }`}
               >
                 {item.name}
-                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-linear-to-r from-teal-500 to-cyan-500 transform transition-all duration-300 ${
-                  isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                }`}></span>
+                {isActive(item.href) && (
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-1 bg-primary rounded-full" />
+                )}
               </Link>
-            ))}           
-            
-            {/* CTA Button */}
+            ))}
+          </div>
+
+          {/* Right side actions */}
+          <div className="hidden md:flex items-center space-x-4">
+           
             <Link
               href="/contact"
-              className="ml-4 bg-linear-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 flex items-center gap-2"
+              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold transition-transform duration-300 hover:scale-105 shadow-sm hover:shadow-lg hover:shadow-primary/30"
             >
-              Get Started
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              Get a Quote
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center">
+            
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2.5 rounded-lg text-gray-700 hover:text-teal-600 hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200"
-              aria-expanded="false"
+              className="ml-2 inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-muted focus:outline-none"
+              aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
-              {!isMenuOpen ? (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              ) : (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                {isMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              )}
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                )}
+              </svg>
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-4 space-y-1 bg-white/95 backdrop-blur-sm border-t border-gray-100 rounded-b-xl shadow-lg">
+          <div className="md:hidden pb-4">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background/95 backdrop-blur-sm rounded-b-lg">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 ${
-                    isActive(item.href)
-                      ? 'text-teal-600 bg-teal-50 border-l-4 border-teal-600'
-                      : 'text-gray-700 hover:text-teal-600 hover:bg-teal-50 border-l-4 border-transparent'
-                  }`}
                   onClick={() => setIsMenuOpen(false)}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                    isActive(item.href)
+                      ? 'text-primary bg-muted'
+                      : 'text-muted-foreground hover:text-primary hover:bg-muted'
+                  }`}
                 >
                   {item.name}
                 </Link>
               ))}
+            </div>
+            <div className="px-4 mt-4">
               <Link
                 href="/contact"
-                className="block w-full text-center bg-linear-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 mt-4 shadow-md hover:shadow-lg"
                 onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-center bg-primary text-primary-foreground px-5 py-3 rounded-lg font-semibold transition-transform duration-300 hover:scale-105"
               >
-                Get Started →
+                Get a Quote
               </Link>
             </div>
           </div>
