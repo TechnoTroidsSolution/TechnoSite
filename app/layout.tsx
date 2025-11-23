@@ -28,11 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <Header />
         <Breadcrumb />
-        <main className="min-h-screen bg-gray-50">
+        <main className="min-h-screen bg-background">
           {children}
         </main>
         <Footer />

@@ -29,7 +29,7 @@ export default function ServicesPage() {
   const data = loadServicesContent();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background text-foreground">
 
       <HeroSection hero={data.hero_section} />
       <ServicesGrid services={data.services_grid} />

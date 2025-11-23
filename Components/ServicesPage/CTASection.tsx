@@ -16,10 +16,10 @@ export default function CTASection({ data }: CTASectionProps) {
   const router = useRouter();
 
   return (
-    <section className="py-24 px-6 bg-[linear-gradient(135deg,var(--color-primary),var(--color-accent),var(--color-background))] text-primary-foreground relative overflow-hidden">
+    <section className="py-24 px-6 bg-[linear-gradient(135deg,var(--primary),var(--pop),var(--background))] text-primary-foreground relative overflow-hidden">
       <div className="absolute inset-0 opacity-30">
         <div className="absolute -top-10 -left-16 w-64 h-64 bg-primary/40 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-pop/30 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
