@@ -23,12 +23,12 @@ interface IndustriesSectionProps {
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  healthcare: <Stethoscope className="w-8 h-8 text-primary" />,
-  finance: <Landmark className="w-8 h-8 text-primary" />,
-  education: <GraduationCap className="w-8 h-8 text-primary" />,
-  ecommerce: <ShoppingCart className="w-8 h-8 text-primary" />,
-  logistics: <Truck className="w-8 h-8 text-primary" />,
-  saas: <Cloud className="w-8 h-8 text-primary" />,
+  healthcare: <Stethoscope className="w-8 h-8 text-[var(--primary)]" />,
+  finance: <Landmark className="w-8 h-8 text-[var(--primary)]" />,
+  education: <GraduationCap className="w-8 h-8 text-[var(--primary)]" />,
+  ecommerce: <ShoppingCart className="w-8 h-8 text-[var(--primary)]" />,
+  logistics: <Truck className="w-8 h-8 text-[var(--primary)]" />,
+  saas: <Cloud className="w-8 h-8 text-[var(--primary)]" />,
 };
 
 export default function IndustriesSection({ data }: IndustriesSectionProps) {
@@ -48,9 +48,9 @@ export default function IndustriesSection({ data }: IndustriesSectionProps) {
           {data.industries.map((industry) => (
             <div
               key={industry.name}
-              className="flex flex-col items-center gap-3 p-6 bg-card border border-border/60 rounded-xl hover:shadow-xl transition-all duration-300"
+              className="flex flex-col items-center gap-3 p-6 bg-card border-2 border-[var(--primary)]/30 rounded-xl hover:shadow-xl hover:shadow-[var(--primary)]/20 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center">
+              <div className="w-16 h-16 bg-[var(--primary)]/15 rounded-xl flex items-center justify-center">
                 {iconMap[industry.icon]}
               </div>
 

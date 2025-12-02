@@ -29,13 +29,13 @@ interface ProcessSectionProps {
 }
 
 const ICON_MAP: Record<string, React.ReactNode> = {
-  search: <Search className="w-8 h-8 text-primary" />,
-  strategy: <FileSearch className="w-8 h-8 text-primary" />,
-  design: <PenTool className="w-8 h-8 text-primary" />,
-  development: <Code2 className="w-8 h-8 text-primary" />,
-  qa: <ShieldCheck className="w-8 h-8 text-primary" />,
-  launch: <Rocket className="w-8 h-8 text-primary" />,
-  support: <RefreshCw className="w-8 h-8 text-primary" />,
+  search: <Search className="w-8 h-8 text-[var(--primary)]" />,
+  strategy: <FileSearch className="w-8 h-8 text-[var(--primary)]" />,
+  design: <PenTool className="w-8 h-8 text-[var(--primary)]" />,
+  development: <Code2 className="w-8 h-8 text-[var(--primary)]" />,
+  qa: <ShieldCheck className="w-8 h-8 text-[var(--primary)]" />,
+  launch: <Rocket className="w-8 h-8 text-[var(--primary)]" />,
+  support: <RefreshCw className="w-8 h-8 text-[var(--primary)]" />,
 };
 
 export default function ProcessSection({ data }: ProcessSectionProps) {
@@ -44,7 +44,7 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
       <div className="max-w-7xl mx-auto">
 
         <div className="text-center mb-20">
-          <span className="inline-block bg-primary/15 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-6">
+          <span className="inline-block bg-[var(--primary)]/15 text-[var(--primary)] px-6 py-2 rounded-full text-sm font-semibold mb-6 border border-[var(--primary)]/30">
             {data.badge}
           </span>
 
@@ -67,17 +67,17 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
             >
               {/* Icon + Number */}
               <div className="shrink-0 text-center lg:text-left">
-                <div className="w-15 h-15 rounded-2xl bg-primary/15 flex items-center justify-center shadow-md">
+                <div className="w-15 h-15 rounded-2xl bg-[var(--primary)]/15 flex items-center justify-center shadow-md">
                   {ICON_MAP[step.icon]}
                 </div>
 
-                <div className="text-5xl font-bold text-primary mt-4">
+                <div className="text-5xl font-bold text-[var(--primary)] mt-4">
                   {step.number < 10 ? `0${step.number}` : step.number}
                 </div>
               </div>
 
               {/* Content */}
-              <div className="bg-card border border-border/60 rounded-3xl p-10 shadow-lg hover:shadow-xl transition-all lg:w-2/3">
+              <div className="bg-card border-2 border-[var(--primary)]/30 rounded-3xl p-10 shadow-lg hover:shadow-xl hover:shadow-[var(--primary)]/20 transition-all lg:w-2/3">
                 <h3 className="text-2xl font-semibold text-foreground mb-3">
                   {step.title}
                 </h3>
@@ -88,7 +88,7 @@ export default function ProcessSection({ data }: ProcessSectionProps) {
                   {step.tags.map((tag) => (
                     <span
                       key={`${step.title}-${tag}`}
-                      className="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-xs"
+                      className="bg-[var(--primary)]/10 text-[var(--primary)] border border-[var(--primary)]/20 px-3 py-1 rounded-full text-xs"
                     >
                       {tag}
                     </span>

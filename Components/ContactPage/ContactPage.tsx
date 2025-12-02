@@ -92,170 +92,89 @@ export default function ContactPage({
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       {showHero && (
-        <section className="relative bg-gradient-to-br from-background via-background to-[var(--primary)]/5 text-foreground py-24 md:py-32 overflow-hidden">
-          {/* Animated Decorative Elements - Left Side - COLORFUL */}
-          <div className="absolute top-[15%] left-[5%] w-20 h-20 opacity-40">
-            <div className="grid grid-cols-4 gap-1.5">
-              <div className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse"></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse"
-                style={{ animationDelay: "0.1s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse"
-                style={{ animationDelay: "0.2s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse"
-                style={{ animationDelay: "0.3s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse"
-                style={{ animationDelay: "0.4s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse"
-                style={{ animationDelay: "0.5s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse"
-                style={{ animationDelay: "0.6s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse"
-                style={{ animationDelay: "0.7s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse"
-                style={{ animationDelay: "0.8s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse"
-                style={{ animationDelay: "0.9s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse"
-                style={{ animationDelay: "1s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse"
-                style={{ animationDelay: "1.1s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse"
-                style={{ animationDelay: "1.2s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse"
-                style={{ animationDelay: "1.3s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse"
-                style={{ animationDelay: "1.4s" }}
-              ></div>
-              <div
-                className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse"
-                style={{ animationDelay: "1.5s" }}
-              ></div>
-            </div>
+        <section className="relative bg-gradient-to-br from-background via-background to-[var(--primary)]/5 text-foreground py-16 md:py-20 overflow-hidden">
+          {/* Decorative Animated Icons */}
+          {/* Dotted Grid (Top Left) */}
+          <div className="absolute top-12 left-4 md:left-10 opacity-40 animate-spin-slow pointer-events-none">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+              <circle cx="2" cy="2" r="2" className="fill-cyan-500" />
+              <circle cx="22" cy="2" r="2" className="fill-cyan-500" />
+              <circle cx="42" cy="2" r="2" className="fill-cyan-500" />
+              <circle cx="2" cy="22" r="2" className="fill-cyan-500" />
+              <circle cx="22" cy="22" r="2" className="fill-cyan-500" />
+              <circle cx="42" cy="22" r="2" className="fill-cyan-500" />
+              <circle cx="2" cy="42" r="2" className="fill-cyan-500" />
+              <circle cx="22" cy="42" r="2" className="fill-cyan-500" />
+              <circle cx="42" cy="42" r="2" className="fill-cyan-500" />
+            </svg>
           </div>
 
-          {/* X mark - Top Center - CYAN */}
-          <div className="absolute top-[12%] left-[35%] text-[var(--accent)] text-3xl font-bold animate-pulse opacity-30">
-            ×
+          {/* Blue Triangle (Top Right) */}
+          <div className="absolute top-20 right-10 opacity-60 hidden md:block animate-float-slow pointer-events-none">
+            <svg width="45" height="45" viewBox="0 0 40 40" fill="none">
+              <path d="M20 0L40 35H0L20 0Z" className="fill-blue-400" />
+            </svg>
           </div>
 
-          {/* Triangle - Top Right - PRIMARY BLUE */}
-          <div
-            className="absolute top-[10%] right-[20%] w-0 h-0 border-l-20 border-l-transparent border-r-20 border-r-transparent border-b-35 border-b-[var(--primary)] opacity-30 animate-bounce"
-            style={{ animationDuration: "3s" }}
-          ></div>
+          {/* Square Outline (Bottom Right) */}
+          <div className="absolute bottom-20 right-1/4 opacity-50 animate-spin-reverse-slow pointer-events-none">
+            <div className="w-14 h-14 border-4 border-blue-300 rounded-lg animate-float-medium"></div>
+          </div>
 
-          {/* Circle - Left Side - ACCENT */}
-          <div className="absolute top-[50%] left-[8%] w-12 h-12 border-3 border-[var(--accent)] rounded-full opacity-40 animate-pulse"></div>
+          {/* Small Cross (Top Center) */}
+          <div className="absolute top-12 left-2/3 transform -translate-x-1/2 opacity-50 animate-wiggle-slow pointer-events-none">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" className="text-cyan-400">
+              <path d="M12 0V24M0 12H24" />
+            </svg>
+          </div>
 
-          {/* Square - Bottom Center - PRIMARY */}
-          <div
-            className="absolute bottom-[15%] left-[42%] w-10 h-10 border-2 border-[var(--primary)] rotate-45 opacity-30 animate-spin"
-            style={{ animationDuration: "8s" }}
-          ></div>
+          {/* Circle Outline (Left Middle) */}
+          <div className="absolute top-1/2 left-12 w-10 h-10 border-4 border-cyan-200 rounded-full opacity-50 animate-float-medium pointer-events-none" style={{animationDelay: '1s'}}></div>
 
-          {/* Circle - Bottom Right - GRADIENT RING */}
-          <div
-            className="absolute bottom-[20%] right-[25%] w-16 h-16 rounded-full opacity-40 animate-pulse border-3 border-transparent bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] bg-clip-border"
-            style={{ animationDelay: "1s" }}
-          ></div>
-
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--primary)]/20 to-[var(--accent)]/20 backdrop-blur-sm border-2 border-[var(--primary)]/40 rounded-full px-5 py-2 mb-8 shadow-lg shadow-[var(--primary)]/10">
-              <svg
-                className="w-6 h-6 text-[var(--accent)]"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M8.5 11C10.7091 11 12.5 9.20914 12.5 7C12.5 4.79086 10.7091 3 8.5 3C6.29086 3 4.5 4.79086 4.5 7C4.5 9.20914 6.29086 11 8.5 11Z"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M20 8V14M23 11H17"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span className="text-sm font-semibold text-[var(--primary)]">
-                Let&apos;s Connect
-              </span>
-            </div>
-
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
-              {heroTitle}
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto leading-relaxed text-muted-foreground">
-              {heroSubtitle}
-            </p>
-
-            {/* Mouse Scroll Indicator */}
-            <div className="mt-16 flex justify-center">
-              <div className="relative animate-bounce">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center max-w-4xl mx-auto">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--primary)]/20 to-[var(--accent)]/20 backdrop-blur-sm border-2 border-[var(--primary)]/40 rounded-full px-5 py-2 mb-8 shadow-lg shadow-[var(--primary)]/10">
                 <svg
-                  className="w-10 h-16 text-[var(--primary)]"
-                  viewBox="0 0 32 48"
+                  className="w-6 h-6 text-[var(--accent)]"
+                  viewBox="0 0 24 24"
                   fill="none"
-                  stroke="currentColor"
-                  strokeOpacity="0.8"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect
-                    x="4"
-                    y="4"
-                    width="24"
-                    height="40"
-                    rx="12"
-                    strokeWidth="2.5"
+                  <path
+                    d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
-                  <circle
-                    cx="16"
-                    cy="14"
-                    r="2"
-                    fill="currentColor"
-                    fillOpacity="0.8"
+                  <path
+                    d="M8.5 11C10.7091 11 12.5 9.20914 12.5 7C12.5 4.79086 10.7091 3 8.5 3C6.29086 3 4.5 4.79086 4.5 7C4.5 9.20914 6.29086 11 8.5 11Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M20 8V14M23 11H17"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
+                <span className="text-sm font-semibold text-[var(--primary)]">
+                  Let&apos;s Connect
+                </span>
               </div>
+
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-[var(--foreground)] via-[var(--primary)] to-[var(--foreground)] bg-clip-text text-transparent">
+                {heroTitle}
+              </h1>
+              
+              <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-3xl mx-auto mb-8">
+                {heroSubtitle}
+              </p>
             </div>
           </div>
         </section>
