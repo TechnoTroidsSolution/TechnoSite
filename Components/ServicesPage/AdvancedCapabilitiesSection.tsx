@@ -17,10 +17,10 @@ interface AdvancedCapabilitiesProps {
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  ai: <Brain className="w-8 h-8 text-primary" />,
-  vision: <ScanEye className="w-8 h-8 text-primary" />,
-  nlp: <MessageSquare className="w-8 h-8 text-primary" />,
-  analytics: <LineChart className="w-8 h-8 text-primary" />,
+  ai: <Brain className="w-8 h-8 text-[var(--primary)]" />,
+  vision: <ScanEye className="w-8 h-8 text-[var(--primary)]" />,
+  nlp: <MessageSquare className="w-8 h-8 text-[var(--primary)]" />,
+  analytics: <LineChart className="w-8 h-8 text-[var(--primary)]" />,
 };
 
 export default function AdvancedCapabilitiesSection({
@@ -45,9 +45,9 @@ export default function AdvancedCapabilitiesSection({
           {data.items.map((item) => (
             <div
               key={item.capability}
-              className="bg-card p-8 rounded-2xl border border-border/60 shadow-sm hover:shadow-xl transition-all"
+              className="bg-card p-8 rounded-2xl border-2 border-[var(--primary)]/30 shadow-sm hover:shadow-xl hover:shadow-[var(--primary)]/20 transition-all"
             >
-              <div className="w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-[var(--primary)]/15 rounded-xl flex items-center justify-center mb-6">
                 {iconMap[item.icon]}
               </div>
 

@@ -5,6 +5,7 @@ import Image from "next/image";
 import CompanyStatsSection from "@/Components/HomePage/stats/CompanyStatsSection";
 import { TestimonialsSection } from "@/Components/HomePage/Testimonials/TestimonialsSection";
 import Services from "@/Components/HomePage/services/Services";
+import { Reveal } from "@/Components/Animations/Reveal";
 import HighlightsSection from "@/Components/HomePage/HighlightsSection";
 import ProcessPreview from "@/Components/HomePage/ProcessPreview";
 import InsightsSection from "@/Components/HomePage/InsightsSection";
@@ -63,15 +64,17 @@ export default function Home() {
 
             {/* Right Column - Illustration */}
             <div className="relative flex items-center justify-center mt-16 lg:mt-20 group">
-              <Image
-                src="/Images/homepage/Pc.png"
-                alt="Modern workspace illustration showing cloud platforms and analytics dashboard"
-                width={700}
-                height={540}
-                className="w-full h-auto max-w-lg lg:max-w-2lg relative z-10 scale-110 lg:scale-125 transition-all duration-700 ease-in-out group-hover:scale-[1.15] lg:group-hover:scale-[1.35] group-hover:rotate-1 group-hover:drop-shadow-2xl contrast-110"
-                priority
-                sizes="(min-width: 1024px) 700px, 95vw"
-              />
+              <Reveal delay={0.3}>
+                <Image
+                  src="/Images/homepage/Pc.png"
+                  alt="Modern workspace illustration showing cloud platforms and analytics dashboard"
+                  width={700}
+                  height={540}
+                  className="w-full h-auto max-w-lg lg:max-w-2lg relative z-10 scale-110 lg:scale-125 transition-all duration-700 ease-in-out group-hover:scale-[1.15] lg:group-hover:scale-[1.35] group-hover:rotate-1 group-hover:drop-shadow-2xl contrast-110"
+                  priority
+                  sizes="(min-width: 1024px) 700px, 95vw"
+                />
+              </Reveal>
 
               {/* Floating Tech Bubble Icons Around Illustration - COLORFUL */}
               {/* Rocket Icon - Top Left - BLUE GRADIENT */}

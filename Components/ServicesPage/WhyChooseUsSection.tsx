@@ -18,22 +18,22 @@ interface WhyChooseUsProps {
 }
 
 const ICONS: Record<string, React.ReactNode> = {
-  rocket: <Rocket className="w-8 h-8 text-teal-600" />,
-  target: <Target className="w-8 h-8 text-teal-600" />,
-  check: <BadgeCheck className="w-8 h-8 text-teal-600" />,
-  support: <Headset className="w-8 h-8 text-teal-600" />,
+  rocket: <Rocket className="w-8 h-8 text-[var(--primary)]" />,
+  target: <Target className="w-8 h-8 text-[var(--primary)]" />,
+  check: <BadgeCheck className="w-8 h-8 text-[var(--primary)]" />,
+  support: <Headset className="w-8 h-8 text-[var(--primary)]" />,
 };
 
 export default function WhyChooseUsSection({ data }: WhyChooseUsProps) {
   return (
-    <section className="py-24 px-6 bg-white">
+    <section className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
 
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
             {data.title}
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-foreground/80 max-w-2xl mx-auto">
             {data.subtitle}
           </p>
         </div>
@@ -42,17 +42,17 @@ export default function WhyChooseUsSection({ data }: WhyChooseUsProps) {
           {data.items.map((item, index) => (
             <div
               key={index}
-              className="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300"
+              className="group bg-card border-2 border-[var(--primary)]/30 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:shadow-[var(--primary)]/20 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-[var(--primary)]/15 rounded-xl flex items-center justify-center mx-auto mb-6">
                 {ICONS[item.icon]}
               </div>
 
-              <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
+              <h3 className="text-xl font-semibold text-foreground text-center mb-3">
                 {item.title}
               </h3>
 
-              <p className="text-gray-600 text-center text-sm leading-relaxed">
+              <p className="text-foreground/80 text-center text-sm leading-relaxed">
                 {item.description}
               </p>
             </div>

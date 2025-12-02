@@ -27,31 +27,31 @@ interface ServicesGridProps {
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  education: <GraduationCap className="w-8 h-8 text-primary" />,
-  n8n: <Workflow className="w-8 h-8 text-primary" />,
-  sap: <Layers className="w-8 h-8 text-primary" />,
-  fullstack: <Server className="w-8 h-8 text-primary" />,
-  mobile: <Smartphone className="w-8 h-8 text-primary" />,
-  blockchain: <Blocks className="w-8 h-8 text-primary" />,
-  uiux: <Palette className="w-8 h-8 text-primary" />,
-  devops: <Cloud className="w-8 h-8 text-primary" />,
-  ai: <Cpu className="w-8 h-8 text-primary" />,
+  education: <GraduationCap className="w-8 h-8 text-[var(--primary)]" />,
+  n8n: <Workflow className="w-8 h-8 text-[var(--primary)]" />,
+  sap: <Layers className="w-8 h-8 text-[var(--primary)]" />,
+  fullstack: <Server className="w-8 h-8 text-[var(--primary)]" />,
+  mobile: <Smartphone className="w-8 h-8 text-[var(--primary)]" />,
+  blockchain: <Blocks className="w-8 h-8 text-[var(--primary)]" />,
+  uiux: <Palette className="w-8 h-8 text-[var(--primary)]" />,
+  devops: <Cloud className="w-8 h-8 text-[var(--primary)]" />,
+  ai: <Cpu className="w-8 h-8 text-[var(--primary)]" />,
 };
 
 export default function ServicesGrid({ services }: ServicesGridProps) {
   const router = useRouter();
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-primary/5 via-background to-background">
+    <section className="py-24 px-6 bg-gradient-to-b from-[var(--primary)]/5 via-background to-background">
       <div className="max-w-7xl mx-auto">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service) => (
             <article
               key={service.slug}
-              className="group bg-card rounded-3xl shadow-lg p-10 border border-border/60 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              className="group bg-card rounded-3xl shadow-lg p-10 border-2 border-[var(--primary)]/30 hover:shadow-2xl hover:shadow-[var(--primary)]/20 transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="bg-primary/15 text-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+              <div className="bg-[var(--primary)]/15 text-[var(--primary)] w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
                 {iconMap[service.icon]}
               </div>
 
@@ -67,7 +67,7 @@ export default function ServicesGrid({ services }: ServicesGridProps) {
                 {service.tags.map((tag) => (
                   <span
                     key={`${service.slug}-${tag}`}
-                    className="bg-primary/10 text-primary px-4 py-1 rounded-full text-xs border border-primary/20"
+                    className="bg-[var(--primary)]/10 text-[var(--primary)] px-4 py-1 rounded-full text-xs border border-[var(--primary)]/20"
                   >
                     {tag}
                   </span>
@@ -76,7 +76,7 @@ export default function ServicesGrid({ services }: ServicesGridProps) {
 
               <button
                 onClick={() => router.push(`/services/${service.slug}`)}
-                className="flex items-center gap-2 text-primary font-semibold hover:underline hover:gap-3 transition-all"
+                className="flex items-center gap-2 text-[var(--primary)] font-semibold hover:underline hover:gap-3 transition-all cursor-pointer"
               >
                 Learn More
                 <svg
