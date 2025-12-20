@@ -1,11 +1,8 @@
-'use client';
-
 import IntroSection from "@/Components/HomePage/IntroSectionNew";
 import Image from "next/image";
 import CompanyStatsSection from "@/Components/HomePage/stats/CompanyStatsSection";
 import { TestimonialsSection } from "@/Components/HomePage/Testimonials/TestimonialsSection";
 import Services from "@/Components/HomePage/services/Services";
-import { Reveal } from "@/Components/Animations/Reveal";
 import HighlightsSection from "@/Components/HomePage/HighlightsSection";
 import ProcessPreview from "@/Components/HomePage/ProcessPreview";
 import InsightsSection from "@/Components/HomePage/InsightsSection";
@@ -14,67 +11,32 @@ import TechStackSection from "@/Components/HomePage/TechStackSection";
 import RoadmapSection from "@/Components/HomePage/RoadmapSection";
 import WhyChooseUsSection from "@/Components/HomePage/WhyChooseUsSection";
 import CTASection from "@/Components/HomePage/CTASection";
+import HeroDecorations from "@/Components/HomePage/HeroDecorations";
 
 export default function Home() {
   return (
     <main className="bg-background text-foreground">
       {/* Hero Section with Vibrant Gradient Background */}
       <section className="relative min-h-[20vh] bg-gradient-to-br from-background via-background to-primary/5 overflow-hidden text-foreground">
-        {/* Animated Decorative Elements - Left Side - COLORFUL */}
-        <div className="absolute top-[15%] left-[5%] w-20 h-20 opacity-40">
-          <div className="grid grid-cols-4 gap-1.5">
-            <div className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse"></div>
-            <div className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse" style={{ animationDelay: '0.1s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse" style={{ animationDelay: '0.7s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse" style={{ animationDelay: '0.8s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse" style={{ animationDelay: '0.9s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse" style={{ animationDelay: '1.1s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse" style={{ animationDelay: '1.2s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse" style={{ animationDelay: '1.3s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse" style={{ animationDelay: '1.4s' }}></div>
-            <div className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-          </div>
-        </div>
-
-        {/* X mark - Top Center - CYAN */}
-        <div className="absolute top-[12%] left-[35%] text-[var(--accent)] text-3xl font-bold animate-pulse opacity-30">×</div>
-
-        {/* Triangle - Top Right - PRIMARY BLUE */}
-        <div className="absolute top-[10%] right-[20%] w-0 h-0 border-l-20 border-l-transparent border-r-20 border-r-transparent border-b-35 border-b-[var(--primary)] opacity-30 animate-bounce" style={{ animationDuration: '3s' }}></div>
-
-        {/* Circle - Left Side - ACCENT */}
-        <div className="absolute top-[50%] left-[8%] w-12 h-12 border-3 border-[var(--accent)] rounded-full opacity-40 animate-pulse"></div>
-
-        {/* Square - Bottom Center - PRIMARY */}
-        <div className="absolute bottom-[15%] left-[42%] w-10 h-10 border-2 border-[var(--primary)] rotate-45 opacity-30 animate-spin" style={{ animationDuration: '8s' }}></div>
-
-        {/* Circle - Bottom Right - GRADIENT RING */}
-        <div className="absolute bottom-[20%] right-[25%] w-16 h-16 rounded-full opacity-40 animate-pulse border-3 border-transparent bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] bg-clip-border" style={{ animationDelay: '1s' }}></div>
+        {/* Client-side decorative elements */}
+        <HeroDecorations />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center min-h-[60vh] lg:min-h-[70vh]">
-            {/* Left Column - Content */}
+            {/* Left Column - Content (Server-rendered for fast LCP) */}
             <IntroSection />
 
-            {/* Right Column - Illustration */}
+            {/* Right Column - Illustration (Server-rendered) */}
             <div className="relative flex items-center justify-center mt-16 lg:mt-20 group">
-              <Reveal delay={0.3}>
-                <Image
-                  src="/Images/homepage/Pc.png"
-                  alt="Modern workspace illustration showing cloud platforms and analytics dashboard"
-                  width={700}
-                  height={540}
-                  className="w-full h-auto max-w-lg lg:max-w-2lg relative z-10 scale-110 lg:scale-125 transition-all duration-700 ease-in-out group-hover:scale-[1.15] lg:group-hover:scale-[1.35] group-hover:rotate-1 group-hover:drop-shadow-2xl contrast-110"
-                  priority
-                  sizes="(min-width: 1024px) 700px, 95vw"
-                />
-              </Reveal>
+              <Image
+                src="/Images/homepage/Pc.png"
+                alt="Modern workspace illustration showing cloud platforms and analytics dashboard"
+                width={700}
+                height={540}
+                className="w-full h-auto max-w-lg lg:max-w-2lg relative z-10 scale-110 lg:scale-125 transition-all duration-700 ease-in-out group-hover:scale-[1.15] lg:group-hover:scale-[1.35] group-hover:rotate-1 group-hover:drop-shadow-2xl contrast-110"
+                priority
+                sizes="(min-width: 1024px) 700px, 95vw"
+              />
 
               {/* Floating Tech Bubble Icons Around Illustration - COLORFUL */}
               {/* Rocket Icon - Top Left - BLUE GRADIENT */}
