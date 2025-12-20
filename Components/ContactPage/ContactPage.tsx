@@ -129,7 +129,7 @@ export default function ContactPage({
           </div>
 
           {/* Circle Outline (Left Middle) */}
-          <div className="absolute top-1/2 left-12 w-10 h-10 border-4 border-cyan-200 rounded-full opacity-50 animate-float-medium pointer-events-none" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-12 w-10 h-10 border-4 border-cyan-200 rounded-full opacity-50 animate-float-medium pointer-events-none" style={{ animationDelay: '1s' }}></div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
@@ -171,7 +171,7 @@ export default function ContactPage({
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-[var(--foreground)] via-[var(--primary)] to-[var(--foreground)] bg-clip-text text-transparent">
                 {heroTitle}
               </h1>
-              
+
               <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-3xl mx-auto mb-8">
                 {heroSubtitle}
               </p>
@@ -402,69 +402,29 @@ export default function ContactPage({
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
           <div className="flex justify-center items-start">
             <div className="relative animate-float">
-              <svg
-                className="w-80 h-80 md:w-96 md:h-96"
-                viewBox="0 0 200 200"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Background circle */}
-                <circle cx="100" cy="100" r="85" fill="#5ECCC3" opacity="0.2" />
+              <svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="nodeGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#3B82F6" />
+                    <stop offset="100%" stop-color="#06B6D4" />
+                  </linearGradient>
+                </defs>
 
-                {/* Center person (Leader) */}
-                <circle cx="100" cy="75" r="18" fill="#5ECCC3" />
-                <path
-                  d="M75 130C75 115 86 103 100 103C114 103 125 115 125 130V145H75V130Z"
-                  fill="#5ECCC3"
-                />
+                <circle cx="110" cy="60" r="10" fill="url(#nodeGrad)" />
+                <circle cx="60" cy="120" r="10" fill="url(#nodeGrad)" />
+                <circle cx="160" cy="120" r="10" fill="url(#nodeGrad)" />
+                <circle cx="110" cy="160" r="10" fill="url(#nodeGrad)" />
 
-                {/* Left person */}
-                <circle cx="60" cy="85" r="15" fill="#5ECCC3" opacity="0.7" />
-                <path
-                  d="M40 130C40 118 48 108 60 108C72 108 80 118 80 130V142H40V130Z"
-                  fill="#5ECCC3"
-                  opacity="0.7"
-                />
 
-                {/* Right person */}
-                <circle cx="140" cy="85" r="15" fill="#5ECCC3" opacity="0.7" />
-                <path
-                  d="M120 130C120 118 128 108 140 108C152 108 160 118 160 130V142H120V130Z"
-                  fill="#5ECCC3"
-                  opacity="0.7"
-                />
+                <line x1="110" y1="60" x2="60" y2="120" stroke="#94A3B8" stroke-width="2" />
+                <line x1="110" y1="60" x2="160" y2="120" stroke="#94A3B8" stroke-width="2" />
+                <line x1="110" y1="60" x2="110" y2="160" stroke="#94A3B8" stroke-width="2" />
 
-                {/* Connection lines representing teamwork */}
-                <line
-                  x1="100"
-                  y1="93"
-                  x2="75"
-                  y2="100"
-                  stroke="#2C3E50"
-                  strokeWidth="2"
-                  opacity="0.3"
-                />
-                <line
-                  x1="100"
-                  y1="93"
-                  x2="125"
-                  y2="100"
-                  stroke="#2C3E50"
-                  strokeWidth="2"
-                  opacity="0.3"
-                />
 
-                {/* Decorative dots */}
-                <circle cx="35" cy="55" r="3" fill="#5ECCC3" opacity="0.6" />
-                <circle cx="165" cy="55" r="3" fill="#5ECCC3" opacity="0.6" />
-                <circle cx="25" cy="100" r="4" fill="#5ECCC3" opacity="0.4" />
-                <circle cx="175" cy="100" r="4" fill="#5ECCC3" opacity="0.4" />
-                <circle cx="50" cy="155" r="3" fill="#5ECCC3" opacity="0.5" />
-                <circle cx="150" cy="155" r="3" fill="#5ECCC3" opacity="0.5" />
-
-                {/* Collaboration symbol - hands shaking or connecting */}
-                <circle cx="100" cy="50" r="5" fill="#2C3E50" opacity="0.3" />
+                <circle cx="110" cy="110" r="16" fill="#0EA5E9" />
               </svg>
+
+
             </div>
           </div>
 
@@ -640,203 +600,6 @@ export default function ContactPage({
       </section> */}
 
       {/* Support & Technical Assistance Section */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="text-center mb-16">
-              <div className="inline-block mb-4">
-                <div className="bg-gradient-to-r from-[var(--primary)]/20 to-[var(--accent)]/20 text-[var(--primary)] border border-[var(--primary)]/30 px-4 py-2 rounded-full text-sm font-semibold">
-                  Technical Support & Resources
-                </div>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                Get the Help You Need
-              </h2>
-              <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-                Get instant help through our support channels or explore our
-                comprehensive resources
-              </p>
-            </div>
-          </Reveal>
-
-          <RevealContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* 24/7 Support */}
-            <RevealItem>
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:shadow-[var(--primary)]/20 hover:-translate-y-2 transition-all duration-300 border-2 border-[var(--primary)]/30 hover:border-[var(--accent)]/50">
-                <div className="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-lg flex items-center justify-center mb-5 text-white shadow-lg shadow-[var(--primary)]/30 mx-auto">
-                  <svg
-                    className="w-7 h-7"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3 text-center">
-                  24/7 Live Support
-                </h3>
-                <p className="text-foreground/80 leading-relaxed text-sm text-center mb-4">
-                  Round-the-clock technical assistance from our expert team via
-                  chat, phone, or email
-                </p>
-                <div className="text-center">
-                  <button className="text-[var(--primary)] hover:text-[var(--accent)] font-semibold text-sm hover:underline transition-colors">
-                    Start Live Chat →
-                  </button>
-                </div>
-              </div>
-            </RevealItem>
-
-            {/* Knowledge Base */}
-            <RevealItem>
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:shadow-[var(--primary)]/20 hover:-translate-y-2 transition-all duration-300 border-2 border-[var(--primary)]/30 hover:border-[var(--accent)]/50">
-                <div className="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-lg flex items-center justify-center mb-5 text-white shadow-lg shadow-[var(--primary)]/30 mx-auto">
-                  <svg
-                    className="w-7 h-7"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3 text-center">
-                  Knowledge Base
-                </h3>
-                <p className="text-foreground/80 leading-relaxed text-sm text-center mb-4">
-                  Access hundreds of articles, tutorials, and guides to solve
-                  common issues quickly
-                </p>
-                <div className="text-center">
-                  <button className="text-[var(--primary)] hover:text-[var(--accent)] font-semibold text-sm hover:underline transition-colors">
-                    Browse Articles →
-                  </button>
-                </div>
-              </div>
-            </RevealItem>
-
-            {/* Community Forum */}
-            <RevealItem>
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:shadow-[var(--primary)]/20 hover:-translate-y-2 transition-all duration-300 border-2 border-[var(--primary)]/30 hover:border-[var(--accent)]/50">
-                <div className="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-lg flex items-center justify-center mb-5 text-white shadow-lg shadow-[var(--primary)]/30 mx-auto">
-                  <svg
-                    className="w-7 h-7"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3 text-center">
-                  Community Forum
-                </h3>
-                <p className="text-foreground/80 leading-relaxed text-sm text-center mb-4">
-                  Connect with other users, share experiences, and get
-                  peer-to-peer support
-                </p>
-                <div className="text-center">
-                  <button className="text-[var(--primary)] hover:text-[var(--accent)] font-semibold text-sm hover:underline transition-colors">
-                    Join Community →
-                  </button>
-                </div>
-              </div>
-            </RevealItem>
-          </RevealContainer>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="text-center mb-16">
-              <div className="inline-block mb-4">
-                <div className="bg-gradient-to-r from-[var(--primary)]/20 to-[var(--accent)]/20 text-[var(--primary)] border border-[var(--primary)]/30 px-4 py-2 rounded-full text-sm font-semibold">
-                  Frequently Asked Questions
-                </div>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                Quick Answers
-              </h2>
-              <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-                Quick answers to common questions about contacting us
-              </p>
-            </div>
-          </Reveal>
-
-          <RevealContainer className="space-y-4">
-            {/* FAQ Items */}
-            {[
-              {
-                question: "What's the typical response time for inquiries?",
-                answer:
-                  "We aim to respond to all inquiries within 24 hours during business days. For urgent technical support, our 24/7 live chat provides immediate assistance.",
-              },
-              {
-                question: "Do you offer on-site consultations?",
-                answer:
-                  "Yes, we offer both virtual and on-site consultations depending on your project requirements and location. Contact our sales team to discuss the best option for your needs.",
-              },
-              {
-                question: "Can I schedule a demo of your solutions?",
-                answer:
-                  'Absolutely! You can schedule a personalized demo by contacting sales@techno.com or using our "Book a Free Consultation" option above. We\'ll customize the demo to your specific use case.',
-              },
-              {
-                question:
-                  "What information should I include in my project inquiry?",
-                answer:
-                  "Please provide details about your business needs, project scope, timeline, and any specific technical requirements. The more information you share, the better we can tailor our proposal to your needs.",
-              },
-            ].map((faq, index) => (
-              <RevealItem key={index}>
-                <div className="bg-card/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-[var(--primary)]/20 hover:-translate-y-1 transition-all duration-300 border-2 border-[var(--primary)]/30 hover:border-[var(--accent)]/50 overflow-hidden">
-                  <details className="group">
-                    <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-[var(--primary)]/5 transition-colors">
-                      <h3 className="text-lg font-bold text-foreground">
-                        {faq.question}
-                      </h3>
-                      <svg
-                        className="w-5 h-5 text-[var(--primary)] transition-transform group-open:rotate-180"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </summary>
-                    <div className="px-6 pb-6 text-foreground/80">
-                      <p>{faq.answer}</p>
-                    </div>
-                  </details>
-                </div>
-              </RevealItem>
-            ))}
-          </RevealContainer>
-        </div>
-      </section>
 
       {/* Emergency Support Banner */}
       <section className="py-12 bg-red-50 border-y-2 border-red-200">
@@ -909,7 +672,7 @@ export default function ContactPage({
 
           <div className="overflow-x-auto">
             <table className="w-full bg-card rounded-xl shadow-lg overflow-hidden">
-              <thead className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white">
+              <thead className="bg-gradient-to-r from-[var(--primary)] to-[var(--primary)] text-white">
                 <tr>
                   <th className="px-6 py-4 text-left font-semibold">Channel</th>
                   <th className="px-6 py-4 text-left font-semibold">
@@ -1116,77 +879,13 @@ export default function ContactPage({
                 </span>
               </a>
 
-              {/* GitHub */}
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-3 bg-card border-2 border-border hover:border-gray-900 hover:bg-gray-900 px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-xl"
-              >
-                <svg
-                  className="w-6 h-6 text-slate-900 group-hover:text-white transition-colors"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
-                <span className="font-semibold text-foreground group-hover:text-white transition-colors">
-                  GitHub
-                </span>
-              </a>
 
-              {/* YouTube */}
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-3 bg-card border-2 border-border hover:border-red-600 hover:bg-red-600 px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-xl"
-              >
-                <svg
-                  className="w-6 h-6 text-red-600 group-hover:text-white transition-colors"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
-                <span className="font-semibold text-foreground group-hover:text-white transition-colors">
-                  YouTube
-                </span>
-              </a>
+
+
             </div>
           </Reveal>
 
-          <Reveal>
-            <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 dark:from-primary dark:via-accent dark:to-primary rounded-2xl p-10 text-center shadow-2xl relative overflow-hidden">
-              {/* Ensure visibility with explicit background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 dark:from-primary dark:via-accent dark:to-primary"></div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-4 text-white">
-                  Subscribe to Our Newsletter
-                </h3>
-                <p className="mb-8 text-white text-lg">
-                  Get the latest tech insights, product updates, and exclusive
-                  offers delivered to your inbox
-                </p>
-                <form
-                  className="max-w-lg mx-auto flex flex-col sm:flex-row gap-3"
-                  onSubmit={handleSubmit}
-                >
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    className="grow px-5 py-4 rounded-xl text-slate-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-lg bg-white"
-                  />
-                  <button
-                    type="submit"
-                    className="shrink-0 bg-white text-blue-600 dark:text-primary hover:bg-gray-100 dark:hover:bg-white/90 font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-          </Reveal>
+
         </div>
       </section>
 
