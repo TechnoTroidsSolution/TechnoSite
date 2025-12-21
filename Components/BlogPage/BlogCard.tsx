@@ -4,6 +4,17 @@ import React from 'react';
 import { Calendar, Clock, User, Tag } from 'lucide-react';
 import Link from 'next/link';
 
+// Helper function to parse markdown bold text (**text**)
+const parseMarkdownBold = (text: string): React.ReactNode => {
+    const parts = text.split(/(\*\*[^*]+\*\*)/g);
+    return parts.map((part, index) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+            return <strong key={index}>{part.slice(2, -2)}</strong>;
+        }
+        return part;
+    });
+};
+
 interface BlogCardProps {
     readonly slug: string;
     readonly title: string;
