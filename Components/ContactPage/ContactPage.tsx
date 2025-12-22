@@ -405,8 +405,8 @@ export default function ContactPage({
               <svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="nodeGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#3B82F6" />
-                    <stop offset="100%" stop-color="#06B6D4" />
+                    <stop offset="0%" stopColor="#3B82F6" />
+                    <stop offset="100%" stopColor="#06B6D4" />
                   </linearGradient>
                 </defs>
 
@@ -416,9 +416,9 @@ export default function ContactPage({
                 <circle cx="110" cy="160" r="10" fill="url(#nodeGrad)" />
 
 
-                <line x1="110" y1="60" x2="60" y2="120" stroke="#94A3B8" stroke-width="2" />
-                <line x1="110" y1="60" x2="160" y2="120" stroke="#94A3B8" stroke-width="2" />
-                <line x1="110" y1="60" x2="110" y2="160" stroke="#94A3B8" stroke-width="2" />
+                <line x1="110" y1="60" x2="60" y2="120" stroke="#94A3B8" strokeWidth="2" />
+                <line x1="110" y1="60" x2="160" y2="120" stroke="#94A3B8" strokeWidth="2" />
+                <line x1="110" y1="60" x2="110" y2="160" stroke="#94A3B8" strokeWidth="2" />
 
 
                 <circle cx="110" cy="110" r="16" fill="#0EA5E9" />

@@ -9,9 +9,9 @@ const bulletPoints = [
 export default function IntroSection() {
   return (
     <div className="relative flex flex-col justify-center gap-6 md:gap-7 z-10">
-      <span className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--primary)]/20 to-[var(--accent)]/20 text-[var(--primary)] px-4 py-1.5 rounded-full backdrop-blur border border-[var(--primary)]/30 shadow-lg shadow-[var(--primary)]/10">
+      <span className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--primary)]/20 to-[var(--accent)]/20 text-[var(--primary)] px-4 py-1.5 rounded-full backdrop-blur border border-[var(--primary)]/30 shadow-lg shadow-[var(--primary)]/10 w-fit">
         <span aria-hidden="true" className="h-2 w-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] animate-pulse" />
-        <span className="font-medium">Experience-led technology partner</span>
+        <span className="font-medium">Technology partner</span>
       </span>
 
       <h1 className="text-3xl md:text-[2.75rem] lg:text-[3.25rem] font-bold bg-gradient-to-r from-[var(--foreground)] via-[var(--primary)] to-[var(--foreground)] bg-clip-text text-transparent leading-[1.1] tracking-tight">

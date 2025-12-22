@@ -46,6 +46,8 @@ export default function CareersPage({ careersData }: CareersPageProps) {
   const [selectedDepartment, setSelectedDepartment] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedLocation, setSelectedLocation] = useState<string>("All");
+  const [isCategoryOpen, setIsCategoryOpen] = useState<boolean>(true);
+  const [isLocationOpen, setIsLocationOpen] = useState<boolean>(false);
 
   const filteredJobs = careersData.jobs.filter((job) => {
     const matchesDepartment = selectedDepartment === "All" || job.department === selectedDepartment;
@@ -152,48 +154,68 @@ export default function CareersPage({ careersData }: CareersPageProps) {
                 
                 {/* Category Filter */}
                 <div className="mb-6 pb-6 border-b border-gray-200">
-                  <button className="w-full flex items-center justify-between text-left text-sm font-bold text-foreground mb-4 cursor-pointer">
+                  <button 
+                    onClick={() => setIsCategoryOpen(!isCategoryOpen)}
+                    className="w-full flex items-center justify-between text-left text-sm font-bold text-foreground mb-4 cursor-pointer hover:text-[var(--primary)] transition-colors"
+                  >
                     <span>Category</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg 
+                      className={`w-4 h-4 transition-transform duration-300 ${isCategoryOpen ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  <div className="space-y-2.5">                    
-                    {careersData.departments.map((dept) => (
-                      <label key={dept} className="flex items-center cursor-pointer group">
-                        <input
-                          type="checkbox"
-                          checked={selectedDepartment === dept}
-                          onChange={() => setSelectedDepartment(dept)}
-                          className="w-4 h-4 text-[var(--primary)] border-gray-300 rounded focus:ring-[var(--primary)] focus:ring-2"
-                        />
-                        <span className="ml-3 text-sm text-gray-700 group-hover:text-foreground">{dept}</span>
-                      </label>
-                    ))}
-                  </div>
+                  {isCategoryOpen && (
+                    <div className="space-y-2.5">                    
+                      {careersData.departments.map((dept) => (
+                        <label key={dept} className="flex items-center cursor-pointer group">
+                          <input
+                            type="checkbox"
+                            checked={selectedDepartment === dept}
+                            onChange={() => setSelectedDepartment(dept)}
+                            className="w-4 h-4 text-[var(--primary)] border-gray-300 rounded focus:ring-[var(--primary)] focus:ring-2"
+                          />
+                          <span className="ml-3 text-sm text-gray-700 group-hover:text-foreground">{dept}</span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 {/* Location Filter */}
                 <div>
-                  <button className="w-full flex items-center justify-between text-left text-sm font-bold text-foreground mb-4 cursor-pointer">
+                  <button 
+                    onClick={() => setIsLocationOpen(!isLocationOpen)}
+                    className="w-full flex items-center justify-between text-left text-sm font-bold text-foreground mb-4 cursor-pointer hover:text-[var(--primary)] transition-colors"
+                  >
                     <span>Location</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg 
+                      className={`w-4 h-4 transition-transform duration-300 ${isLocationOpen ? 'rotate-45' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                     </svg>
                   </button>
-                  <div className="space-y-2.5">
-                    {locations.map((location) => (
-                      <label key={location} className="flex items-center cursor-pointer group">
-                        <input
-                          type="checkbox"
-                          checked={selectedLocation === location}
-                          onChange={() => setSelectedLocation(location)}
-                          className="w-4 h-4 text-[var(--primary)] border-gray-300 rounded focus:ring-[var(--primary)] focus:ring-2"
-                        />
-                        <span className="ml-3 text-sm text-gray-700 group-hover:text-foreground">{location}</span>
-                      </label>
-                    ))}
-                  </div>
+                  {isLocationOpen && (
+                    <div className="space-y-2.5">
+                      {locations.map((location) => (
+                        <label key={location} className="flex items-center cursor-pointer group">
+                          <input
+                            type="checkbox"
+                            checked={selectedLocation === location}
+                            onChange={() => setSelectedLocation(location)}
+                            className="w-4 h-4 text-[var(--primary)] border-gray-300 rounded focus:ring-[var(--primary)] focus:ring-2"
+                          />
+                          <span className="ml-3 text-sm text-gray-700 group-hover:text-foreground">{location}</span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -220,11 +242,7 @@ export default function CareersPage({ careersData }: CareersPageProps) {
                 <p className="text-gray-700 text-sm">
                   Showing <span className="font-semibold text-foreground">1 - {filteredJobs.length}</span> of <span className="font-semibold text-foreground">{filteredJobs.length} jobs</span>
                 </p>
-                <select className="px-4 py-2 border border-gray-300 rounded-lg bg-white text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary)] cursor-pointer">
-                  <option>Most relevant</option>
-                  <option>Newest first</option>
-                  <option>Salary: High to Low</option>
-                </select>
+
               </div>
 
               {selectedDepartment !== "All" && (

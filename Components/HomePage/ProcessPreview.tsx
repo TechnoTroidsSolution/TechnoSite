@@ -48,10 +48,10 @@ export default function ProcessPreview() {
             </p>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:text-accent transition-colors"
+              className="group inline-flex items-center gap-2 text-primary font-semibold hover:text-accent transition-all duration-300 hover:gap-3"
             >
               Explore the full process
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </Reveal>
 

@@ -90,7 +90,7 @@ export default function Home() {
       <RoadmapSection />
 
       {/* Testimonials - Social proof */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
 
       {/* Insights - Thought leadership */}
       <InsightsSection />

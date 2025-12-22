@@ -130,12 +130,6 @@ const JobDetailPage = ({ job }: { readonly job: Job | undefined }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
-              <button className="bg-blue-50 border border-blue-200 text-[var(--primary)] px-6 py-3 rounded-lg font-semibold hover:bg-blue-100 transition-colors inline-flex items-center gap-2 cursor-pointer">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                </svg>
-                Save Job
-              </button>
             </div>
           </div>
         </div>
@@ -254,11 +248,8 @@ const JobDetailPage = ({ job }: { readonly job: Job | undefined }) => {
                 <p className="text-white/90 text-sm mb-4">
                   Apply now and join our innovative team.
                 </p>
-                <button className="w-full bg-white text-[var(--primary)] px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors mb-3 cursor-pointer">
+                <button className="w-full bg-white text-[var(--primary)] px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors cursor-pointer">
                   Apply Now
-                </button>
-                <button className="w-full bg-white/15 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/25 transition-colors cursor-pointer">
-                  Save for Later
                 </button>
               </div>
 

@@ -62,7 +62,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ data }) => {
                     <div className="mb-16">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="w-1 h-8 bg-gradient-to-b from-[var(--primary)] to-[var(--accent)] rounded-full" />
-                            <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                            <h2 className="text-3xl sm:text-4xl font-bold text-black">
                                 Featured Articles
                             </h2>
                         </div>
@@ -89,7 +89,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ data }) => {
                 <div>
                     <div className="flex items-center gap-3 mb-8">
                         <div className="w-1 h-8 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full" />
-                        <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-black">
                             All Articles
                         </h2>
                     </div>
