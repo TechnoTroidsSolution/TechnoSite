@@ -65,13 +65,6 @@ export default function CTASection({ data }: CTASectionProps) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
-          <button
-            onClick={() => router.push("/services")}
-            className="bg-white border-2 border-[var(--primary)] text-[var(--primary)] font-semibold px-8 py-3 text-base rounded-lg hover:bg-[var(--primary)]/5 transition-all duration-300 cursor-pointer"
-          >
-            Explore Our Services
-          </button>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm">

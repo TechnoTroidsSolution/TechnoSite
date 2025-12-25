@@ -8,7 +8,7 @@ interface HeroProps {
 
 export default function HeroSection({ hero }: HeroProps) {
   return (
-    <section className="relative bg-gradient-to-br from-background via-background to-[var(--primary)]/5 text-foreground py-16 md:py-20 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-background via-background to-[var(--primary)]/5 text-foreground py-16 md:py-15 overflow-hidden">
       {/* Decorative Animated Icons */}
       {/* Dotted Grid (Top Left) */}
       <div className="absolute top-12 left-4 md:left-10 opacity-40 animate-spin-slow pointer-events-none">

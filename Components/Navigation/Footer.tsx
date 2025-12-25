@@ -9,15 +9,15 @@ const Footer = () => {
   const footerLinks = {
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
+      { name: 'Service', href: '/services' },
       { name: 'Careers', href: '/careers' },
       { name: 'Contact', href: '/contact' },
     ],
     services: [
-      { name: 'Web Development', href: '/services/web-development' },
-      { name: 'Mobile Apps', href: '/services/mobile-apps' },
-      { name: 'Cloud Solutions', href: '/services/cloud' },
-      { name: 'AI & ML', href: '/services/ai-ml' },
+      { name: 'Web Development', href: '/services/full-stack-web-development' },
+      { name: 'Mobile Apps', href: '/services/mobile-applications' },
+      { name: 'Cloud Solutions', href: '/services/cloud-devops' },
+      { name: 'AI & ML', href: '/services/ai-ml-integration' },
     ],
 
     resources: [

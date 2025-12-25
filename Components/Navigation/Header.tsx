@@ -47,7 +47,7 @@ const Header = () => {
               </svg>
             </div>
             <span className="ml-3 text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-              TechnoTroids
+              StackTweaks
             </span>
           </Link>
 
@@ -64,9 +64,18 @@ const Header = () => {
                 }`}
               >
                 {item.name}
-                {isActive(item.href) && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-1 bg-primary rounded-full" />
-                )}
+
+                {/* Animated underline */}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] w-full rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--accent)]
+                  transition-transform duration-300 ease-out
+                  ${
+                    isActive(item.href)
+                      ? 'scale-x-100'
+                      : 'scale-x-0 group-hover:scale-x-100'
+                  }`}
+                  style={{ transformOrigin: 'center' }}
+                />
               </Link>
             ))}
           </div>
