@@ -29,8 +29,8 @@ async function getAboutData(): Promise<AboutData> {
 }
 
 export const metadata = {
-  title: 'About Us - TechnoTroids',
-  description: 'Learn about our philosophy, values, and the team behind TechnoTroids. Discover how we think about software and our commitment to excellence.',
+  title: 'About Us - Techamplers',
+  description: 'Learn about our philosophy, values, and the team behind Techamplers. Discover how we think about software and our commitment to excellence.',
 };
 
 export default async function About() {

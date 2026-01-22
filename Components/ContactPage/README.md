@@ -1,6 +1,6 @@
 # ContactPage Component
 
-A reusable, comprehensive contact page component for TechnoTroids website.
+A reusable, comprehensive contact page component for Techamplers website.
 
 ## Location
 `Components/ContactPage/ContactPage.tsx`

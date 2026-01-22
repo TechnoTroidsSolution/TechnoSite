@@ -1,6 +1,6 @@
 blog:
   meta:
-    title: "TechnoTroids Blog"
+    title: "Techamplers Blog"
     subtitle: "Insights on AI, Technology, and Innovation"
     description: "Stay updated with the latest trends in Agentic AI, Model Context Protocol, and cutting-edge technology."
 
@@ -8,7 +8,7 @@ blog:
     - slug: "agentic-ai-autonomous-systems"
       title: "The Rise of Agentic AI: Building Autonomous Intelligent Systems"
       date: "2024-12-15"
-      author: "TechnoTroids AI Research Team"
+      author: "Techamplers AI Research Team"
       category: "Artificial Intelligence"
       tags:
         - "Agentic AI"
@@ -130,12 +130,12 @@ blog:
 
         Agentic AI represents the next frontier in artificial intelligence - systems that don't just respond to queries but actively pursue goals, make decisions, and take actions. As these technologies mature, they will fundamentally transform how we work, create, and solve problems.
 
-        At TechnoTroids, we're at the forefront of agentic AI development, building intelligent systems that empower businesses to achieve more. Ready to explore how agentic AI can transform your organization? [Get in touch with us](/contact).
+        At Techamplers, we're at the forefront of agentic AI development, building intelligent systems that empower businesses to achieve more. Ready to explore how agentic AI can transform your organization? [Get in touch with us](/contact).
 
     - slug: "model-context-protocol-ai-interoperability"
       title: "Model Context Protocol (MCP): Building the Future of AI Interoperability"
       date: "2024-12-18"
-      author: "TechnoTroids Engineering Team"
+      author: "Techamplers Engineering Team"
       category: "AI Infrastructure"
       tags:
         - "MCP"
@@ -361,12 +361,12 @@ blog:
 
         The Model Context Protocol is more than just a technical specification - it's a vision for how AI systems should interact with the world. By providing a standardized, open approach to AI integration, MCP empowers developers to build more powerful, flexible, and interoperable AI applications.
 
-        At TechnoTroids, we're actively leveraging MCP to build next-generation AI solutions. Interested in integrating MCP into your AI infrastructure? [Let's talk](/contact).
+        At Techamplers, we're actively leveraging MCP to build next-generation AI solutions. Interested in integrating MCP into your AI infrastructure? [Let's talk](/contact).
 
     - slug: "llm-production-deployment-strategies"
       title: "Large Language Models in Production: Deployment Strategies and Best Practices"
       date: "2024-12-10"
-      author: "TechnoTroids DevOps Team"
+      author: "Techamplers DevOps Team"
       category: "AI Infrastructure"
       tags:
         - "LLM"

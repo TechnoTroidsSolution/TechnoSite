@@ -9,7 +9,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
-    title = 'TechnoTroids Blog',
+    title = 'Techamplers Blog',
     subtitle = 'Insights on AI, Technology, and Innovation',
 }) => {
     return (

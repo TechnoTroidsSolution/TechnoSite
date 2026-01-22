@@ -5,8 +5,8 @@ import path from 'path';
 import yaml from 'js-yaml';
 
 export const metadata = {
-  title: 'Careers | TechnoTroids',
-  description: 'Join our team and build the future of technology. Explore career opportunities at TechnoTroids.',
+  title: 'Careers | Techamplers',
+  description: 'Join our team and build the future of technology. Explore career opportunities at Techamplers.',
 };
 
 // Load careers data from YAML

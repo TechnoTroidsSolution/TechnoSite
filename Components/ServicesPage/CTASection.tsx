@@ -16,7 +16,7 @@ export default function CTASection({ data }: CTASectionProps) {
   const router = useRouter();
 
   return (
-    <section className="py-20 px-6 bg-gray-50 text-foreground relative overflow-hidden">
+    <section className="py-20 px-6 bg-muted/30 text-foreground relative overflow-hidden">
       {/* Decorative Animated Icons */}
       {/* Dotted Grid (Top Left) */}
       <div className="absolute top-12 left-4 md:left-10 opacity-40 pointer-events-none">

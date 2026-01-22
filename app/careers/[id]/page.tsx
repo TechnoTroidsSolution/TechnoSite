@@ -5,7 +5,7 @@ import path from 'path';
 import yaml from 'js-yaml';
 
 export const metadata: Metadata = {
-  title: 'Job Details - Technotroids',
+  title: 'Job Details - Techamplers',
   description: 'View detailed job description and requirements',
 };
 

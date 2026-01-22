@@ -14,11 +14,11 @@ export default function ServiceItem({
   return (
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0 mt-1">
-        <Icon className="w-8 h-8 text-gray-800" />
+        <Icon className="w-8 h-8 text-foreground" />
       </div>
       <div>
-        <h4 className="font-semibold text-lg text-gray-900">{title}</h4>
-        <p className="text-gray-600">{description}</p>
+        <h4 className="font-semibold text-lg text-foreground">{title}</h4>
+        <p className="text-muted-foreground">{description}</p>
       </div>
     </div>
   );

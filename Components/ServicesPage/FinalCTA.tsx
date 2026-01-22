@@ -18,7 +18,7 @@ export default function FinalCTA({ data }: FinalCTAProps) {
   const router = useRouter();
 
   return (
-    <section className="py-20 px-6 bg-gray-50 text-foreground relative overflow-hidden">
+    <section className="py-20 px-6 bg-muted/30 text-foreground relative overflow-hidden">
       {/* Decorative Animated Icons */}
       {/* Dotted Grid (Top Left) */}
       <div className="absolute top-12 left-4 md:left-10 opacity-40 pointer-events-none">
@@ -70,7 +70,7 @@ export default function FinalCTA({ data }: FinalCTAProps) {
 
           <button
             onClick={() => router.push(data.button2_link)}
-            className="bg-white border-2 border-[var(--primary)] text-[var(--primary)] font-semibold px-8 py-3 text-base rounded-lg hover:bg-[var(--primary)]/5 transition-all duration-300 cursor-pointer"
+            className="bg-card border-2 border-[var(--primary)] text-[var(--primary)] font-semibold px-8 py-3 text-base rounded-lg hover:bg-[var(--primary)]/5 transition-all duration-300 cursor-pointer"
           >
             {data.button2_text}
           </button>
