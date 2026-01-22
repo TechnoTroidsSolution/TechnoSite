@@ -51,7 +51,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = '' }) => {
 
   return (
     <nav 
-      className={`bg-muted/50 border-b border-border ${className}`} 
+      className={`bg-slate-50 border-b border-gray-200 ${className}`} 
       aria-label="Breadcrumb"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -60,7 +60,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = '' }) => {
             <li key={index} className="flex items-center">
               {index > 0 && (
                 <svg
-                  className="w-4 h-4 text-muted-foreground mx-2"
+                  className="w-4 h-4 text-gray-400 mx-2"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -76,12 +76,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = '' }) => {
               {item.href ? (
                 <Link
                   href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                  className="text-slate-600 hover:text-primary transition-colors duration-200"
                 >
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-foreground font-medium" aria-current="page">
+                <span className="text-slate-900 font-medium" aria-current="page">
                   {item.label}
                 </span>
               )}

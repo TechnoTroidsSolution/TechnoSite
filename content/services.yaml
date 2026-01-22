@@ -25,14 +25,14 @@ services_grid:
     slug: "n8n-automation"
 
   - icon: "sap"
-    title: "SAP Automation"
-    description: "Enterprise-grade SAP integration and automation solutions."
+    title: "ERP Automation"
+    description: "Enterprise-grade ERP integration and automation solutions across multiple platforms."
     tags:
-      - "SAP Fiori"
-      - "ABAP Development"
+      - "ERP Integration"
+      - "Workflow Automation"
       - "RPA Integration"
-      - "Business Process"
-    slug: "sap-automation"
+      - "Business Processes"
+    slug: "erp-automation"
 
   - icon: "fullstack"
     title: "Full-Stack Web Development"

@@ -32,7 +32,7 @@ export default function InsightsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <Reveal className="max-w-2xl space-y-4">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-semibold">
+            <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
               Latest thinking
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
