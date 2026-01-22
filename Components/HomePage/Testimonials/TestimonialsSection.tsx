@@ -13,7 +13,7 @@ const ArrowIcon = ({ className }: { className?: string }) => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className={`h-6 w-6 text-gray-800 ${className}`}
+    className={`h-6 w-6 text-foreground ${className}`}
   >
     <path
       strokeLinecap="round"
@@ -59,12 +59,12 @@ export const TestimonialsSection = () => {
         </div>
       </Reveal>
       <Reveal>
-        <h2 className="mt-6 text-center text-4xl font-bold text-slate-900 md:text-5xl">
+        <h2 className="mt-6 text-center text-4xl font-bold text-foreground md:text-5xl">
           What Our Clients Say
         </h2>
       </Reveal>
       <Reveal>
-        <p className="mt-4 max-w-xl text-center text-lg text-slate-600">
+        <p className="mt-4 max-w-xl text-center text-lg text-muted-foreground">
           Don&apos;t just take our word for it. Here&apos;s what industry leaders
           say about working with DevStudio.
         </p>
@@ -98,7 +98,7 @@ export const TestimonialsSection = () => {
               {/* Left Arrow */}
               <button
                 onClick={handlePrev}
-                className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-white/50 p-2 shadow-lg transition hover:bg-white/80 md:left-0 md:-translate-x-full"
+                className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-card/50 p-2 shadow-lg transition hover:bg-card/80 md:left-0 md:-translate-x-full"
                 aria-label="Previous testimonial"
               >
                 <ArrowIcon className="rotate-180" />
@@ -106,7 +106,7 @@ export const TestimonialsSection = () => {
               {/* Right Arrow */}
               <button
                 onClick={handleNext}
-                className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-white/50 p-2 shadow-lg transition hover:bg-white/80 md:right-0 md:translate-x-full"
+                className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-card/50 p-2 shadow-lg transition hover:bg-card/80 md:right-0 md:translate-x-full"
                 aria-label="Next testimonial"
               >
                 <ArrowIcon />

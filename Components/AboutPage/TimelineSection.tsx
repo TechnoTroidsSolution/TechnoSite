@@ -8,7 +8,7 @@ export default function TimelineSection() {
     {
       phase: 'Phase 01',
       title: 'Inception & Core Engine',
-      description: 'TechnoTroids was born from a simple idea: Software is too complex. We built our core engine to simplify the stack.',
+      description: 'Techamplers was born from a simple idea: Software is too complex. We built our core engine to simplify the stack.',
       status: 'completed',
       icon: '⚡'
     },

@@ -53,12 +53,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     if (!post) {
         return {
-            title: 'Post Not Found - TechnoTroids Blog',
+            title: 'Post Not Found - Techamplers Blog',
         };
     }
 
     return {
-        title: `${post.title} - TechnoTroids Blog`,
+        title: `${post.title} - Techamplers Blog`,
         description: post.excerpt,
         openGraph: {
             title: post.title,

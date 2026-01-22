@@ -188,14 +188,14 @@ export default function NotFound() {
 
           <button
             onClick={() => router.back()}
-            className="bg-white border-2 border-[var(--primary)] text-[var(--primary)] font-semibold px-8 py-4 text-base rounded-lg hover:bg-[var(--primary)]/5 transition-all duration-300 cursor-pointer"
+            className="bg-card border-2 border-[var(--primary)] text-[var(--primary)] font-semibold px-8 py-4 text-base rounded-lg hover:bg-[var(--primary)]/5 transition-all duration-300 cursor-pointer"
           >
             Go Back
           </button>
         </div>
 
         {/* Quick Links */}
-        <div className="border-t border-gray-200 dark:border-gray-700 pt-8 mt-8">
+        <div className="border-t border-border pt-8 mt-8">
           <p className="text-sm text-foreground/70 mb-4">Or explore these pages:</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 

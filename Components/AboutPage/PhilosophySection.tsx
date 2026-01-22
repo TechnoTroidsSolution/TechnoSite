@@ -63,7 +63,7 @@ export default function PhilosophySection({
     },
   ];
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-20 md:py-28 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
@@ -126,10 +126,10 @@ export default function PhilosophySection({
                     <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${innovation.gradient} text-white mb-5 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105`}>
                       {innovation.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
                       {innovation.title}
                     </h3>
-                    <p className="text-slate-600 leading-relaxed text-sm">
+                    <p className="text-muted-foreground leading-relaxed text-sm">
                       {innovation.desc}
                     </p>
                   </div>

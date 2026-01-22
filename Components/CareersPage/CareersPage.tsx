@@ -3,6 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
+
+// EmailJS Configuration - Use same config as contact page
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "your_service_id";
+const EMAILJS_JOB_ALERT_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_JOB_ALERT_TEMPLATE_ID || "your_job_alert_template_id";
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "your_public_key";
 
 interface JobOpening {
   readonly id: string;
@@ -48,6 +54,62 @@ export default function CareersPage({ careersData }: CareersPageProps) {
   const [selectedLocation, setSelectedLocation] = useState<string>("All");
   const [isCategoryOpen, setIsCategoryOpen] = useState<boolean>(true);
   const [isLocationOpen, setIsLocationOpen] = useState<boolean>(false);
+
+  // Job Alert States
+  const [alertEmail, setAlertEmail] = useState<string>("");
+  const [isAlertSubmitting, setIsAlertSubmitting] = useState<boolean>(false);
+  const [alertStatus, setAlertStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  // Handle Job Alert Subscription
+  const handleJobAlertSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!alertEmail) {
+      setAlertStatus({
+        type: "error",
+        message: "Please enter your email address.",
+      });
+      return;
+    }
+
+    setIsAlertSubmitting(true);
+    setAlertStatus({ type: null, message: "" });
+
+    try {
+      const templateParams = {
+        subscriber_email: alertEmail,
+        department_filter: selectedDepartment,
+        location_filter: selectedLocation,
+        subscription_date: new Date().toLocaleDateString(),
+      };
+
+      const result = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_JOB_ALERT_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      if (result.status === 200) {
+        setAlertStatus({
+          type: "success",
+          message: "You're subscribed! We'll notify you of new job openings.",
+        });
+        setAlertEmail("");
+      }
+    } catch (error) {
+      console.error("Job Alert Error:", error);
+      setAlertStatus({
+        type: "error",
+        message: "Something went wrong. Please try again.",
+      });
+    } finally {
+      setIsAlertSubmitting(false);
+    }
+  };
 
   const filteredJobs = careersData.jobs.filter((job) => {
     const matchesDepartment = selectedDepartment === "All" || job.department === selectedDepartment;
@@ -220,23 +282,72 @@ export default function CareersPage({ careersData }: CareersPageProps) {
               </div>
 
               {/* Job Alert Box - Separate */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+              {/* <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
                 <h4 className="text-lg font-bold text-foreground mb-3">Create Job Alert</h4>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">
                   Use refined search filters above to get better job alerts
                 </p>
-                <input
-                  type="email"
-                  placeholder="Enter email"
-                  className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent mb-3 bg-white text-foreground placeholder:text-gray-400"
-                />
-                <button className="w-full bg-[var(--primary)] text-white px-4 py-3 rounded-lg text-sm font-semibold hover:bg-[var(--primary)]/90 transition-colors cursor-pointer">
-                  Create Alert
-                </button>
-              </div>
+                
+                {alertStatus.type && (
+                  <div
+                    className={`p-3 rounded-lg text-sm font-medium mb-3 ${
+                      alertStatus.type === "success"
+                        ? "bg-green-100 text-green-800 border border-green-200"
+                        : "bg-red-100 text-red-800 border border-red-200"
+                    }`}
+                  >
+                    {alertStatus.message}
+                  </div>
+                )}
+
+                <form onSubmit={handleJobAlertSubmit}>
+                  <input
+                    type="email"
+                    placeholder="Enter email"
+                    value={alertEmail}
+                    onChange={(e) => setAlertEmail(e.target.value)}
+                    className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent mb-3 bg-white text-foreground placeholder:text-gray-400"
+                    required
+                  />
+                  <button 
+                    type="submit"
+                    disabled={isAlertSubmitting}
+                    className={`w-full bg-[var(--primary)] text-white px-4 py-3 rounded-lg text-sm font-semibold hover:bg-[var(--primary)]/90 transition-colors cursor-pointer ${
+                      isAlertSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                    }`}
+                  >
+                    {isAlertSubmitting ? (
+                      <span className="flex items-center justify-center gap-2">
+                        <svg
+                          className="animate-spin h-4 w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          ></path>
+                        </svg>
+                        Subscribing...
+                      </span>
+                    ) : (
+                      "Create Alert"
+                    )}
+                  </button>
+                </form>
+              </div> */}
             </div>
 
-            {/* Job Cards */}
             <div className="lg:col-span-9">
               <div className="mb-6 flex items-center justify-between">
                 <p className="text-gray-700 text-sm">

@@ -61,33 +61,6 @@ const JobDetailPage = ({ job }: { readonly job: Job | undefined }) => {
         <div className="absolute top-1/2 left-12 w-10 h-10 border-4 border-cyan-200 rounded-full opacity-50 animate-float-medium pointer-events-none" style={{animationDelay: '1s'}}></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Breadcrumb */}
-          <nav className="mb-8">
-            <ol className="flex items-center space-x-2 text-sm">
-              <li>
-                <Link href="/" className="text-foreground/70 hover:text-foreground transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li className="text-foreground/50">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </li>
-              <li>
-                <Link href="/careers" className="text-foreground/70 hover:text-foreground transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li className="text-foreground/50">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </li>
-              <li className="text-foreground font-medium">{job.title}</li>
-            </ol>
-          </nav>
-
             {/* Job Header */}
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight bg-gradient-to-r from-[var(--foreground)] via-[var(--primary)] to-[var(--foreground)] bg-clip-text text-transparent">

@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TechnoTroids - Innovative Technology Solutions",
+  title: "Techamplers - Innovative Technology Solutions",
   description: "Transform your business with cutting-edge technology solutions. We specialize in web development, mobile apps, cloud solutions, and AI/ML services.",
 };
 

@@ -6,8 +6,8 @@ import yaml from 'js-yaml';
 import ContactPage from '@/Components/ContactPage/ContactPage';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - TechnoTroids',
-  description: "Get in touch with TechnoTroids. Let's build something extraordinary together.",
+  title: 'Contact Us - Techamplers',
+  description: "Get in touch with Techamplers. Let's build something extraordinary together.",
 };
 
 interface ContactData {

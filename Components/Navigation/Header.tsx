@@ -47,7 +47,7 @@ const Header = () => {
               </svg>
             </div>
             <span className="ml-3 text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-              StackTweaks
+              Techamplers
             </span>
           </Link>
 

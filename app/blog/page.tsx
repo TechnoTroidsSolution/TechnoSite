@@ -43,11 +43,11 @@ async function getBlogData(): Promise<BlogData> {
 }
 
 export const metadata = {
-    title: 'Blog - TechnoTroids | AI & Technology Insights',
+    title: 'Blog - Techamplers | AI & Technology Insights',
     description:
         'Explore cutting-edge insights on Agentic AI, Model Context Protocol (MCP), and the latest technology trends.',
     openGraph: {
-        title: 'TechnoTroids Blog - AI & Technology Insights',
+        title: 'Techamplers Blog - AI & Technology Insights',
         description:
             'Latest articles on Agentic AI, MCP, and innovative technology solutions',
         type: 'website',
