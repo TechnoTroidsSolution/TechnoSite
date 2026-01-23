@@ -7,9 +7,11 @@ import HeroSection from "@/Components/ServicesPage/HeroSection";
 import ServicesGrid from "@/Components/ServicesPage/ServicesGrid";
 import CTASection from "@/Components/ServicesPage/CTASection";
 import IndustriesSection from "@/Components/ServicesPage/IndustriesSection";
-import ProcessSection from "@/Components/ServicesPage/ProcessSection";
+// import ProcessSection from "@/Components/ServicesPage/ProcessSection";
 import FinalCTA from "@/Components/ServicesPage/FinalCTA";
 import AdvancedCapabilitiesSection from "@/Components/ServicesPage/AdvancedCapabilitiesSection";
+import RoadmapSection from "@/Components/HomePage/RoadmapSection";
+
 
 export const metadata: Metadata = {
   title: "Our Services - TechnoTroids",
@@ -32,7 +34,8 @@ export default function ServicesPage() {
       <ServicesGrid services={data.services_grid} />
       <CTASection data={data.cta_section} />
       <IndustriesSection data={data.industries_section} />
-      <ProcessSection data={data.process_section} />
+      <RoadmapSection/>
+      {/* <ProcessSection data={data.process_section} /> */}
       {/* <CollaborativeSection collab={data.collaborative_section} /> */}
       {/* <WhyChooseUsSection data={data.why_choose_us} /> */}
       <AdvancedCapabilitiesSection data={data.advanced_capabilities} />

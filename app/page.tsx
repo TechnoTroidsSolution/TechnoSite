@@ -1,14 +1,14 @@
 import IntroSection from "@/Components/HomePage/IntroSectionNew";
 import Image from "next/image";
-import CompanyStatsSection from "@/Components/HomePage/stats/CompanyStatsSection";
-import { TestimonialsSection } from "@/Components/HomePage/Testimonials/TestimonialsSection";
+// import CompanyStatsSection from "@/Components/HomePage/stats/CompanyStatsSection";
+// import { TestimonialsSection } from "@/Components/HomePage/Testimonials/TestimonialsSection";
 import Services from "@/Components/HomePage/services/Services";
 import HighlightsSection from "@/Components/HomePage/HighlightsSection";
-import ProcessPreview from "@/Components/HomePage/ProcessPreview";
+// import ProcessPreview from "@/Components/HomePage/ProcessPreview";
 import InsightsSection from "@/Components/HomePage/InsightsSection";
 import CompanyOverviewSection from "@/Components/HomePage/CompanyOverviewSection";
 import TechStackSection from "@/Components/HomePage/TechStackSection";
-import RoadmapSection from "@/Components/HomePage/RoadmapSection";
+// import RoadmapSection from "@/Components/HomePage/RoadmapSection";
 import WhyChooseUsSection from "@/Components/HomePage/WhyChooseUsSection";
 import CTASection from "@/Components/HomePage/CTASection";
 import HeroDecorations from "@/Components/HomePage/HeroDecorations";
@@ -78,16 +78,16 @@ export default function Home() {
       <TechStackSection />
 
       {/* Process - How we work */}
-      <ProcessPreview />
+      {/* <ProcessPreview /> */}
 
       {/* Stats - Our achievements and credibility */}
-      <CompanyStatsSection />
+      {/* <CompanyStatsSection /> */}
 
       {/* Highlights - Key features and benefits */}
       <HighlightsSection />
 
       {/* Roadmap - Our vision and future */}
-      <RoadmapSection />
+      {/* <RoadmapSection /> */}
 
       {/* Testimonials - Social proof */}
       {/* <TestimonialsSection /> */}

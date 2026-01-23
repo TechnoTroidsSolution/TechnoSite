@@ -18,7 +18,7 @@ export default function CompanyOverviewSection() {
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <RevealContainer className="space-y-6">
             <RevealItem>
-              <span className="text-sm font-semibold uppercase tracking-widest text-primary">
+              <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
                 Our Company
               </span>
             </RevealItem>

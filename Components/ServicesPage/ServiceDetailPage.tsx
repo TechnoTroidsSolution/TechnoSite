@@ -101,25 +101,25 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
       </section>
 
       {/* MAIN CONTENT */}
-      <div className="bg-muted/30">
+      <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid lg:grid-cols-3 gap-8">
         {/* LEFT SIDEBAR */}
         <aside className="lg:col-span-1 space-y-6 h-fit lg:sticky lg:top-20 order-2 lg:order-1">
           {/* Service Details Card */}
-          <div className="bg-card rounded-2xl border border-border p-6 shadow-sm">
+          <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
             <h3 className="text-lg font-bold text-foreground mb-4">Service Details</h3>
             <div className="space-y-4">
               <div>
-                <div className="text-sm text-muted-foreground mb-1">Category</div>
+                <div className="text-sm text-gray-600 mb-1">Category</div>
                 <div className="font-medium text-foreground">{service.category ?? "General"}</div>
               </div>
-              <div className="border-t border-border pt-4">
-                <div className="text-sm text-muted-foreground mb-1">Ideal For</div>
+              <div className="border-t border-gray-200 pt-4">
+                <div className="text-sm text-gray-600 mb-1">Ideal For</div>
                 <div className="font-medium text-foreground">{whoIsItFor.join(", ") || "Businesses"}</div>
               </div>
-              <div className="border-t border-border pt-4">
-                <div className="text-sm text-muted-foreground mb-1">Tech Stack</div>
+              <div className="border-t border-gray-200 pt-4">
+                <div className="text-sm text-gray-600 mb-1">Tech Stack</div>
                 <div className="font-medium text-foreground">{tools.slice(0, 3).join(", ")}{tools.length > 3 ? "..." : ""}</div>
               </div>
             </div>
@@ -133,7 +133,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
             </p>
             <button 
               onClick={() => router.push("/contact")}
-              className="w-full bg-card text-[var(--primary)] px-6 py-3 rounded-lg font-semibold hover:bg-muted transition-colors mb-3 cursor-pointer">
+              className="w-full bg-white text-[var(--primary)] px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors mb-3 cursor-pointer">
               Get a Quote
             </button>
 
@@ -143,15 +143,15 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
         {/* RIGHT MAIN CONTENT */}
         <div className="lg:col-span-2 space-y-8 order-1 lg:order-2">
           {/* Overview Section */}
-          <div className="bg-card rounded-2xl border border-border p-8 shadow-sm">
+          <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
             <h2 className="text-xl font-bold text-foreground mb-6">
               Overview
             </h2>
-            <p className="text-muted-foreground leading-relaxed">{description}</p>
+            <p className="text-gray-700 leading-relaxed">{description}</p>
           </div>
 
           {/* Process Section */}
-          <div className="bg-card rounded-2xl border border-border p-8 shadow-sm">
+          <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
             <h2 className="text-xl font-bold text-foreground mb-6">
               How We Proceed
             </h2>
@@ -161,14 +161,14 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
                   <svg className="w-5 h-5 text-[var(--primary)] shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-muted-foreground text-sm leading-relaxed">{item}</span>
+                  <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Deliverables Section */}
-          <div className="bg-card rounded-2xl border border-border p-8 shadow-sm">
+          <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
             <h2 className="text-xl font-bold text-foreground mb-6">
               Deliverables
             </h2>
@@ -176,7 +176,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
               {deliverables.map((item) => (
                 <span
                   key={`deliverable-${item}`}
-                  className="px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg font-medium text-sm"
+                  className="px-4 py-2 bg-blue-50 text-blue-600 border border-blue-200 rounded-lg font-medium text-sm"
                 >
                   {item}
                 </span>
@@ -185,7 +185,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
           </div>
 
           {/* Technologies Section */}
-          <div className="bg-card rounded-2xl border border-border p-8 shadow-sm">
+          <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
             <h2 className="text-xl font-bold text-foreground mb-6">
               Technologies We Use
             </h2>
@@ -193,7 +193,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
               {tools.map((tool) => (
                 <span
                   key={`tool-${tool}`}
-                  className="px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg font-medium text-sm"
+                  className="px-4 py-2 bg-blue-50 text-blue-600 border border-blue-200 rounded-lg font-medium text-sm"
                 >
                   {tool}
                 </span>

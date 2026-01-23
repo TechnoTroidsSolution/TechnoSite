@@ -101,51 +101,53 @@ services:
       keywords: "n8n automation, workflow automation, no-code automation"
       meta_description: "Automate business workflows using N8N with custom nodes and integrations."
 
-  - id: sap-automation
-    title: "SAP Automation"
-    subtitle: "Streamline enterprise workflows with SAP + automation."
+  - id: erp-automation
+    title: "ERP Automation"
+    subtitle: "Streamline enterprise workflows with ERP automation and integrations."
     description: >
-      We help enterprises automate SAP processes using integrations, RPA, and customized workflows.
-      Improve business efficiency and reduce bottlenecks.
+      We help enterprises automate and optimize ERP-driven business processes using
+      seamless integrations, RPA, and custom workflows. Our solutions improve efficiency,
+      reduce operational overhead, and enable data-driven decision-making across departments.
 
     process:
-      - "SAP workflow analysis"
-      - "Integration strategy planning"
-      - "SAP Fiori or ABAP-based development"
-      - "Automation connectors setup"
-      - "RPA integration"
+      - "ERP system assessment & workflow analysis"
+      - "Automation & integration strategy planning"
+      - "Custom ERP module development"
+      - "API & connector implementation"
+      - "RPA integration for repetitive tasks"
       - "Testing & validation"
-      - "Deployment & employee training"
-      - "Continuous optimization"
+      - "Deployment & user training"
+      - "Continuous optimization & support"
 
     deliverables:
-      - "SAP automation scripts"
-      - "ABAP/Fiori components"
-      - "Custom workflows"
-      - "RPA integration"
-      - "Documentation & training"
+      - "ERP automation workflows"
+      - "Custom ERP modules & integrations"
+      - "RPA bots & connectors"
+      - "Process documentation & training materials"
 
     tech_stack:
-      - "SAP BTP"
-      - "SAP Fiori"
-      - "ABAP"
-      - "RPA (UIPath/Power Automate)"
-      - "SAP APIs"
+      - "ERP APIs & Webhooks"
+      - "RPA (UIPath / Power Automate)"
+      - "Middleware & iPaaS tools"
+      - "Cloud Platforms (AWS / Azure / GCP)"
+      - "Custom Microservices"
 
     benefits:
-      - "Eliminates repetitive SAP tasks"
-      - "Improves enterprise productivity"
-      - "Reduces errors"
-      - "Enhances reporting visibility"
+      - "Eliminates repetitive ERP tasks"
+      - "Improves operational efficiency"
+      - "Reduces human errors"
+      - "Enhances reporting & visibility"
+      - "Scales with business growth"
 
     ideal_for:
-      - "Large enterprises"
+      - "Mid to large enterprises"
       - "Manufacturing companies"
-      - "Finance & HR departments"
+      - "Retail & supply chain businesses"
+      - "Finance, HR & Operations teams"
 
     seo:
-      keywords: "SAP automation, SAP integration, SAP workflow automation"
-      meta_description: "Enterprise-grade SAP automation and RPA integration for efficient operations."
+      keywords: "ERP automation, ERP integration, ERP workflow automation, enterprise automation"
+      meta_description: "Enterprise-grade ERP automation and workflow integration to streamline business operations."
 
   - id: full-stack-web-development
     title: "Full-Stack Web Development"
