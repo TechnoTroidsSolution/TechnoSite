@@ -1,10 +1,15 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import PrivacyPolicyModal from '../Modals/PrivacyPolicyModal';
+import TermsServiceModal from '../Modals/TermsServiceModal';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
 
   const footerLinks = {
     company: [
@@ -56,12 +61,14 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/20">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <span className="ml-2 text-xl font-bold text-white">Techamplers</span>
+              <Image 
+                          src="/Images/Logo/logo.png" 
+                          alt="Techamplers Logo" 
+                          width={350} 
+                          height={70} 
+                          className="h-10 md:h-12 w-auto transition-all duration-300 group-hover:scale-105"
+                          priority
+                        />  
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               Transforming businesses through innovative technology solutions.
@@ -145,18 +152,28 @@ const Footer = () => {
             © {currentYear} Techamplers. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <Link href="/privacy" className="text-slate-500 hover:text-blue-400 text-sm transition-colors duration-200">
+            <button 
+              onClick={() => setIsPrivacyModalOpen(true)}
+              className="text-slate-500 hover:text-blue-400 text-sm transition-colors duration-200"
+            >
               Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-slate-500 hover:text-blue-400 text-sm transition-colors duration-200">
+            </button>
+            <button 
+              onClick={() => setIsTermsModalOpen(true)}
+              className="text-slate-500 hover:text-blue-400 text-sm transition-colors duration-200"
+            >
               Terms of Service
-            </Link>
+            </button>
             <Link href="/cookies" className="text-slate-500 hover:text-blue-400 text-sm transition-colors duration-200">
               Cookie Policy
             </Link>
           </div>
         </div>
       </div>
+
+      {/* Modals */}
+      <PrivacyPolicyModal isOpen={isPrivacyModalOpen} onClose={() => setIsPrivacyModalOpen(false)} />
+      <TermsServiceModal isOpen={isTermsModalOpen} onClose={() => setIsTermsModalOpen(false)} />
     </footer>
   );
 };
