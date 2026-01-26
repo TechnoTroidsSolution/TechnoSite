@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
@@ -41,14 +42,14 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="w-10 h-10 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-primary/40 transition-all duration-300 group-hover:scale-110">
-              <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v18m0 0l-6-6m6 6l6-6" />
-              </svg>
-            </div>
-            <span className="ml-3 text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-              Techamplers
-            </span>
+           <Image 
+            src="/Images/Logo/logo.png" 
+            alt="Techamplers Logo" 
+            width={350} 
+            height={70} 
+            className="h-10 md:h-12 w-auto transition-all duration-300 group-hover:scale-105"
+            priority
+          />        
           </Link>
 
           {/* Desktop Navigation */}

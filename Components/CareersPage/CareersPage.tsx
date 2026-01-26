@@ -429,11 +429,6 @@ export default function CareersPage({ careersData }: CareersPageProps) {
                           </svg>
                         </Link>
                       </div>
-                      <button className="ml-6 p-2 hover:bg-gray-100 rounded-lg transition-colors shrink-0 cursor-pointer">
-                        <svg className="w-5 h-5 text-gray-400 hover:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                        </svg>
-                      </button>
                     </div>
                   </div>
                 ))}
@@ -470,12 +465,13 @@ export default function CareersPage({ careersData }: CareersPageProps) {
               <p className="text-lg text-foreground/80 mb-6">
                 Join our Talent Community to get job alerts from {careersData.hero.title.split(" ")[0]} delivered to your inbox.
               </p>
-              <button className="px-8 py-4 bg-[var(--primary)] text-primary-foreground rounded-lg font-semibold hover:bg-[var(--primary)]/90 transition-colors inline-flex items-center gap-2 cursor-pointer">
+              <button className="px-8 py-4 bg-[var(--primary)] text-white rounded-lg font-semibold hover:bg-[var(--primary)]/90 transition-colors inline-flex items-center gap-2 cursor-pointer">
                 Learn more
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
+
             </div>
           </div>
         </div>
