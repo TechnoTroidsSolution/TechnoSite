@@ -7,6 +7,7 @@ import {
   RevealContainer,
   RevealItem,
 } from "@/Components/Animations/Reveal";
+import { FileText, Mail, Phone } from "lucide-react";
 
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "your_service_id";
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "your_template_id";
@@ -95,10 +96,127 @@ export default function ContactPage({
     message: string;
   }>({ type: null, message: "" });
 
+  // Form values state
+  const [formValues, setFormValues] = useState<Record<string, string>>({});
+  
+  // Validation errors state
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  // Validation functions
+  const validateName = (value: string): string => {
+    if (!value.trim()) {
+      return "Name is required";
+    }
+    // Only allow alphabets and spaces
+    if (!/^[a-zA-Z\s]+$/.test(value)) {
+      return "Name can only contain letters and spaces";
+    }
+    return "";
+  };
+
+  const validateEmail = (value: string): string => {
+    if (!value.trim()) {
+      return "Email is required";
+    }
+    // Email validation - accepts any valid email format with any domain (company, professional, etc.)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(value)) {
+      return "Please enter a valid email address";
+    }
+    return "";
+  };
+
+  const validatePhone = (value: string): string => {
+    if (!value.trim()) {
+      return "Phone number is required";
+    }
+    // Remove any non-digit characters for validation
+    const digitsOnly = value.replace(/\D/g, "");
+    if (digitsOnly.length < 10) {
+      return "Phone number must be at least 10 digits";
+    }
+    if (digitsOnly.length > 10) {
+      return "Phone number must be exactly 10 digits";
+    }
+    return "";
+  };
+
+  const validateSelect = (value: string, fieldLabel: string): string => {
+    if (!value || value.trim() === "") {
+      return `${fieldLabel} is required`;
+    }
+    return "";
+  };
+
+  // Handle input change with live validation
+  const handleInputChange = (name: string, value: string, fieldType?: string, fieldLabel?: string) => {
+    // Update form value
+    setFormValues((prev) => ({ ...prev, [name]: value }));
+
+    // Live validation based on field name
+    let error = "";
+    
+    if (name === "name" || name.toLowerCase().includes("name")) {
+      error = validateName(value);
+    } else if (name === "email" || name.toLowerCase().includes("email")) {
+      error = validateEmail(value);
+    } else if (name === "phone" || name.toLowerCase().includes("phone") || fieldType === "tel") {
+      // Only allow digits for phone
+      const digitsOnly = value.replace(/\D/g, "");
+      setFormValues((prev) => ({ ...prev, [name]: digitsOnly }));
+      error = validatePhone(digitsOnly);
+    } else if (fieldType === "select") {
+      error = validateSelect(value, fieldLabel || name);
+    }
+
+    // Update errors
+    setErrors((prev) => ({ ...prev, [name]: error }));
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (!formRef.current) return;
+    
+    // Validate all fields before submission
+    const formData = new FormData(formRef.current);
+    const newErrors: Record<string, string> = {};
+    
+    // Validate each field
+    for (const [name, value] of formData.entries()) {
+      const stringValue = value.toString();
+      const fieldName = name.toLowerCase();
+      
+      // Find the field definition to get label and type
+      const fieldDef = contact.form_fields.find((f) => f.name === name);
+      const isSelectField = fieldDef?.type === "select";
+      const isWhenNeedField = fieldName.includes("when") || fieldName.includes("need") || fieldName.includes("timeline") || fieldName.includes("deadline");
+      
+      if (fieldName.includes("name")) {
+        const error = validateName(stringValue);
+        if (error) newErrors[name] = error;
+      } else if (fieldName.includes("email")) {
+        const error = validateEmail(stringValue);
+        if (error) newErrors[name] = error;
+      } else if (fieldName.includes("phone") || name === "phone") {
+        const error = validatePhone(stringValue);
+        if (error) newErrors[name] = error;
+      } else if (isSelectField && (isWhenNeedField || fieldDef?.required)) {
+        // Validate select fields, especially "when did you need this"
+        const error = validateSelect(stringValue, fieldDef?.label || name);
+        if (error) newErrors[name] = error;
+      }
+    }
+    
+    // Set errors and return if validation fails
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setSubmitStatus({
+        type: "error",
+        message: "Please fix the errors in the form before submitting.",
+      });
+      return;
+    }
     
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
@@ -117,6 +235,9 @@ export default function ContactPage({
           message: "Thank you! Your message has been sent successfully. We'll get back to you soon.",
         });
         formRef.current.reset();
+        // Clear form values and errors
+        setFormValues({});
+        setErrors({});
       }
     } catch (error) {
       console.error("EmailJS Error:", error);
@@ -265,79 +386,163 @@ export default function ContactPage({
 
               {/* Name and Email in a row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {contact.form_fields.slice(0, 2).map((field) => (
-                  <div key={field.name}>
-                    <label
-                      htmlFor={field.name}
-                      className="block text-sm font-semibold mb-1.5 text-muted-foreground"
-                    >
-                      {field.label} {field.required && "*"}
-                    </label>
-                    <input
-                      type={field.type}
-                      id={field.name}
-                      name={field.name}
-                      required={field.required}
-                      placeholder={field.placeholder}
-                      className="w-full px-4 py-2.5 border-2 border-[var(--primary)]/20 rounded-lg bg-background focus:ring-2 focus:ring-[var(--primary)] focus:border-[var(--primary)]/50 text-sm transition-all duration-200"
-                    />
-                  </div>
-                ))}
+                {contact.form_fields.slice(0, 2).map((field) => {
+                  const fieldName = field.name.toLowerCase();
+                  const isNameField = fieldName.includes("name");
+                  const isEmailField = fieldName.includes("email");
+                  const hasError = errors[field.name] && formValues[field.name] !== undefined;
+                  
+                  return (
+                    <div key={field.name}>
+                      <label
+                        htmlFor={field.name}
+                        className="block text-sm font-semibold mb-1.5 text-muted-foreground"
+                      >
+                        {field.label} {field.required && "*"}
+                      </label>
+                      <input
+                        type={field.type}
+                        id={field.name}
+                        name={field.name}
+                        required={field.required}
+                        placeholder={field.placeholder}
+                        value={formValues[field.name] || ""}
+                        onChange={(e) => {
+                          let value = e.target.value;
+                          // For name field, only allow alphabets and spaces
+                          if (isNameField) {
+                            value = value.replace(/[^a-zA-Z\s]/g, "");
+                          }
+                          handleInputChange(field.name, value, field.type);
+                        }}
+                        className={`w-full px-4 py-2.5 border-2 rounded-lg bg-background focus:ring-2 focus:ring-[var(--primary)] text-sm transition-all duration-200 ${
+                          hasError
+                            ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                            : "border-[var(--primary)]/20 focus:border-[var(--primary)]/50"
+                        }`}
+                      />
+                      {hasError && (
+                        <p className="text-red-500 text-xs mt-1.5 flex items-center gap-1">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                          </svg>
+                          {errors[field.name]}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
 
               {/* Phone and Company in a row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {contact.form_fields.slice(2, 4).map((field) => (
-                  <div key={field.name}>
-                    <label
-                      htmlFor={field.name}
-                      className="block text-sm font-semibold mb-1.5 text-muted-foreground"
-                    >
-                      {field.label} {field.required && "*"}
-                    </label>
-                    <input
-                      type={field.type}
-                      id={field.name}
-                      name={field.name}
-                      required={field.required}
-                      placeholder={field.placeholder}
-                      className="w-full px-4 py-2.5 border-2 border-[var(--primary)]/20 rounded-lg bg-background focus:ring-2 focus:ring-[var(--primary)] focus:border-[var(--primary)]/50 text-sm transition-all duration-200"
-                    />
-                    {field.helper && (
-                      <p className="text-xs text-muted-foreground mt-1">
-                        {field.helper}
-                      </p>
-                    )}
-                  </div>
-                ))}
+                {contact.form_fields.slice(2, 4).map((field) => {
+                  const fieldName = field.name.toLowerCase();
+                  const isPhoneField = fieldName.includes("phone") || field.type === "tel";
+                  const hasError = errors[field.name] && formValues[field.name] !== undefined;
+                  
+                  return (
+                    <div key={field.name}>
+                      <label
+                        htmlFor={field.name}
+                        className="block text-sm font-semibold mb-1.5 text-muted-foreground"
+                      >
+                        {field.label} {field.required && "*"}
+                      </label>
+                      <input
+                        type={isPhoneField ? "tel" : field.type}
+                        id={field.name}
+                        name={field.name}
+                        required={field.required}
+                        placeholder={field.placeholder}
+                        value={formValues[field.name] || ""}
+                        onChange={(e) => {
+                          let value = e.target.value;
+                          // For phone field, only allow digits
+                          if (isPhoneField) {
+                            value = value.replace(/\D/g, "");
+                            // Limit to 10 digits
+                            if (value.length > 10) {
+                              value = value.slice(0, 10);
+                            }
+                          }
+                          handleInputChange(field.name, value, field.type);
+                        }}
+                        maxLength={isPhoneField ? 10 : undefined}
+                        className={`w-full px-4 py-2.5 border-2 rounded-lg bg-background focus:ring-2 focus:ring-[var(--primary)] text-sm transition-all duration-200 ${
+                          hasError
+                            ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                            : "border-[var(--primary)]/20 focus:border-[var(--primary)]/50"
+                        }`}
+                      />
+                      {hasError && (
+                        <p className="text-red-500 text-xs mt-1.5 flex items-center gap-1">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                          </svg>
+                          {errors[field.name]}
+                        </p>
+                      )}
+                      {field.helper && !hasError && (
+                        <p className="text-xs text-muted-foreground mt-1">
+                          {field.helper}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
 
               {/* Select fields - full width */}
               {contact.form_fields
                 .filter((f) => f.type === "select")
-                .map((field) => (
-                  <div key={field.name}>
-                    <label
-                      htmlFor={field.name}
-                      className="block text-sm font-semibold mb-1.5 text-muted-foreground"
-                    >
-                      {field.label} {field.required && "*"}
-                    </label>
-                    <select
-                      id={field.name}
-                      name={field.name}
-                      required={field.required}
-                      className="w-full px-4 py-2.5 border-2 border-[var(--primary)]/20 rounded-lg bg-background focus:ring-2 focus:ring-[var(--primary)] focus:border-[var(--primary)]/50 text-sm transition-all duration-200"
-                    >
-                      <option value="">Select an option</option>
-                      {field.options?.map((option) => (
-                        <option key={option} value={option}>
-                          {option}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                ))}
+                .map((field) => {
+                  const fieldName = field.name.toLowerCase();
+                  const isWhenNeedField = fieldName.includes("when") || fieldName.includes("need") || fieldName.includes("timeline") || fieldName.includes("deadline");
+                  // Make "when did you need this" field mandatory
+                  const isRequired = isWhenNeedField || field.required;
+                  const hasError = errors[field.name] && formValues[field.name] !== undefined;
+                  
+                  return (
+                    <div key={field.name}>
+                      <label
+                        htmlFor={field.name}
+                        className="block text-sm font-semibold mb-1.5 text-muted-foreground"
+                      >
+                        {field.label} {isRequired && "*"}
+                      </label>
+                      <select
+                        id={field.name}
+                        name={field.name}
+                        required={isRequired}
+                        value={formValues[field.name] || ""}
+                        onChange={(e) => {
+                          handleInputChange(field.name, e.target.value, "select", field.label);
+                        }}
+                        className={`w-full px-4 py-2.5 border-2 rounded-lg bg-background focus:ring-2 focus:ring-[var(--primary)] text-sm transition-all duration-200 ${
+                          hasError
+                            ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                            : "border-[var(--primary)]/20 focus:border-[var(--primary)]/50"
+                        }`}
+                      >
+                        <option value="">Select an option</option>
+                        {field.options?.map((option) => (
+                          <option key={option} value={option}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                      {hasError && (
+                        <p className="text-red-500 text-xs mt-1.5 flex items-center gap-1">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                          </svg>
+                          {errors[field.name]}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
 
               {/* Referral field - full width */}
               {contact.form_fields.find((f) => f.name === "referral") && (
@@ -798,172 +1003,78 @@ export default function ContactPage({
         </div>
       </section>
 
-      {/* Contact Channels Comparison */}
-      <section className="py-16 bg-secondary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Choose Your Preferred Channel
-            </h2>
-            <p className="text-muted-foreground">
-              Compare response times and best use cases
-            </p>
-          </div>
+      {/* Contact Channels – Pastel Cards */}
+<section className="py-24 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-slate-900">
+        Choose Your Communication Style
+      </h2>
+      <p className="mt-4 text-slate-600 text-lg font-bold">
+        Soft, simple ways to reach us
+      </p>
+    </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full bg-card rounded-xl shadow-lg overflow-hidden">
-              <thead className="bg-gradient-to-r from-[var(--primary)] to-[var(--primary)] text-white">
-                <tr>
-                  <th className="px-6 py-4 text-left font-semibold">Channel</th>
-                  <th className="px-6 py-4 text-left font-semibold">
-                    Response Time
-                  </th>
-                  <th className="px-6 py-4 text-left font-semibold">
-                    Best For
-                  </th>
-                  <th className="px-6 py-4 text-left font-semibold">
-                    Availability
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border">
-                <tr className="hover:bg-secondary/50 transition-colors">
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5 text-red-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                          />
-                        </svg>
-                      </div>
-                      <span className="font-semibold text-foreground">
-                        Phone
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 text-foreground">
-                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
-                      Immediate
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 text-muted-foreground">
-                    Urgent issues, complex problems
-                  </td>
-                  <td className="px-6 py-4 text-muted-foreground">24/7</td>
-                </tr>
-                <tr className="hover:bg-secondary/50 transition-colors">
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5 text-blue-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-                          />
-                        </svg>
-                      </div>
-                      <span className="font-semibold text-foreground">
-                        Live Chat
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 text-foreground">
-                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
-                      1-2 minutes
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 text-muted-foreground">
-                    Quick questions, general inquiries
-                  </td>
-                  <td className="px-6 py-4 text-muted-foreground">24/7</td>
-                </tr>
-                <tr className="hover:bg-secondary/50 transition-colors">
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5 text-purple-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                          />
-                        </svg>
-                      </div>
-                      <span className="font-semibold text-foreground">
-                        Email
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 text-foreground">
-                    <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">
-                      2-4 hours
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 text-muted-foreground">
-                    Detailed inquiries, documentation
-                  </td>
-                  <td className="px-6 py-4 text-muted-foreground">24/7</td>
-                </tr>
-                <tr className="hover:bg-secondary/50 transition-colors">
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <svg
-                          className="w-5 h-5 text-primary"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                          />
-                        </svg>
-                      </div>
-                      <span className="font-semibold text-foreground">
-                        Contact Form
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 text-foreground">
-                    <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">
-                      4-6 hours
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 text-muted-foreground">
-                    Project inquiries, partnerships
-                  </td>
-                  <td className="px-6 py-4 text-muted-foreground">24/7</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+    {/* Center aligned cards */}
+    <div className="flex flex-wrap justify-center gap-10">
+      {/* Phone – Light Pink */}
+      <div className="w-full sm:w-[340px] relative rounded-3xl bg-pink-100 p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        
+        {/* Floating glowing badge */}
+        <button className="absolute top-8 right-5 inline-flex items-center justify-center rounded-full bg-pink-400 px-4 py-1.5 text-xs font-medium text-white shadow-lg shadow-pink-500/40 transition-all duration-300 hover:shadow-pink-500/70">
+          Immediate response
+        </button>
+
+        <h3 className="flex items-center gap-2 text-2xl font-bold text-pink-900 mb-4">
+  <Phone className="w-5 h-5 text-pink-700" />
+  Phone
+</h3>
+
+
+        <p className="text-sm text-pink-800/80 leading-relaxed font-semibold">
+          Best for urgent conversations that need instant clarity.
+        </p>
+      </div>
+
+      {/* Email – Light Blue */}
+      <div className="w-full sm:w-[340px] relative rounded-3xl bg-sky-100 p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        
+        <button className="absolute top-8 right-5 inline-flex items-center justify-center rounded-full bg-sky-400 px-4 py-1.5 text-xs font-medium text-white shadow-lg shadow-sky-500/40 transition-all duration-300 hover:shadow-sky-500/70">
+          2 – 4 hours
+        </button>
+
+        <h3 className="flex items-center gap-2 text-2xl font-bold text-sky-900 mb-4">
+  <Mail className="w-5 h-5 text-sky-700" />
+  Email
+</h3>
+
+
+        <p className="text-sm text-sky-800/80 leading-relaxed font-semibold">
+          Best for detailed discussions and documentation.
+        </p>
+      </div>
+
+      {/* Contact Form – Light Green */}
+      <div className="w-full sm:w-[340px] relative rounded-3xl bg-emerald-100 p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        
+        <button className="absolute top-8 right-5 inline-flex items-center justify-center rounded-full bg-emerald-400 px-4 py-1.5 text-xs font-medium text-white shadow-lg shadow-emerald-500/40 transition-all duration-300 hover:shadow-emerald-500/70">
+          4 – 6 hours
+        </button>
+
+        <h3 className="flex items-center gap-2 text-2xl font-bold text-emerald-900 mb-4">
+  <FileText className="w-5 h-5 text-emerald-700" />
+  Contact Form
+</h3>
+
+        <p className="text-sm text-emerald-800/80 leading-relaxed font-semibold">
+          Ideal for new projects and partnership enquiries.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
       {/* Social Media & Connect Section */}
       <section className="py-16 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

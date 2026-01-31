@@ -19,7 +19,7 @@ export default function TechStackSection() {
             <div className="relative mx-auto flex w-full max-w-xl justify-center">
               <div className="relative z-10 w-full animate-float">
                 <Image
-                  src="/Images/homepage/tc.png"
+                  src="/Images/homepage/tc.webp"
                   alt="Technology Stack - Modern tools and frameworks we use"
                   width={600}
                   height={600}
