@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation";
 import {
   GraduationCap,
   Workflow,
@@ -12,14 +11,17 @@ import {
   Palette,
   Cloud,
   Cpu,
+  ArrowUpRight,
 } from "lucide-react";
-
+import { ServiceFeatureCard } from "./ServiceFeatureCard";
 interface ServiceItem {
   readonly icon: string;
   readonly title: string;
   readonly description: string;
   readonly tags: readonly string[];
   readonly slug: string;
+  readonly imageLarge?: string;
+  readonly imageSmall?: string;
 }
 
 interface ServicesGridProps {
@@ -27,71 +29,59 @@ interface ServicesGridProps {
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  education: <GraduationCap className="w-8 h-8 text-[var(--primary)]" />,
-  n8n: <Workflow className="w-8 h-8 text-[var(--primary)]" />,
-  sap: <Layers className="w-8 h-8 text-[var(--primary)]" />,
-  fullstack: <Server className="w-8 h-8 text-[var(--primary)]" />,
-  mobile: <Smartphone className="w-8 h-8 text-[var(--primary)]" />,
-  blockchain: <Blocks className="w-8 h-8 text-[var(--primary)]" />,
-  uiux: <Palette className="w-8 h-8 text-[var(--primary)]" />,
-  devops: <Cloud className="w-8 h-8 text-[var(--primary)]" />,
-  ai: <Cpu className="w-8 h-8 text-[var(--primary)]" />,
+  education: <GraduationCap />,
+  n8n: <Workflow />,
+  sap: <Layers />,
+  fullstack: <Server />,
+  mobile: <Smartphone />,
+  blockchain: <Blocks />,
+  uiux: <Palette />,
+  devops: <Cloud />,
+  ai: <Cpu />,
 };
 
+/* 🎨 ROW THEMES */
+const rowThemes = [
+  {
+    // 🌸 Warm Peach
+    card: "from-[#f7ede8] via-[#f3e4dc] to-[#efe0d6]",
+    text: "text-[#3a2b24]",
+    sub: "text-[#6b4f43]",
+    accent: "text-[#d49b7f]",
+    glow: "bg-[#d49b7f]/70",
+    divider: "bg-[#d49b7f]",
+  },
+  {
+    // 🌿 Soft Sage
+    card: "from-[#eef3ee] via-[#e6ede7] to-[#dde6df]",
+    text: "text-[#243028]",
+    sub: "text-[#4a5d52]",
+    accent: "text-[#8fb7a1]",
+    glow: "bg-[#8fb7a1]/70",
+    divider: "bg-[#8fb7a1]",
+  },
+  {
+    // 🌊 Powder Blue
+    card: "from-[#edf4fb] via-[#e4eff8] to-[#dbe9f4]",
+    text: "text-[#1f2a37]",
+    sub: "text-[#4b5f73]",
+    accent: "text-[#7aa6c2]",
+    glow: "bg-[#7aa6c2]/70",
+    divider: "bg-[#7aa6c2]",
+  },
+];
+
 export default function ServicesGrid({ services }: ServicesGridProps) {
-  const router = useRouter();
-
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-[var(--primary)]/5 via-background to-background">
-      <div className="max-w-7xl mx-auto">
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {services.map((service) => (
-            <article
-              key={service.slug}
-              className="group bg-card rounded-3xl shadow-lg p-10 border-2 border-[var(--primary)]/30 hover:shadow-2xl hover:shadow-[var(--primary)]/20 transition-all duration-500 hover:-translate-y-2"
-            >
-              <div className="bg-[var(--primary)]/15 text-[var(--primary)] w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
-                {iconMap[service.icon]}
-              </div>
-
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                {service.title}
-              </h3>
-
-              <p className="text-foreground/80 mb-6 leading-relaxed">
-                {service.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-8">
-                {service.tags.map((tag) => (
-                  <span
-                    key={`${service.slug}-${tag}`}
-                    className="bg-[var(--primary)]/10 text-[var(--primary)] px-4 py-1 rounded-full text-xs border border-[var(--primary)]/20"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <button
-                onClick={() => router.push(`/services/${service.slug}`)}
-                className="flex items-center gap-2 text-[var(--primary)] font-semibold hover:underline hover:gap-3 transition-all cursor-pointer"
-              >
-                Learn More
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                    d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </article>
-          ))}
-        </div>
+    <section className="py-28 px-6">
+      <div className="max-w-7xl mx-auto space-y-12">
+        {services.map((service, index) => (
+          <ServiceFeatureCard
+            key={service.slug}
+            service={service}
+           index={index}
+          />
+        ))}
       </div>
     </section>
   );
