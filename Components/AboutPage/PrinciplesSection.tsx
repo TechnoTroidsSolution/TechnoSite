@@ -57,25 +57,25 @@ export default function PrinciplesSection({ principles }: PrinciplesSectionProps
         </Reveal>
 
         {/* Principles Grid */}
-        <RevealContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <RevealContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
           {principles.map((principle, index) => (
-            <RevealItem key={principle.title}>
+            <RevealItem key={principle.title} className="h-full">
               <div
-                className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:shadow-[var(--primary)]/20 hover:-translate-y-2 transition-all duration-300 border-2 border-[var(--primary)]/30 hover:border-[var(--accent)]/50"
+                className="h-full flex flex-col bg-card/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:shadow-[var(--primary)]/20 hover:-translate-y-2 transition-all duration-300 border-2 border-[var(--primary)]/30 hover:border-[var(--accent)]/50"
               >
-              {/* Icon */}
-              <div className="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-lg flex items-center justify-center mb-5 text-white shadow-lg shadow-[var(--primary)]/30">
-                {icons[index % icons.length]}
-              </div>
+                {/* Icon */}
+                <div className="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-lg flex items-center justify-center mb-5 text-white shadow-lg shadow-[var(--primary)]/30">
+                  {icons[index % icons.length]}
+                </div>
 
-              {/* Content */}
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                {principle.title}
-              </h3>
+                {/* Content */}
+                <h3 className="text-xl font-bold text-foreground mb-3">
+                  {principle.title}
+                </h3>
 
-              <p className="text-foreground/80 leading-relaxed text-sm">
-                {principle.description}
-              </p>
+                <p className="text-foreground/80 leading-relaxed text-sm flex-grow">
+                  {principle.description}
+                </p>
               </div>
             </RevealItem>
           ))}
