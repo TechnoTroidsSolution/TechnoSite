@@ -2,11 +2,41 @@ services:
   - id: education-site-building
     title: "Education Site Building"
     subtitle: "Custom LMS platforms, student portals, and e-learning ecosystems."
+    image: "/Images/serviceDetail/educationBuildingSite/image1.webp"
+    overview_image: "/Images/serviceDetail/educationBuildingSite/image2.webp"
+    detail_image: "/Images/serviceDetail/educationBuildingSite/image3.webp"
     description: >
-      We build modern, scalable education websites and LMS platforms for institutes, schools,
-      coaching centers, and e-learning startups. From student management to course delivery,
-      we ensure a seamless digital learning experience.
-
+      We build modern, scalable education websites and LMS platforms tailored for institutes, schools, coaching centers, and e-learning startups.
+      Our solutions streamline student management, course delivery, and academic operations in one unified system.
+      We create interactive learning environments with video classes, assessments, assignments, and progress tracking.
+      From admissions and fee management to certifications and reporting, we cover the complete digital ecosystem.
+      Our platforms are secure, mobile-friendly, and designed for seamless performance across devices.
+      We help educational institutions transform into smart, future-ready digital learning hubs.
+    process_intro: >
+      Our education development process is built around usability, scalability, and performance to deliver seamless learning experiences. 
+      We design platforms that simplify academic management while enhancing student engagement and accessibility. 
+      Each solution is tailored to meet the operational needs of modern institutions.
+      Our systems are flexible and future-ready, ensuring long-term growth and adaptability.
+    category_description: >
+      Our education development process is built around usability, scalability, and performance.
+      We create platforms that deliver seamless learning experiences across all devices.
+      Our solutions simplify academic operations while enhancing student engagement.
+      Every system is designed to adapt and grow with your institution’s evolving needs.
+    ideal_intro: >
+      This solution is ideal for schools, colleges, universities, coaching centers, and e-learning startups aiming to modernize their infrastructure. 
+      It supports institutions looking to digitize admissions, course management, and communication systems. Online educators and training providers can also benefit from structured LMS platforms. 
+      It is perfect for organizations seeking efficiency, automation, and improved learning experiences.
+    tech_intro: >
+     We use modern, scalable, and secure technologies to build high-performance educational platforms. 
+     Our tech stack supports video streaming, secure databases, and seamless third-party integrations. 
+     We implement strong data protection practices to safeguard student information. 
+     The architecture is designed to handle high traffic, real-time learning, and continuous expansion.
+    last_para: >
+     Our approach goes beyond just development — we focus on delivering a complete digital learning experience. 
+     From planning and design to deployment and ongoing support, we ensure every stage is handled with precision and care. 
+     We continuously optimize performance, security, and usability to keep your platform running smoothly.
+     Our goal is to help you build a reliable, future-ready education system that empowers both educators and learners.
+ 
     process:
       - "Requirement analysis and user persona mapping"
       - "Information architecture & LMS workflow planning"
@@ -34,6 +64,37 @@ services:
       - "AWS S3 / Cloudflare"
       - "Stripe / Razorpay"
       - "WebRTC / Vimeo / YouTube API"
+
+    technologies:
+      - name: "Next.js"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/nextjs.webp"
+
+      - name: "Node.js"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/nodejs.webp"
+
+      - name: "PostgreSQL"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/postgres.webp"
+
+      - name: "MongoDB"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/mongodb.webp"
+
+      - name: "Cloudflare"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/cloudflare.webp"
+
+      - name: "Stripe"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/stripe.webp"
+
+      - name: "Razorpay"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/razorpay.webp"
+
+      - name: "WebRTC"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/webrtc.webp"
+
+      - name: "Vimeo"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/vimeo.webp"
+
+      - name: "YouTube API"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/youtube.webp"
 
     benefits:
       - "Scalable architecture"
