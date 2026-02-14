@@ -1,15 +1,31 @@
 "use client";
+import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React from "react";
 
 interface ServiceDetail {
   readonly title: string;
   readonly subtitle: string;
+  readonly image?: string;
+  readonly overview_image?: string;
+  readonly detail_image?: string;
   readonly description: string;
+
+  readonly process_intro?: string;
+  readonly category_description?: string;
+  readonly ideal_intro?: string;
+  readonly tech_intro?: string;
+  readonly technologies_intro?: string;
+  readonly last_para?: string;
+
   readonly category?: string;
   readonly process?: readonly string[];
   readonly deliverables?: readonly string[];
   readonly tech_stack?: readonly string[];
+readonly technologies?: {
+  name: string;
+  icon: string;
+}[];
   readonly ideal_for?: readonly string[];
 }
 
@@ -17,165 +33,207 @@ interface ServiceDetailPageProps {
   readonly service: ServiceDetail;
 }
 
-export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
-  const title = service.title;
-  const heroSubtitle = service.subtitle;
-  const description = service.description;
-
-  const process = service.process ?? [];
-  const deliverables = service.deliverables ?? [];
-  const tools = service.tech_stack ?? [];
-  const whoIsItFor = service.ideal_for ?? [];
-
+export default function ServiceDetailPage({
+  service,
+}: ServiceDetailPageProps) {
   const router = useRouter();
 
+  const {
+    title,
+    subtitle,
+    description,
+    category = "General",
+    process_intro = "",
+    category_description = "",
+    ideal_intro = "",
+    tech_intro = "",
+    last_para = "",
+    process = [],
+    deliverables = [],
+    tech_stack = [],
+    technologies = [],
+    ideal_for = [],
+  } = service;
+
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-background via-background to-[var(--primary)]/5 text-foreground py-10 overflow-hidden">
-        {/* Decorative Animated Icons */}
-        {/* Dotted Grid (Top Left) */}
-        <div className="absolute top-12 left-4 md:left-10 opacity-40 animate-spin-slow pointer-events-none">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-            <circle cx="2" cy="2" r="2" className="fill-cyan-500" />
-            <circle cx="22" cy="2" r="2" className="fill-cyan-500" />
-            <circle cx="42" cy="2" r="2" className="fill-cyan-500" />
-            <circle cx="2" cy="22" r="2" className="fill-cyan-500" />
-            <circle cx="22" cy="22" r="2" className="fill-cyan-500" />
-            <circle cx="42" cy="22" r="2" className="fill-cyan-500" />
-            <circle cx="2" cy="42" r="2" className="fill-cyan-500" />
-            <circle cx="22" cy="42" r="2" className="fill-cyan-500" />
-            <circle cx="42" cy="42" r="2" className="fill-cyan-500" />
-          </svg>
-        </div>
+    <div className="min-h-screen bg-white text-black">
+      {/* ================= HERO ================= */}
+      <section className="relative w-full h-[550px] flex items-center">
 
-        {/* Blue Triangle (Top Right) */}
-        <div className="absolute top-20 right-10 opacity-60 hidden md:block animate-float-slow pointer-events-none">
-          <svg width="45" height="45" viewBox="0 0 40 40" fill="none">
-            <path d="M20 0L40 35H0L20 0Z" className="fill-blue-400" />
-          </svg>
-        </div>
+      {/* Common Background Image */}
+      <img
+        src="/Images/common/service-hero.jpg"   // <-- same image for all services
+        alt="Service Background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-        {/* Square Outline (Bottom Right) */}
-        <div className="absolute bottom-20 right-1/4 opacity-50 animate-spin-reverse-slow pointer-events-none">
-          <div className="w-14 h-14 border-4 border-blue-300 rounded-lg animate-float-medium"></div>
-        </div>
+      {/* Black Overlay */}
+      <div className="absolute inset-0 bg-black/85"></div>
 
-        {/* Circle Outline (Left Middle) */}
-        <div className="absolute top-1/2 left-12 w-10 h-10 border-4 border-cyan-200 rounded-full opacity-50 animate-float-medium pointer-events-none" style={{animationDelay: '1s'}}></div>
+      {/* Content */}
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-white z-10">
+        <h1 className="text-4xl md:text-5xl font-bold mb-5">
+          {title}
+        </h1>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <p className="text-xl font-medium mb-8 max-w-2xl">
+          {subtitle}
+        </p>
 
-          {/* Service Header */}
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight bg-gradient-to-r from-[var(--foreground)] via-[var(--primary)] to-[var(--foreground)] bg-clip-text text-transparent">
-              {title}
-            </h1>
+        <button
+          onClick={() => router.push("/contact")}
+          className="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
+        >
+          Get Started →
+        </button>
+      </div>
+    </section>
 
-            <div className="flex flex-wrap items-center gap-3 text-sm mb-6">
-              <span className="flex items-center gap-1.5 bg-gradient-to-r from-[var(--primary)]/20 to-[var(--accent)]/20 backdrop-blur-sm border-2 border-[var(--primary)]/40 rounded-full px-4 py-1.5">
-                <svg className="w-4 h-4 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                </svg>
-                <span className="text-[var(--primary)] font-medium">{service.category ?? "General"}</span>
-              </span>
-            </div>
+      {/* ================= MAIN CONTENT ================= */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10 grid lg:grid-cols-3 gap-16">
+        {/* ================= LEFT CONTENT ================= */}
+        <div className="lg:col-span-2 space-y-7">
+          {/* ========== OVERVIEW ========== */}
+          <section id="overview">
+            <h2 className="text-3xl xs:text-4xl font-bold mb-4">Overview</h2>
 
-            <p className="text-xl md:text-2xl opacity-90 leading-relaxed mb-6">
-              {heroSubtitle}
+            <p className="text-gray-500 text-md leading-relaxed mb-6">
+              {description}
             </p>
 
-            <div className="flex flex-wrap gap-3">
-              <button 
-                onClick={() => router.push("/contact")}
-                className="bg-[var(--primary)] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[var(--primary)]/90 transition-colors inline-flex items-center gap-2 cursor-pointer">
-                Get Started
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
+            {service.overview_image && (
+              <img
+                src={service.overview_image}
+                alt="Overview"
+                className="w-full h-auto object-cover rounded-xl"
+              />
+            )}
+          </section>
 
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* MAIN CONTENT */}
-      <div className="bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid lg:grid-cols-3 gap-8">
-        {/* LEFT SIDEBAR */}
-        <aside className="lg:col-span-1 space-y-6 h-fit lg:sticky lg:top-20 order-2 lg:order-1">
-          {/* Service Details Card */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <h3 className="text-lg font-bold text-foreground mb-4">Service Details</h3>
-            <div className="space-y-4">
-              <div>
-                <div className="text-sm text-gray-600 mb-1">Category</div>
-                <div className="font-medium text-foreground">{service.category ?? "General"}</div>
-              </div>
-              <div className="border-t border-gray-200 pt-4">
-                <div className="text-sm text-gray-600 mb-1">Ideal For</div>
-                <div className="font-medium text-foreground">{whoIsItFor.join(", ") || "Businesses"}</div>
-              </div>
-              <div className="border-t border-gray-200 pt-4">
-                <div className="text-sm text-gray-600 mb-1">Tech Stack</div>
-                <div className="font-medium text-foreground">{tools.slice(0, 3).join(", ")}{tools.length > 3 ? "..." : ""}</div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Card */}
-          <div className="bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-2xl p-6 text-white shadow-lg">
-            <h3 className="text-xl font-bold mb-2">Ready to get started?</h3>
-            <p className="text-white/90 text-sm mb-4">
-              Let&apos;s build a high-performance digital solution tailored to your business.
-            </p>
-            <button 
-              onClick={() => router.push("/contact")}
-              className="w-full bg-white text-[var(--primary)] px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors mb-3 cursor-pointer">
-              Get a Quote
-            </button>
-
-          </div>
-        </aside>
-
-        {/* RIGHT MAIN CONTENT */}
-        <div className="lg:col-span-2 space-y-8 order-1 lg:order-2">
-          {/* Overview Section */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
-            <h2 className="text-xl font-bold text-foreground mb-6">
-              Overview
+          {/* ========== WHAT WE PROCEED / INCLUDE ========== */}
+          <section id="process" className="mt-15">
+            <h2 className="text-3xl xs:text-4xl font-bold mb-4">
+             How We Proceed 
             </h2>
-            <p className="text-gray-700 leading-relaxed">{description}</p>
-          </div>
 
-          {/* Process Section */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
-            <h2 className="text-xl font-bold text-foreground mb-6">
-              How We Proceed
-            </h2>
+            {process_intro && (
+              <p className="text-gray-500 text-md leading-relaxed mb-6">
+                {process_intro}
+              </p>
+            )}
+
             <ul className="space-y-3.5">
               {process.map((item) => (
-                <li key={`process-${item}`} className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[var(--primary)] shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                <li key={item} className="flex items-start gap-3">
+                  <svg
+                    className="w-5 h-5 text-blue-600 shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
                   </svg>
-                  <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
+                  <span className="text-gray-600 text-md font-semibold leading-relaxed">
+                    {item}
+                  </span>
                 </li>
               ))}
             </ul>
+          </section>
+
+          {/* ========== SERVICE DETAIL ========== */}
+          <section id="details" className="mt-12">
+            <h2 className="text-3xl xs:text-4xl font-bold mb-4">
+              Service Detail
+            </h2>
+            {/* CATEGORY */}
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-2">
+                Category – {category}
+              </h3>
+
+              {category_description && (
+                <p className="text-gray-600 text-md leading-relaxed">
+                  {category_description}
+                </p>
+              )}
+            </div>
+
+            {service.detail_image && (
+              <img
+                src={service.detail_image}
+                alt="Service Detail"
+                className="w-full h-auto rounded-xl mb-8"
+              />
+            )}
+
+
+            {/* IDEAL FOR */}
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-2">Ideal For</h3>
+
+              {ideal_intro && (
+                <p className="text-gray-600 text-md leading-relaxed mb-4">
+                  {ideal_intro}
+                </p>
+              )}
+
+              <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+                {ideal_for.map((item) => (
+                  <li key={item} className="group flex items-start gap-3">
+                    <ArrowRight className="w-5 h-5 text-blue-600 mt-1 transition-transform duration-300 group-hover:translate-x-1" />
+                    <span className="text-gray-600 text-md font-semibold leading-relaxed">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* TECH STACK */}
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
+
+              {tech_intro && (
+                <p className="text-gray-600 text-md leading-relaxed mb-4">
+                  {tech_intro}
+                </p>
+              )}
+
+              <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+                {tech_stack.map((tech) => (
+                  <li key={tech} className="group flex items-start gap-3">
+                    <ArrowRight className="w-4 h-4 text-blue-600 mt-1 transition-transform duration-300 group-hover:translate-x-1" />
+                    <span className="text-gray-600 text-md font-semibold leading-relaxed">
+                      {tech}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              {last_para && (
+                <p className="text-gray-600 text-md leading-relaxed mb-5 mt-6">
+                  {last_para}
+                </p>
+              )}
+            </div>
+          </section>
           </div>
 
-          {/* Deliverables Section */}
+          
+
+        {/* ================= RIGHT SIDEBAR ================= */}
+        <aside className="space-y-12">
+          {/* Deliverables */}
           <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
-            <h2 className="text-xl font-bold text-foreground mb-6">
-              Deliverables
-            </h2>
+            <h2 className="text-xl font-bold mb-6">Deliverables</h2>
+
             <div className="flex flex-wrap gap-2">
               {deliverables.map((item) => (
                 <span
-                  key={`deliverable-${item}`}
+                  key={item}
                   className="px-4 py-2 bg-blue-50 text-blue-600 border border-blue-200 rounded-lg font-medium text-sm"
                 >
                   {item}
@@ -183,28 +241,50 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
               ))}
             </div>
           </div>
-
-          {/* Technologies Section */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
-            <h2 className="text-xl font-bold text-foreground mb-6">
-              Technologies We Use
-            </h2>
-            <div className="flex flex-wrap gap-2">
-              {tools.map((tool) => (
-                <span
-                  key={`tool-${tool}`}
-                  className="px-4 py-2 bg-blue-50 text-blue-600 border border-blue-200 rounded-lg font-medium text-sm"
-                >
-                  {tool}
-                </span>
-              ))}
+          
+          {/* ========== TECHNOLOGIES ========== */}
+          <section id="technologies" className="mt-12">
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+              <h2 className="text-xl font-bold mb-8">
+                Technologies Used
+              </h2>
+              <div className="flex flex-wrap gap-10">
+                {technologies.map((tech) => (
+        <div key={tech.name} className="text-center">
+          <img
+            src={tech.icon}
+            alt={tech.name}
+            className="w-14 h-14 object-contain mx-auto"
+          />
+          <p className="mt-2 text-sm font-medium">
+            {tech.name}
+          </p>
+        </div>
+      ))}
+              </div>
             </div>
+          </section>
+
+        
+          {/* CTA */}
+          <div className="bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl p-6 text-white shadow-lg">
+            <h3 className="text-xl font-bold mb-2">
+              Ready to get started?
+            </h3>
+            <p className="text-white/90 text-sm mb-4">
+              Let&apos;s build a high-performance digital solution tailored
+              to your business.
+            </p>
+
+            <button
+              onClick={() => router.push("/contact")}
+              className="w-full bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+            >
+              Get a Quote
+            </button>
           </div>
-        </div>
-        </div>
-        </div>
-      </div>
+        </aside>
+      </section>
     </div>
   );
 }
-
