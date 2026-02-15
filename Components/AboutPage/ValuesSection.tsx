@@ -32,6 +32,16 @@ export default function ValuesSection() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       )
+    },
+    {
+      title: 'Long-Term Reliability',
+      desc: 'We build solutions designed to last. Stable architecture, scalable systems, and thoughtful execution ensure your technology continues to perform as your business grows.',
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3l7 4v5c0 5-3.582 9.418-7 10-3.418-.582-7-5-7-10V7l7-4z" />
+        </svg>
+      )
     }
   ];
 
@@ -53,20 +63,23 @@ export default function ValuesSection() {
           </Reveal>
         </div>
 
-        <RevealContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <RevealContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
           {values.map((item, index) => (
-            <RevealItem key={index}>
-              <div className="flex gap-5 p-8 rounded-2xl bg-slate-100 hover:bg-slate-200 border border-slate-200 hover:shadow-lg hover:shadow-[var(--primary)]/10 transition-all duration-300 group">
+            <RevealItem key={index} className="h-full">
+              <div className="h-full flex gap-5 p-8 rounded-2xl bg-slate-100 hover:bg-slate-200 border border-slate-200 hover:shadow-lg hover:shadow-[var(--primary)]/10 transition-all duration-300 group">
+                
                 {/* Icon Box */}
                 <div className="shrink-0 w-14 h-14 rounded-xl bg-slate-300 text-slate-600 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[var(--primary)] group-hover:to-[var(--accent)] group-hover:text-white transition-all duration-300 shadow-sm">
                   {item.icon}
                 </div>
-                
-                <div>
+
+                {/* Content */}
+                <div className="flex flex-col">
                   <h3 className="text-xl font-bold text-foreground mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
+
+                  <p className="text-muted-foreground leading-relaxed text-sm flex-grow">
                     {item.desc}
                   </p>
                 </div>

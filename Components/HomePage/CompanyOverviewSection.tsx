@@ -46,13 +46,19 @@ export default function CompanyOverviewSection() {
             </RevealItem>
 
             <RevealItem>
-              <Link
+             <Link
                 href="/about"
-                className="group inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wide text-foreground transition-colors hover:text-primary cursor-pointer"
+                className="group relative inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wide text-foreground transition-all duration-300 hover:text-[var(--primary)]"
               >
-                <span>Know More</span>
+                <span className="relative">
+                  Know More
+
+                  {/* Animated underline */}
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] transition-all duration-300 group-hover:w-full"></span>
+                </span>
+
                 <svg 
-                  className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
+                  className="w-5 h-5 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[var(--primary)]" 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
