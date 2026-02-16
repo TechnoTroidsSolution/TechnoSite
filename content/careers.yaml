@@ -1,0 +1,187 @@
+careers:
+  hero:
+    title: "Join Our Team"
+    subtitle: "Build the future with us. We're looking for talented individuals who are passionate about technology and innovation."
+    cta_text: "Explore Opportunities"
+
+  stats:
+    - label: "Open Positions"
+      value: "3+"
+    - label: "Team Members"
+      value: "50+"
+    - label: "Countries"
+      value: "15+"
+    - label: "Growth Rate"
+      value: "200%"
+
+  benefits:
+    - title: "Competitive Salary"
+      description: "Industry-leading compensation packages with performance bonuses and equity options."
+      icon: "💰"
+    - title: "Remote First"
+      description: "Work from anywhere in the world. We believe in flexibility and work-life balance."
+      icon: "🌍"
+    - title: "Learning Budget"
+      description: "$2000 annual budget for courses, conferences, and professional development."
+      icon: "📚"
+    - title: "Health & Wellness"
+      description: "Comprehensive health insurance, mental health support, and gym memberships."
+      icon: "❤️"
+    - title: "Flexible Hours"
+      description: "Set your own schedule. We care about results, not when you're online."
+      icon: "⏰"
+    - title: "Team Events"
+      description: "Regular team building activities, hackathons, and annual company retreats."
+      icon: "🎉"
+
+  jobs:
+    - id: "product-manager"
+      title: "Product Manager"
+      department: "Product"
+      location: "Hybrid"
+      type: "Full-time"
+      experience: "0-2 years"
+      salary: "To be disclosed"
+      posted_date: "2025-01-08"
+      description: "Lead product strategy and execution for our core products, working closely with engineering and design teams."
+      
+      responsibilities:
+        - "Define product vision, strategy, and roadmap"
+        - "Gather and prioritize product requirements from stakeholders"
+        - "Work with engineering and design to deliver features"
+        - "Analyze product metrics and user feedback for improvements"
+        - "Conduct market research and competitive analysis"
+        - "Create product specifications and user stories"
+        - "Coordinate product launches and go-to-market strategies"
+        - "Communicate product updates to stakeholders"
+      
+      requirements:
+        - "5+ years of product management experience in B2B SaaS"
+        - "Strong analytical and problem-solving skills"
+        - "Experience with agile development methodologies"
+        - "Proven track record of launching successful products"
+        - "Excellent stakeholder management and communication skills"
+        - "Data-driven decision making approach"
+        - "Understanding of technical concepts and architecture"
+        - "Experience with product analytics tools (Mixpanel, Amplitude)"
+      
+      nice_to_have:
+        - "Technical background or CS degree"
+        - "Experience with AI/ML products"
+        - "MBA or relevant certification"
+        - "Experience in enterprise software"
+        - "Product management certification"
+      
+      key_skills:
+        - "Product Strategy"
+        - "Roadmap Planning"
+        - "Agile"
+        - "Data Analysis"
+        - "Stakeholder Management"
+        - "User Research"
+        - "A/B Testing"
+        - "Go-to-Market"
+
+    - id: "senior-full-stack-developer"
+      title: "Senior Full Stack Developer"
+      department: "Engineering"
+      location: "Hybrid"
+      type: "Full-time"
+      experience: "0-2 years"
+      salary: "To be disclosed"
+      posted_date: "2026-01-10"
+      description: "We're looking for an experienced Senior Full Stack Developer to lead technical initiatives and build scalable web applications using modern technologies."
+      
+      responsibilities:
+        - "Design and develop robust, scalable web applications using React, Node.js, and TypeScript"
+        - "Lead technical architecture decisions and mentor junior developers"
+        - "Collaborate with cross-functional teams to define and implement new features"
+        - "Write clean, maintainable code with comprehensive test coverage"
+        - "Conduct code reviews and ensure code quality standards"
+        - "Optimize application performance and ensure security best practices"
+        - "Participate in agile ceremonies and contribute to sprint planning"
+        - "Stay updated with emerging technologies and industry trends"
+      
+      requirements:
+        - "5+ years of experience in full-stack web development"
+        - "Strong proficiency in React, Node.js, and TypeScript"
+        - "Experience with Next.js, Express, and modern web frameworks"
+        - "Solid understanding of RESTful APIs and microservices architecture"
+        - "Experience with SQL and NoSQL databases (PostgreSQL, MongoDB)"
+        - "Familiarity with cloud platforms (AWS, Azure, or GCP)"
+        - "Strong problem-solving skills and attention to detail"
+        - "Excellent communication and collaboration abilities"
+      
+      nice_to_have:
+        - "Experience with GraphQL and Apollo"
+        - "Knowledge of Docker and Kubernetes"
+        - "Contributions to open-source projects"
+        - "Experience with CI/CD pipelines"
+        - "Understanding of system design and scalability patterns"
+      
+      key_skills:
+        - "React"
+        - "Node.js"
+        - "TypeScript"
+        - "Next.js"
+        - "PostgreSQL"
+        - "AWS"
+        - "Docker"
+        - "REST APIs"
+
+    - id: "junior-full-stack-developer"
+      title: "Junior Full Stack Developer"
+      department: "Engineering"
+      location: "Hybrid"
+      type: "Full-time"
+      experience: "0-2 years"
+      salary: "To be disclosed"
+      posted_date: "2026-01-10"
+      description: "Start your career as a Junior Full Stack Developer! We're looking for enthusiastic developers eager to learn and grow with our team."
+      
+      responsibilities:
+        - "Assist in developing web application features under senior guidance"
+        - "Learn and implement frontend components using React"
+        - "Build simple backend APIs using Node.js and Express"
+        - "Write and maintain documentation for code and features"
+        - "Participate in code reviews and learn from feedback"
+        - "Fix bugs and improve existing codebase"
+        - "Collaborate with team members on assigned tasks"
+        - "Continuously learn new technologies and best practices"
+      
+      requirements:
+        - "Bachelor's degree in Computer Science or related field (or equivalent experience)"
+        - "Basic knowledge of JavaScript, HTML, and CSS"
+        - "Familiarity with React or similar frontend frameworks"
+        - "Understanding of basic programming concepts and data structures"
+        - "Eagerness to learn and grow as a developer"
+        - "Good communication skills and team player attitude"
+        - "Basic understanding of version control (Git)"
+        - "Problem-solving mindset and attention to detail"
+      
+      nice_to_have:
+        - "Personal projects or portfolio demonstrating coding skills"
+        - "Internship experience in software development"
+        - "Knowledge of TypeScript"
+        - "Familiarity with Node.js or backend development"
+        - "Contributions to open-source projects"
+      
+      key_skills:
+        - "JavaScript"
+        - "React"
+        - "HTML/CSS"
+        - "Git"
+        - "Problem Solving"
+        - "Communication"
+        - "Learning Agility"
+        - "Teamwork"
+
+  departments:
+    - "All"
+    - "Engineering"
+    - "Product"
+
+  cta:
+    title: "Don't see the right role?"
+    description: "We're always looking for talented people. Send us your resume and we'll keep you in mind for future opportunities."
+    email: "careers@technosoft.com"

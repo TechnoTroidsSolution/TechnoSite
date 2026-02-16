@@ -1,0 +1,833 @@
+services:
+  - id: education-site-building
+    title: "Education Site Building"
+    subtitle: "Custom LMS platforms, student portals, and e-learning ecosystems."
+
+    overview_image: "/Images/serviceDetail/educationBuildingSite/image2.webp"
+    detail_image: "/Images/serviceDetail/educationBuildingSite/image3.webp"
+    description: >
+      We build modern, scalable education websites and LMS platforms tailored for institutes, schools, coaching centers, and e-learning startups.
+      Our solutions streamline student management, course delivery, and academic operations in one unified system.
+      We create interactive learning environments with video classes, assessments, assignments, and progress tracking.
+      From admissions and fee management to certifications and reporting, we cover the complete digital ecosystem.
+      Our platforms are secure, mobile-friendly, and designed for seamless performance across devices.
+      We help educational institutions transform into smart, future-ready digital learning hubs.
+    process_intro: >
+      Our education development process is built around usability, scalability, and performance to deliver seamless learning experiences. 
+      We design platforms that simplify academic management while enhancing student engagement and accessibility. 
+      Each solution is tailored to meet the operational needs of modern institutions.
+      Our systems are flexible and future-ready, ensuring long-term growth and adaptability.
+    category_description: >
+      Our education development process is built around usability, scalability, and performance.
+      We create platforms that deliver seamless learning experiences across all devices.
+      Our solutions simplify academic operations while enhancing student engagement.
+      Every system is designed to adapt and grow with your institution’s evolving needs.
+    ideal_intro: >
+      This solution is ideal for schools, colleges, universities, coaching centers, and e-learning startups aiming to modernize their infrastructure. 
+      It supports institutions looking to digitize admissions, course management, and communication systems. Online educators and training providers can also benefit from structured LMS platforms. 
+      It is perfect for organizations seeking efficiency, automation, and improved learning experiences.
+    tech_intro: >
+     We use modern, scalable, and secure technologies to build high-performance educational platforms. 
+     Our tech stack supports video streaming, secure databases, and seamless third-party integrations. 
+     We implement strong data protection practices to safeguard student information. 
+     The architecture is designed to handle high traffic, real-time learning, and continuous expansion.
+    last_para: >
+     Our approach goes beyond just development — we focus on delivering a complete digital learning experience. 
+     From planning and design to deployment and ongoing support, we ensure every stage is handled with precision and care. 
+     We continuously optimize performance, security, and usability to keep your platform running smoothly.
+     Our goal is to help you build a reliable, future-ready education system that empowers both educators and learners.
+ 
+    process:
+      - "Requirement analysis and user persona mapping"
+      - "Information architecture & LMS workflow planning"
+      - "UI/UX design for students, teachers, and admins"
+      - "Development of course modules, progress tracking, and assessments"
+      - "Video streaming integration and resource management"
+      - "Student portal + teacher dashboard development"
+      - "Testing for performance and multi-device usage"
+      - "Deployment, onboarding, and long-term support"
+
+    deliverables:
+      - "Fully functional LMS"
+      - "Admin dashboard"
+      - "Course builder"
+      - "Student & teacher portals"
+      - "Video content delivery setup"
+      - "Assessment/quiz module"
+      - "Payment gateway integration"
+      - "Reports & analytics"
+
+    tech_stack:
+      - "Next.js"
+      - "Node.js / Django"
+      - "PostgreSQL / MongoDB"
+      - "AWS S3 / Cloudflare"
+      - "Stripe / Razorpay"
+      - "WebRTC / Vimeo / YouTube API"
+
+    technologies:
+      - name: "Next.js"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/nextjs.webp"
+
+      - name: "Node.js"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/nodejs.webp"
+
+      - name: "PostgreSQL"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/postgres.webp"
+
+      - name: "MongoDB"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/mongodb.webp"
+
+      - name: "Cloudflare"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/cloudflare.webp"
+
+      - name: "Stripe"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/stripe.webp"
+
+      - name: "Razorpay"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/razorpay.webp"
+
+      - name: "WebRTC"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/webrtc.webp"
+
+      - name: "Vimeo"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/vimeo.webp"
+
+      - name: "YouTube API"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/youtube.webp"
+
+    benefits:
+      - "Scalable architecture"
+      - "High-conversion designs"
+      - "Secure student data handling"
+      - "Fast performance even with high traffic"
+      - "Future-ready modular LMS"
+
+    ideal_for:
+      - "Schools"
+      - "Universities"
+      - "E-learning startups"
+      - "Coaching centers"
+
+    seo:
+      keywords: "LMS development, education website, e-learning platform"
+      meta_description: "Custom education platforms and LMS development for institutes and EdTech startups."
+
+  - id: n8n-automation
+    title: "N8N Automation"
+    subtitle: "Automate your business workflows without limits."
+    overview_image: "/Images/serviceDetail/n8n/image1.webp"
+    detail_image: "/Images/serviceDetail/n8n/image1.webp"
+    description: >
+      We design intelligent automation workflows using N8N to eliminate repetitive manual processes. 
+      Our solutions connect APIs, CRMs, SaaS platforms, and internal systems into unified automation pipelines. 
+      By streamlining operations and reducing errors, we help businesses improve productivity and operational clarity.
+
+    process_intro: >
+      Our automation process starts with analyzing existing workflows and identifying efficiency gaps. 
+      We map triggers, logic flows, and integrations to ensure seamless execution. 
+      Each workflow is thoroughly tested and optimized before deployment to guarantee reliability.
+
+    category_description: >
+      Workflow automation enables organizations to operate faster and with greater accuracy. 
+      We integrate multiple tools into cohesive systems that reduce manual effort. 
+      Every automation is built to scale with business growth while maintaining security and performance.
+
+    ideal_intro: >
+      This solution is ideal for marketing teams, operations departments, and growing startups. 
+      Businesses handling repetitive data entry, reporting, or CRM updates benefit significantly. 
+      It is perfect for organizations aiming to increase efficiency through low-code automation.
+
+    tech_intro: >
+      We leverage N8N’s flexible automation engine along with Node.js and secure REST APIs. 
+      Webhooks and OAuth integrations ensure secure and real-time workflow execution. 
+      The infrastructure is optimized for scalability and complex business logic.
+
+    last_para: >
+      Our automation systems are designed to evolve with your business operations. 
+      We provide documentation, training, and monitoring tools to ensure smooth adoption. 
+      Our mission is to create a smart, self-operating digital workflow ecosystem.  
+
+    process:
+      - "Business workflow analysis"
+      - "Automation mapping and triggers setup"
+      - "API integrations & custom node creation"
+      - "Workflow testing and optimization"
+      - "Error handling logic"
+      - "Security and permission setup"
+      - "Automation deployment"
+      - "Training & documentation"
+
+    deliverables:
+      - "Automation workflows"
+      - "Custom N8N nodes"
+      - "API integrations"
+      - "Monitoring dashboard"
+      - "Task automation scripts"
+      - "Error-handling logic"
+      - "Complete documentation"
+
+    tech_stack:
+      - "N8N"
+      - "Node.js"
+      - "REST APIs"
+      - "Webhook triggers"
+      - "OAuth integrations"
+
+    technologies:
+      - name: "N8N"
+        icon: "/Images/serviceDetail/n8n/Tech/n8n.webp"
+
+      - name: "Node.js"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/nodejs.webp"
+
+      - name: "Rest APIs"
+        icon: "/Images/serviceDetail/n8n/Tech/restApi.webp"
+
+      - name: "Webhook triggers"
+        icon: "/Images/serviceDetail/n8n/Tech/webHook.webp"
+
+      - name: "OAuth integrations"
+        icon: "/Images/serviceDetail/n8n/Tech/Oauth.webp"
+
+
+    benefits:
+      - "Reduces manual tasks"
+      - "Fast automation setup"
+      - "Low-code yet powerful"
+      - "Highly scalable flows"
+
+    ideal_for:
+      - "Marketing teams"
+      - "Operations"
+      - "E-commerce"
+      - "Startups needing automation"
+
+    seo:
+      keywords: "n8n automation, workflow automation, no-code automation"
+      meta_description: "Automate business workflows using N8N with custom nodes and integrations."
+
+  - id: erp-automation
+    title: "ERP Automation"
+    subtitle: "Streamline enterprise workflows with ERP automation and integrations."
+    overview_image: "/Images/serviceDetail/erp/image1.webp"
+    detail_image: "/Images/serviceDetail/erp/image1.webp"
+    description: >
+      We help enterprises automate ERP-driven workflows to improve efficiency and reduce operational overhead. 
+      Our solutions integrate finance, HR, supply chain, and CRM systems into one synchronized ecosystem. 
+      By minimizing repetitive tasks and manual errors, we enable better visibility and faster decision-making.
+
+    process_intro: >
+      Our ERP automation process begins with system assessment and workflow mapping. 
+      We identify bottlenecks and design strategic integration solutions tailored to your organization. 
+      Each implementation is tested thoroughly to ensure seamless deployment and adoption.
+
+    category_description: >
+      ERP automation focuses on optimizing enterprise-level processes across departments. 
+      We use APIs, middleware, and RPA tools to connect systems securely. 
+      The result is a scalable infrastructure that enhances operational transparency and efficiency.
+
+    ideal_intro: >
+      This service is ideal for mid to large enterprises seeking digital transformation. 
+      Manufacturing, retail, and finance sectors benefit from automated ERP integrations. 
+      It supports organizations looking to centralize data and streamline workflows.
+
+    tech_intro: >
+      We utilize ERP APIs, cloud infrastructure, and RPA platforms for robust integrations. 
+      Secure middleware ensures reliable data synchronization across systems. 
+      Our architecture is built to handle enterprise-scale workloads efficiently.
+
+    last_para: >
+      Our ERP automation strategy focuses on long-term operational excellence. 
+      Continuous monitoring and optimization ensure sustained performance improvements. 
+      We help enterprises build efficient, scalable, and future-ready systems.
+
+    process:
+      - "ERP system assessment & workflow analysis"
+      - "Automation & integration strategy planning"
+      - "Custom ERP module development"
+      - "API & connector implementation"
+      - "RPA integration for repetitive tasks"
+      - "Testing & validation"
+      - "Deployment & user training"
+      - "Continuous optimization & support"
+
+    deliverables:
+      - "ERP automation workflows"
+      - "Custom ERP modules & integrations"
+      - "RPA bots & connectors"
+      - "Process documentation & training materials"
+
+    technologies:
+      - name: "ERP APIs"
+        icon: "/Images/serviceDetail/erp/Tech/erpApi.webp"
+
+      - name: "RPA"
+        icon: "/Images/serviceDetail/erp/Tech/rpa.webp"
+
+      - name: "Middleware"
+        icon: "/Images/serviceDetail/erp/Tech/middleware.webp"
+
+      - name: "Cloud"
+        icon: "/Images/serviceDetail/erp/Tech/aws.webp"
+
+      - name: "Custom Microservices"
+        icon: "/Images/serviceDetail/erp/Tech/custom.webp"
+
+    tech_stack:
+      - "ERP APIs & Webhooks"
+      - "RPA (UIPath / Power Automate)"
+      - "Middleware & iPaaS tools"
+      - "Cloud Platforms (AWS / Azure / GCP)"
+      - "Custom Microservices"
+
+    benefits:
+      - "Eliminates repetitive ERP tasks"
+      - "Improves operational efficiency"
+      - "Reduces human errors"
+      - "Enhances reporting & visibility"
+      - "Scales with business growth"
+
+    ideal_for:
+      - "Mid to large enterprises"
+      - "Manufacturing companies"
+      - "Retail & supply chain businesses"
+      - "Finance, HR & Operations teams"
+
+    seo:
+      keywords: "ERP automation, ERP integration, ERP workflow automation, enterprise automation"
+      meta_description: "Enterprise-grade ERP automation and workflow integration to streamline business operations."
+
+  - id: full-stack-web-development
+    title: "Full-Stack Web Development"
+    subtitle: "High-performance, scalable web applications from front to back."
+    overview_image: "/Images/serviceDetail/fullStack/image1.webp"
+    detail_image: "/Images/serviceDetail/fullStack/image1.webp"
+    description: >
+      We build modern full-stack web applications that combine powerful backend systems with intuitive frontend experiences.
+      From SaaS platforms to enterprise dashboards, our solutions are designed for scalability, security, and performance.
+      Each application is engineered with clean architecture and optimized code to ensure long-term growth and maintainability.
+    process_intro: >
+      Our development process begins with detailed requirement analysis and technical planning.
+      We design scalable system architectures before moving into UI/UX prototyping and development.
+      Agile methodologies ensure efficient delivery while maintaining flexibility and quality assurance.
+
+    category_description: >
+      Full-stack development integrates frontend interfaces, backend logic, and database systems into a cohesive product.
+      We focus on performance optimization, API design, and seamless user experiences.
+      Every project is structured to support scalability, security, and future expansion.
+
+    ideal_intro: >
+      This solution is ideal for startups launching SaaS platforms or digital products.
+      Enterprises seeking internal dashboards and management systems also benefit greatly.
+      It is perfect for businesses requiring complete end-to-end web development expertise.
+
+    tech_intro: >
+      We use modern frameworks such as Next.js and React for frontend performance.
+      Backend systems are powered by Node.js or Python with scalable databases like PostgreSQL or MongoDB.
+      Cloud platforms and containerization ensure reliable deployment and infrastructure scalability.
+
+    last_para: >
+      Our focus is on building reliable and high-performing digital platforms.
+      We provide post-launch maintenance and continuous optimization for sustained success.
+      Our goal is to deliver web systems that grow alongside your business.
+    process:
+      - "Requirement gathering"
+      - "System architecture design"
+      - "UI/UX prototyping"
+      - "Frontend & backend development"
+      - "Database & API setup"
+      - "Testing & QA"
+      - "Deployment & DevOps"
+      - "Post-launch maintenance"
+
+    deliverables:
+      - "Frontend UI"
+      - "Backend APIs"
+      - "Database schema"
+      - "Admin dashboard"
+      - "Authentication system"
+      - "Cloud deployment"
+
+    technologies:
+      - name: "Next.js"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/nextjs.webp"
+
+      - name: "Node.js"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/nodejs.webp"
+
+      - name: "MongoDB"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/mongodb.webp"
+
+      - name: "Vercel"
+        icon: "/Images/serviceDetail/fullStack/Tech/vercel.webp"
+
+      - name: "Docker"
+        icon: "/Images/serviceDetail/fullStack/Tech/docker.webp"
+
+    tech_stack:
+      - "Next.js / React"
+      - "Node.js / Python"
+      - "MongoDB / PostgreSQL"
+      - "AWS / Vercel"
+      - "Redis / Docker"
+
+    benefits:
+      - "Clean, scalable code"
+      - "SEO-friendly"
+      - "High performance"
+      - "Secure architecture"
+
+    ideal_for:
+      - "Startups"
+      - "SaaS platforms"
+      - "Enterprise dashboards"
+
+    seo:
+      keywords: "full-stack development, web development company"
+      meta_description: "Custom full-stack app development using Next.js, Node.js, and scalable cloud architecture."
+
+  - id: mobile-applications
+    title: "Mobile Applications"
+    subtitle: "iOS and Android apps built for performance and user engagement."
+    overview_image: "/Images/serviceDetail/mobile/image1.webp"
+    detail_image: "/Images/serviceDetail/mobile/image1.webp"
+    description: >
+      We design and develop mobile applications that are intuitive, responsive, and performance-driven.
+      Our apps deliver seamless experiences across both iOS and Android platforms.
+      From MVP launches to enterprise-grade mobile systems, we create scalable solutions focused on user engagement.
+
+    process_intro: >
+      We begin with wireframing and UX strategy to define a strong foundation.
+      High-fidelity designs are crafted before development to ensure clarity and usability.
+      Rigorous testing across devices ensures stability, performance, and reliability.
+
+    category_description: >
+      Mobile development combines user-centric design with secure backend integrations.
+      We build both cross-platform and native applications depending on business needs.
+      Every solution is optimized for speed, scalability, and long-term maintainability.
+
+    ideal_intro: >
+      This service is ideal for startups launching innovative mobile products.
+      E-commerce businesses can increase engagement through mobile-first strategies.
+      It also suits SaaS companies expanding their services into the mobile ecosystem.
+
+    tech_intro: >
+      We leverage React Native and Flutter for cross-platform efficiency.
+      Backend services are powered by scalable APIs and cloud infrastructure.
+      Deployment processes ensure smooth publishing to the App Store and Play Store.
+
+    last_para: >
+      Our mission is to build mobile experiences that users trust and enjoy.
+      Continuous improvements and performance optimization ensure long-term success.
+      We help brands transform their ideas into impactful mobile solutions.
+
+    process:
+      - "Wireframing & UX planning"
+      - "UI design for multiple screens"
+      - "Core feature development"
+      - "API integration"
+      - "Device testing"
+      - "App Store & Play Store setup"
+      - "Deployment"
+      - "Post-launch improvements"
+
+    deliverables:
+      - "iOS & Android apps"
+      - "Source code"
+      - "API integration"
+      - "Crash monitoring setup"
+      - "High-quality UI screens"
+
+    technologies:
+      - name: "React Native"
+        icon: "/Images/serviceDetail/mobile/Tech/react.webp"
+
+      - name: "Node.js"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/nodejs.webp"
+
+      - name: "Flutter"
+        icon: "/Images/serviceDetail/mobile/Tech/flutter.webp"
+
+      - name: "Firebase"
+        icon: "/Images/serviceDetail/mobile/Tech/firebase.webp"
+
+      - name: "App Store Connect"
+        icon: "/Images/serviceDetail/mobile/Tech/appstore.webp"
+
+    tech_stack:
+      - "React Native"
+      - "Flutter"
+      - "Firebase"
+      - "Node.js"
+      - "App Store Connect / Google Console"
+
+    benefits:
+      - "Fast and responsive apps"
+      - "Cross-platform support"
+      - "Lower development cost"
+      - "Optimized UI/UX"
+
+    ideal_for:
+      - "Startups"
+      - "E-commerce"
+      - "SaaS mobile tools"
+
+    seo:
+      keywords: "mobile app development, react native apps"
+      meta_description: "Build mobile apps using React Native and Flutter with seamless performance."
+
+  - id: blockchain-solutions
+    title: "Blockchain Solutions"
+    subtitle: "Future-ready decentralized applications and smart contract systems."
+    overview_image: "/Images/serviceDetail/blockchain/image1.webp"
+    detail_image: "/Images/serviceDetail/blockchain/image1.webp"
+    description: >
+      We develop secure blockchain applications including smart contracts and decentralized platforms.
+      Our solutions support NFTs, DeFi systems, token ecosystems, and enterprise blockchain integrations.
+      Each project is designed to ensure transparency, security, and scalable decentralized infrastructure.
+
+    process_intro: >
+      We start with use-case validation and tokenomics strategy planning.
+      Smart contracts are architected and tested thoroughly before deployment.
+      Web3 integrations are implemented to ensure smooth user interaction and wallet connectivity.
+
+    category_description: >
+      Blockchain development enables trustless transactions and transparent digital systems.
+      We create decentralized architectures that automate logic through smart contracts.
+      Every solution is built with security audits and performance optimization in mind.
+
+    ideal_intro: >
+      This service is ideal for Web3 startups and NFT marketplaces.
+      DeFi platforms benefit from secure smart contract development.
+      Enterprises exploring decentralized technologies can leverage our blockchain expertise.
+
+    tech_intro: >
+      We use Solidity for smart contract development and Web3 libraries for integration.
+      Networks such as Ethereum and Polygon support decentralized deployment.
+      Decentralized storage solutions ensure data integrity and security.
+
+    last_para: >
+      Our blockchain solutions are engineered for reliability and scalability.
+      We conduct audits and performance testing to minimize vulnerabilities.
+      Our goal is to help businesses confidently adopt decentralized technologies.
+
+    process:
+      - "Use-case and tokenomics planning"
+      - "Smart contract architecture"
+      - "UI/UX for dApps"
+      - "Web3 & wallet integration"
+      - "Contract audits"
+      - "Deployment to testnet/mainnet"
+      - "Performance optimization"
+      - "Monitoring & analytics"
+
+    deliverables:
+      - "Smart contracts"
+      - "DApp frontend"
+      - "Admin dashboard"
+      - "Wallet integrations"
+      - "Audit report"
+
+    technologies:
+      - name: "Solidity"
+        icon: "/Images/serviceDetail/blockchain/Tech/solidity.webp"
+
+      - name: "Ethers.js"
+        icon: "/Images/serviceDetail/blockchain/Tech/esther.webp"
+
+      - name: "Polygon"
+        icon: "/Images/serviceDetail/blockchain/Tech/polygon.webp"
+
+      - name: "IPFS"
+        icon: "/Images/serviceDetail/blockchain/Tech/ipfs.webp"
+
+      - name: "Hardhat"
+        icon: "/Images/serviceDetail/blockchain/Tech/hardhat.webp"
+
+    tech_stack:
+      - "Solidity"
+      - "Web3.js / Ethers.js"
+      - "Polygon / Ethereum"
+      - "IPFS"
+      - "Hardhat / Foundry"
+
+    benefits:
+      - "Secure blockchain architecture"
+      - "Transparent transactions"
+      - "Decentralized user experience"
+
+    ideal_for:
+      - "Web3 startups"
+      - "NFT platforms"
+      - "DeFi systems"
+
+    seo:
+      keywords: "blockchain development, smart contract company"
+      meta_description: "Blockchain and smart contract development with secure scalable architecture."
+
+ 
+  - id: ui-ux-design
+    title: "UI/UX Design"
+    subtitle: "Human-centered designs that convert users into customers."
+    overview_image: "/Images/serviceDetail/uiux/image1.webp"
+    detail_image: "/Images/serviceDetail/uiux/image1.webp"
+    description: >
+      We create intuitive and visually compelling interfaces grounded in user research and behavioral insights.
+      Our designs focus on clarity, consistency, and engagement across digital platforms.
+      By combining creativity with strategy, we deliver user experiences that drive higher conversions.
+
+    process_intro: >
+      Our process begins with user research and persona development.
+      Wireframes and prototypes are created to validate usability early.
+      High-fidelity designs are finalized after testing and refinement.
+
+    category_description: >
+      UI/UX design bridges aesthetics and functionality.
+      We develop structured design systems that maintain brand consistency.
+      Every interface is optimized to enhance usability and reduce friction.
+
+    ideal_intro: >
+      Ideal for web applications, mobile apps, and SaaS platforms.
+      Startups seeking strong product-market fit benefit from structured design thinking.
+      Enterprises can enhance digital experiences through strategic redesign.
+
+    tech_intro: >
+      We utilize industry-leading design tools for prototyping and collaboration.
+      Interactive prototypes ensure smooth developer handoff.
+      Design systems maintain scalability and consistency across products.
+
+    last_para: >
+      Our goal is to create experiences that users enjoy and trust.
+      We focus on measurable improvements in engagement and retention.
+      Great design becomes a competitive advantage for your brand.
+
+    process:
+      - "User research & personas"
+      - "Wireframing"
+      - "Prototyping"
+      - "User testing"
+      - "High-fidelity designs"
+      - "Design system creation"
+      - "Developer handoff"
+
+    deliverables:
+      - "Wireframes"
+      - "UI screens"
+      - "Style guides"
+      - "Design systems"
+      - "Clickable prototypes"
+
+    technologies:
+      - name: "Figma"
+        icon: "/Images/serviceDetail/uiux/Tech/figma.webp"
+
+      - name: "Adobe XD"
+        icon: "/Images/serviceDetail/uiux/Tech/adobe.webp"
+
+      - name: "Notion"
+        icon: "/Images/serviceDetail/uiux/Tech/notion.webp"
+
+      - name: "Miro"
+        icon: "/Images/serviceDetail/uiux/Tech/miro.webp"
+
+    tech_stack:
+      - "Figma"
+      - "Adobe XD"
+      - "Notion"
+      - "Miro"
+
+    benefits:
+      - "Improved user engagement"
+      - "Higher conversions"
+      - "Consistent branding"
+
+    ideal_for:
+      - "Web apps"
+      - "Mobile apps"
+      - "SaaS platforms"
+
+    seo:
+      keywords: "ui ux design agency, product design"
+      meta_description: "Professional UI/UX design with user-centered principles and modern design systems."
+
+  - id: cloud-devops
+    title: "Cloud & DevOps"
+    subtitle: "Automated, scalable infrastructure for modern applications."
+    overview_image: "/Images/serviceDetail/cloud/image1.webp"
+    detail_image: "/Images/serviceDetail/cloud/image1.webp"
+    description: >
+      We design and manage cloud-native infrastructures that support modern digital applications.
+      Our DevOps solutions automate deployment pipelines, monitoring, and scaling strategies.
+      By optimizing infrastructure, we ensure high availability, security, and cost efficiency.
+
+    process_intro: >
+      We begin with infrastructure planning and cloud architecture design.
+      CI/CD pipelines are implemented to streamline development workflows.
+      Continuous monitoring ensures performance stability and rapid issue resolution.
+
+    category_description: >
+      Cloud and DevOps services enhance deployment speed and operational reliability.
+      Containerization and orchestration ensure scalable infrastructure management.
+      Automated pipelines reduce downtime and increase release efficiency.
+
+    ideal_intro: >
+      Ideal for SaaS companies and high-traffic platforms.
+      Enterprises transitioning to cloud-native systems benefit greatly.
+      Perfect for businesses seeking reliable and automated infrastructure.
+
+    tech_intro: >
+      We utilize leading cloud providers and containerization technologies.
+      Infrastructure as Code ensures repeatable and scalable deployments.
+      Monitoring tools provide real-time performance insights.
+
+    last_para: >
+      Our cloud strategies prioritize resilience and cost optimization.
+      We ensure infrastructure grows alongside your application demands.
+      The result is a secure, scalable, and efficient deployment ecosystem.
+
+    process:
+      - "Infrastructure planning"
+      - "Cloud architecture setup"
+      - "Docker/Kubernetes deployment"
+      - "CI/CD pipeline development"
+      - "Security implementation"
+      - "Performance monitoring"
+      - "Cost optimization"
+      - "Scaling strategy"
+
+    deliverables:
+      - "Cloud infrastructure"
+      - "CI/CD pipelines"
+      - "Monitoring dashboards"
+      - "Security setup"
+      - "Containerized applications"
+
+    technologies:
+      - name: "AWS"
+        icon: "/Images/serviceDetail/erp/Tech/AWS.webp"
+
+      - name: "Docker"
+        icon: "/Images/serviceDetail/fullStack/Tech/docker.webp"
+
+      - name: "Github Actions"
+        icon: "/Images/serviceDetail/cloud/Tech/githubActions.webp"
+
+      - name: "Terraform"
+        icon: "/Images/serviceDetail/cloud/Tech/terraform.webp"
+
+      - name: "Grafana"
+        icon: "/Images/serviceDetail/cloud/Tech/grafana.webp"
+
+    tech_stack:
+      - "AWS / GCP / Azure"
+      - "Docker / Kubernetes"
+      - "GitHub Actions"
+      - "Terraform"
+      - "Prometheus / Grafana"
+
+    benefits:
+      - "Faster deployments"
+      - "Reduced downtime"
+      - "Lower cloud costs"
+      - "Scalable architecture"
+
+    ideal_for:
+      - "SaaS companies"
+      - "Enterprises"
+      - "High-traffic applications"
+
+    seo:
+      keywords: "devops services, cloud infrastructure"
+      meta_description: "DevOps automation and cloud infrastructure setup with CI/CD and Kubernetes."
+
+  - id: ai-ml-integration
+    title: "AI/ML Integration"
+    subtitle: "Smart solutions powered by AI and deep learning."
+    overview_image: "/Images/serviceDetail/aiml/image1.webp"
+    detail_image: "/Images/serviceDetail/aiml/image1.webp"
+    description: >
+      We integrate AI and machine learning capabilities into existing systems to enhance intelligence and automation.
+      Our solutions include predictive analytics, NLP, computer vision, and chatbot development.
+      By leveraging advanced models, we enable smarter decision-making and process optimization.
+
+    process_intro: >
+      Our process starts with data analysis and preprocessing to ensure quality inputs.
+      We select and train suitable models based on business objectives.
+      Rigorous testing ensures accuracy and reliable real-world performance.
+
+    category_description: >
+      AI integration enhances automation and analytical capabilities within organizations.
+      We build scalable APIs that embed machine learning into business workflows.
+      Each solution is tailored to deliver measurable impact and efficiency.
+
+    ideal_intro: >
+      Ideal for enterprises seeking data-driven decision-making tools.
+      Healthcare, e-commerce, and FinTech sectors benefit from AI insights.
+      Perfect for organizations aiming to automate complex analytical tasks.
+
+    tech_intro: >
+      We use advanced machine learning frameworks and cloud AI platforms.
+      Secure APIs integrate AI models into production systems.
+      Continuous monitoring ensures model accuracy and adaptability.
+
+    last_para: >
+      Our AI solutions are built to evolve with new data and business demands.
+      Ongoing retraining and optimization ensure sustained performance.
+      We help organizations unlock the full potential of intelligent automation.
+
+    process:
+      - "Data collection & preprocessing"
+      - "AI model selection"
+      - "Training & evaluation"
+      - "API development"
+      - "Integration with existing systems"
+      - "Testing & validation"
+      - "Deployment"
+      - "Monitoring & retraining"
+
+    deliverables:
+      - "AI model"
+      - "Prediction APIs"
+      - "Monitoring dashboard"
+      - "Dataset structuring"
+      - "Complete documentation"
+
+    technologies:
+      - name: "Python"
+        icon: "/Images/serviceDetail/aiml/Tech/python.webp"
+
+      - name: "Tensorflow"
+        icon: "/Images/serviceDetail/aiml/Tech/tensorflow.webp"
+
+      - name: "OpenAI"
+        icon: "/Images/serviceDetail/aiml/Tech/openai.webp"
+
+      - name: "Node.js"
+        icon: "/Images/serviceDetail/educationBuildingSite/Tech/nodejs.webp"
+
+      - name: "AWS Sagemaker"
+        icon: "/Images/serviceDetail/aiml/Tech/sagemaker.webp"
+
+    tech_stack:
+      - "Python"
+      - "TensorFlow / PyTorch"
+      - "OpenAI APIs"
+      - "FastAPI / Node.js"
+      - "AWS Sagemaker"
+
+    benefits:
+      - "Automates complex tasks"
+      - "Provides business insights"
+      - "Improves decision-making"
+
+    ideal_for:
+      - "Enterprises"
+      - "Healthcare systems"
+      - "E-commerce"
+      - "FinTech"
+
+    seo:
+      keywords: "ai ml services, machine learning company"
+      meta_description: "AI/ML integration with predictive analytics, NLP, and business intelligence systems."
+
