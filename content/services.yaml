@@ -6,8 +6,8 @@ hero_section:
 services_grid:
   - icon: "education"
     title: "Education Site Building"
-    imageLarge: "/images/services/image1.webp"
-    imageSmall: "/images/services/image2.webp"
+    imageLarge: "/Images/services/image2.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "Custom e-learning platforms and LMS solutions tailored for educational institutions."
     tags:
       - "LMS Development"
@@ -18,8 +18,8 @@ services_grid:
 
   - icon: "n8n"
     title: "N8N Automation"
-    imageLarge: "/images/services/image3.webp"
-    imageSmall: "/images/services/image4.webp"
+    imageLarge: "/Images/services/image4.webp"
+    imageSmall: "/Images/services/image3.webp"
     description: "Powerful workflow automation to streamline your business processes."
     tags:
       - "Workflow Design"
@@ -30,8 +30,8 @@ services_grid:
 
   - icon: "sap"
     title: "ERP Automation"
-    imageLarge: "/images/services/image5.webp"
-    imageSmall: "/images/services/image6.webp"
+    imageLarge: "/Images/services/image6.webp"
+    imageSmall: "/Images/services/image5.webp"
     description: "Enterprise-grade ERP integration and automation solutions across multiple platforms."
     tags:
       - "ERP Integration"
@@ -42,8 +42,8 @@ services_grid:
 
   - icon: "fullstack"
     title: "Full-Stack Web Development"
-    imageLarge: "/images/services/image7.webp"
-    imageSmall: "/images/services/image8.webp"
+    imageLarge: "/Images/services/image8.webp"
+    imageSmall: "/Images/services/image7.webp"
     description: "End-to-end web applications with modern frameworks and scalable architecture."
     tags:
       - "React/Next.js"
@@ -54,8 +54,8 @@ services_grid:
 
   - icon: "mobile"
     title: "Mobile Applications"
-    imageLarge: "/images/services/image7.webp"
-    imageSmall: "/images/services/image8.webp"
+    imageLarge: "/Images/services/image10.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "Native and cross-platform mobile apps for iOS and Android."
     tags:
       - "React Native"
@@ -66,8 +66,8 @@ services_grid:
 
   - icon: "blockchain"
     title: "Blockchain Solutions"
-    imageLarge: "/images/services/image7.webp"
-    imageSmall: "/images/services/image8.webp"
+    imageLarge: "/Images/services/image12.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "Decentralized applications and smart contract development."
     tags:
       - "Smart Contracts"
@@ -78,8 +78,8 @@ services_grid:
 
   - icon: "uiux"
     title: "UI/UX Design"
-    imageLarge: "/images/services/image7.webp"
-    imageSmall: "/images/services/image8.webp"
+    imageLarge: "/Images/services/image14.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "User-centered design that converts visitors into loyal customers."
     tags:
       - "Wireframing"
@@ -90,8 +90,8 @@ services_grid:
 
   - icon: "devops"
     title: "Cloud & DevOps"
-    imageLarge: "/images/services/image7.webp"
-    imageSmall: "/images/services/image8.webp"
+    imageLarge: "/Images/services/image16.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "Scalable cloud infrastructure with CI/CD pipelines and monitoring."
     tags:
       - "AWS/Azure/GCP"
@@ -102,8 +102,8 @@ services_grid:
 
   - icon: "ai"
     title: "AI/ML Integration"
-    imageLarge: "/images/services/image7.webp"
-    imageSmall: "/images/services/image8.webp"
+    imageLarge: "/Images/services/image18.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "Intelligent solutions powered by machine learning and AI."
     tags:
       - "ChatGPT Integration"

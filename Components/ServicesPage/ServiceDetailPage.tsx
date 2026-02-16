@@ -6,7 +6,6 @@ import React from "react";
 interface ServiceDetail {
   readonly title: string;
   readonly subtitle: string;
-  readonly image?: string;
   readonly overview_image?: string;
   readonly detail_image?: string;
   readonly description: string;
@@ -62,13 +61,13 @@ export default function ServiceDetailPage({
 
       {/* Common Background Image */}
       <img
-        src="/Images/common/service-hero.jpg"   // <-- same image for all services
+        src="/Images/serviceDetail/common.webp"   // <-- same image for all services
         alt="Service Background"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
       {/* Black Overlay */}
-      <div className="absolute inset-0 bg-black/85"></div>
+      <div className="absolute inset-0 bg-black/65"></div>
 
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-white z-10">
