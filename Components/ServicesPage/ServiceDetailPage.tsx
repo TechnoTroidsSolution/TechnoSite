@@ -7,7 +7,6 @@ interface ServiceDetail {
   readonly title: string;
   readonly subtitle: string;
   readonly overview_image?: string;
-  readonly detail_image?: string;
   readonly description: string;
 
   readonly process_intro?: string;
@@ -160,15 +159,6 @@ export default function ServiceDetailPage({
                 </p>
               )}
             </div>
-
-            {service.detail_image && (
-              <img
-                src={service.detail_image}
-                alt="Service Detail"
-                className="w-full h-auto rounded-xl mb-8"
-              />
-            )}
-
 
             {/* IDEAL FOR */}
             <div className="mb-8">

@@ -4,7 +4,6 @@ services:
     subtitle: "Custom LMS platforms, student portals, and e-learning ecosystems."
 
     overview_image: "/Images/serviceDetail/educationBuildingSite/image2.webp"
-    detail_image: "/Images/serviceDetail/educationBuildingSite/image3.webp"
     description: >
       We build modern, scalable education websites and LMS platforms tailored for institutes, schools, coaching centers, and e-learning startups.
       Our solutions streamline student management, course delivery, and academic operations in one unified system.
@@ -117,7 +116,6 @@ services:
     title: "N8N Automation"
     subtitle: "Automate your business workflows without limits."
     overview_image: "/Images/serviceDetail/n8n/image1.webp"
-    detail_image: "/Images/serviceDetail/n8n/image1.webp"
     description: >
       We design intelligent automation workflows using N8N to eliminate repetitive manual processes. 
       Our solutions connect APIs, CRMs, SaaS platforms, and internal systems into unified automation pipelines. 
@@ -211,7 +209,6 @@ services:
     title: "ERP Automation"
     subtitle: "Streamline enterprise workflows with ERP automation and integrations."
     overview_image: "/Images/serviceDetail/erp/image1.webp"
-    detail_image: "/Images/serviceDetail/erp/image1.webp"
     description: >
       We help enterprises automate ERP-driven workflows to improve efficiency and reduce operational overhead. 
       Our solutions integrate finance, HR, supply chain, and CRM systems into one synchronized ecosystem. 
@@ -302,7 +299,6 @@ services:
     title: "Full-Stack Web Development"
     subtitle: "High-performance, scalable web applications from front to back."
     overview_image: "/Images/serviceDetail/fullStack/image1.webp"
-    detail_image: "/Images/serviceDetail/fullStack/image1.webp"
     description: >
       We build modern full-stack web applications that combine powerful backend systems with intuitive frontend experiences.
       From SaaS platforms to enterprise dashboards, our solutions are designed for scalability, security, and performance.
@@ -391,7 +387,6 @@ services:
     title: "Mobile Applications"
     subtitle: "iOS and Android apps built for performance and user engagement."
     overview_image: "/Images/serviceDetail/mobile/image1.webp"
-    detail_image: "/Images/serviceDetail/mobile/image1.webp"
     description: >
       We design and develop mobile applications that are intuitive, responsive, and performance-driven.
       Our apps deliver seamless experiences across both iOS and Android platforms.
@@ -481,7 +476,6 @@ services:
     title: "Blockchain Solutions"
     subtitle: "Future-ready decentralized applications and smart contract systems."
     overview_image: "/Images/serviceDetail/blockchain/image1.webp"
-    detail_image: "/Images/serviceDetail/blockchain/image1.webp"
     description: >
       We develop secure blockchain applications including smart contracts and decentralized platforms.
       Our solutions support NFTs, DeFi systems, token ecosystems, and enterprise blockchain integrations.
@@ -571,7 +565,6 @@ services:
     title: "UI/UX Design"
     subtitle: "Human-centered designs that convert users into customers."
     overview_image: "/Images/serviceDetail/uiux/image1.webp"
-    detail_image: "/Images/serviceDetail/uiux/image1.webp"
     description: >
       We create intuitive and visually compelling interfaces grounded in user research and behavioral insights.
       Our designs focus on clarity, consistency, and engagement across digital platforms.
@@ -655,7 +648,6 @@ services:
     title: "Cloud & DevOps"
     subtitle: "Automated, scalable infrastructure for modern applications."
     overview_image: "/Images/serviceDetail/cloud/image1.webp"
-    detail_image: "/Images/serviceDetail/cloud/image1.webp"
     description: >
       We design and manage cloud-native infrastructures that support modern digital applications.
       Our DevOps solutions automate deployment pipelines, monitoring, and scaling strategies.
@@ -745,7 +737,6 @@ services:
     title: "AI/ML Integration"
     subtitle: "Smart solutions powered by AI and deep learning."
     overview_image: "/Images/serviceDetail/aiml/image1.webp"
-    detail_image: "/Images/serviceDetail/aiml/image1.webp"
     description: >
       We integrate AI and machine learning capabilities into existing systems to enhance intelligence and automation.
       Our solutions include predictive analytics, NLP, computer vision, and chatbot development.
@@ -834,8 +825,7 @@ services:
   - id: digital-marketing
     title: "Digital Marketing"
     subtitle: "Strategic marketing solutions to grow your brand and reach your audience."
-    overview_image: "/Images/serviceDetail/digitalmarketing/image1.webp"
-    detail_image: "/Images/serviceDetail/digitalmarketing/image2.webp"
+    overview_image: "/Images/serviceDetail/digital/image1.webp"
     description: >
       We deliver comprehensive digital marketing strategies that drive brand awareness, engagement, and conversions.
       Our team specializes in SEO, social media marketing, content strategy, and paid advertising campaigns.
@@ -896,22 +886,22 @@ services:
 
     technologies:
       - name: "Google Analytics"
-        icon: "/Images/serviceDetail/digitalmarketing/Tech/analytics.webp"
+        icon: "/Images/serviceDetail/digital/Tech/analytics.webp"
 
       - name: "Google Ads"
-        icon: "/Images/serviceDetail/digitalmarketing/Tech/googleads.webp"
+        icon: "/Images/serviceDetail/digital/Tech/googleAds.webp"
 
       - name: "Meta Ads"
-        icon: "/Images/serviceDetail/digitalmarketing/Tech/meta.webp"
+        icon: "/Images/serviceDetail/digital/Tech/meta.webp"
 
       - name: "SEMrush"
-        icon: "/Images/serviceDetail/digitalmarketing/Tech/semrush.webp"
+        icon: "/Images/serviceDetail/digital/Tech/semrush.webp"
 
       - name: "HubSpot"
-        icon: "/Images/serviceDetail/digitalmarketing/Tech/hubspot.webp"
+        icon: "/Images/serviceDetail/digital/Tech/hubspot.webp"
 
       - name: "Mailchimp"
-        icon: "/Images/serviceDetail/digitalmarketing/Tech/mailchimp.webp"
+        icon: "/Images/serviceDetail/digital/Tech/mailchimp.webp"
 
     tech_stack:
       - "Google Analytics 4"
