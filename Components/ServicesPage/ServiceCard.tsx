@@ -23,7 +23,7 @@ export default function ServiceCard({
   const IconComponent = serviceIconMap[icon] || serviceIconMap.education;
 
   return (
-    <div className="group relative rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden min-h-[380px]">
+    <div className="group relative rounded-2xl bg-sky-100/30 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden min-h-[380px]">
       {/* Card content */}
       <div className={`relative ${featured ? 'p-10 pt-12' : 'p-8 pt-10'} h-full flex flex-col`}>
         {/* Icon area with decorative elements */}

@@ -743,43 +743,89 @@ export default function ContactPage({
           </Reveal>
         </div>
       </section>
+      {/* Work Location Section */}
+      <section className="py-20 -mt-[3rem]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+        {/* Section Heading */}
+        <div className="text-center mb-14">
 
+
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+           Visit Our Office
+          </h2>
+
+      <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+        We operate from a collaborative workspace designed for innovation and client success.
+      </p>
+    </div>
+
+    {/* Location Card */}
+    <div className="max-w-lg mx-auto">
+      <div className="relative bg-card/60 backdrop-blur-sm rounded-3xl p-10 shadow-lg hover:shadow-2xl hover:shadow-[var(--primary)]/20 transition-all duration-300 border-2 border-[var(--primary)]/20">
+
+        {/* Location Icon */}
+        <div className="absolute -top-6 left-1/2 -translate-x-1/2">
+          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] flex items-center justify-center shadow-lg">
+            <svg
+              className="w-7 h-7 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243A8 8 0 1117.657 16.657z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div className="text-center mt-8">
+          <h3 className="text-2xl font-bold text-foreground mb-4">
+            TechAmplers
+          </h3>
+
+          <p className="text-lg font-semibold text-muted-foreground leading-relaxed">
+            470/700, 2nd Floor, <br />
+            Anna Salai, Nandanam, <br />
+            Chennai-600035 <br />
+            India
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
       {/* Concierge Section */}
       <section className="py-16 bg-secondary animate-fade-in">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
           <div className="flex justify-center items-start">
-            <div className="relative animate-float">
-              <svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="nodeGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#3B82F6" />
-                    <stop offset="100%" stopColor="#06B6D4" />
-                  </linearGradient>
-                </defs>
+           {/* Left Side – Image */}
+    <div className="relative">
+      <img
+        src="/Images/Concierge.webp"
+        alt="Our Work Location"
+        className="rounded-2xl shadow-2xl object-cover w-full h-[300px] hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+    </div>
 
-                <circle cx="110" cy="60" r="10" fill="url(#nodeGrad)" />
-                <circle cx="60" cy="120" r="10" fill="url(#nodeGrad)" />
-                <circle cx="160" cy="120" r="10" fill="url(#nodeGrad)" />
-                <circle cx="110" cy="160" r="10" fill="url(#nodeGrad)" />
-
-
-                <line x1="110" y1="60" x2="60" y2="120" stroke="#94A3B8" strokeWidth="2" />
-                <line x1="110" y1="60" x2="160" y2="120" stroke="#94A3B8" strokeWidth="2" />
-                <line x1="110" y1="60" x2="110" y2="160" stroke="#94A3B8" strokeWidth="2" />
-
-
-                <circle cx="110" cy="110" r="16" fill="#0EA5E9" />
-              </svg>
-
-
-            </div>
-          </div>
-
-          <div className="h-full flex flex-col justify-start animate-fade-in">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+          <div className="h-full flex flex-col justify-start animate-fade-in mt-[2rem]">
+            <h2 className="text-3xl font-bold text-foreground mb-[2rem]">
               Find your way around Techamplers with Concierge
             </h2>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-[3rem]">
               Not sure where to start? Our Concierge team is here to help you
               explore everything Techamplers has to offer and find the perfect
               solution tailored to your business need.
@@ -944,67 +990,8 @@ export default function ContactPage({
         </div>
       </section> */}
 
-      {/* Support & Technical Assistance Section */}
-
-      {/* Emergency Support Banner */}
-      <section className="py-12 bg-red-50 border-y-2 border-red-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-start md:items-center gap-4">
-              <div className="shrink-0">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-white animate-pulse"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-red-900 mb-1">
-                  Critical System Issue?
-                </h3>
-                <p className="text-red-700 text-sm">
-                  For urgent production issues or system downtime, contact our
-                  emergency support line immediately
-                </p>
-              </div>
-            </div>
-            <div className="shrink-0">
-              <a
-                href="tel:+15551234567"
-                className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200 inline-flex items-center shadow-lg"
-              >
-                <svg
-                  className="w-5 h-5 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
-                Call Emergency Support
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Channels – Pastel Cards */}
-<section className="py-24 bg-slate-50">
+    <section className="py-24 bg-white">
   <div className="max-w-7xl mx-auto px-6">
     <div className="text-center mb-16">
       <h2 className="text-4xl font-bold text-slate-900">
