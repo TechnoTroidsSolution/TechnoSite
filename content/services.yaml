@@ -5,7 +5,7 @@ hero_section:
 
 services_grid:
   - icon: "education"
-    title: "Education Site Building"
+    title: "EdTech Solutions"
     imageLarge: "/Images/services/image2.webp"
     imageSmall: "/Images/services/image1.webp"
     description: "Custom e-learning platforms and LMS solutions tailored for educational institutions."
@@ -111,6 +111,18 @@ services_grid:
       - "Predictive Analytics"
       - "NLP"
     slug: "ai-ml-integration"
+
+  - icon: "marketing"
+    title: "Digital Marketing"
+    imageLarge: "/Images/services/image20.webp"
+    imageSmall: "/Images/services/image1.webp"
+    description: "Strategic digital marketing solutions to grow your brand and reach your target audience."
+    tags:
+      - "SEO Optimization"
+      - "Social Media"
+      - "Content Strategy"
+      - "PPC Campaigns"
+    slug: "digital-marketing"
 cta_section:
   title: "Ready to Transform Your Ideas Into Reality?"
   subtitle: "Let's discuss your project and craft a digital experience that stands out."
