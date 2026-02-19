@@ -67,17 +67,17 @@ contact:
     subtitle: "Some conversations are better live."
     methods:
       - type: "Email"
-        value: "admin@Techamplers.com"
+        value: "business@Techamplers.com"
         icon: "mail"
         note: "Best for detailed project information"
 
       - type: "WhatsApp"
-        value: "+91-9360379929"
+        value: "+91-7639379929"
         icon: "message-circle"
         note: "Quick questions or scheduling"
 
       - type: "Phone"
-        value: "+91-9962553822"
+        value: "+91-9600893644"
         icon: "phone"
         note: "Let's talk through your needs"
 
