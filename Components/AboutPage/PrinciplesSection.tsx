@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Reveal, RevealContainer, RevealItem } from '@/Components/Animations/Reveal';
 
 interface Principle {
   readonly title: string;
@@ -36,46 +37,49 @@ export default function PrinciplesSection({ principles }: PrinciplesSectionProps
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-20 md:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <div className="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold">
-              Our Guiding Principles
+        <Reveal>
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <div className="bg-gradient-to-r from-[var(--primary)]/20 to-[var(--accent)]/20 text-[var(--primary)] border border-[var(--primary)]/30 px-4 py-2 rounded-full text-sm font-semibold">
+                Our Guiding Principles
+              </div>
             </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              What Drives Us Forward
+            </h2>
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+              These principles shape every decision we make and guide how we work with our clients
+            </p>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            What Drives Us Forward
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            These principles shape every decision we make and guide how we work with our clients
-          </p>
-        </div>
+        </Reveal>
 
         {/* Principles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <RevealContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
           {principles.map((principle, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200"
-            >
-              {/* Icon */}
-              <div className="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-5 text-teal-600">
-                {icons[index % icons.length]}
-              </div>
+            <RevealItem key={principle.title} className="h-full">
+              <div
+                className="h-full flex flex-col bg-card/50 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:shadow-[var(--primary)]/20 hover:-translate-y-2 transition-all duration-300 border-2 border-[var(--primary)]/30 hover:border-[var(--accent)]/50"
+              >
+                {/* Icon */}
+                <div className="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-lg flex items-center justify-center mb-5 text-white shadow-lg shadow-[var(--primary)]/30">
+                  {icons[index % icons.length]}
+                </div>
 
-              {/* Content */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {principle.title}
-              </h3>
-              
-              <p className="text-gray-600 leading-relaxed text-sm">
-                {principle.description}
-              </p>
-            </div>
+                {/* Content */}
+                <h3 className="text-xl font-bold text-foreground mb-3">
+                  {principle.title}
+                </h3>
+
+                <p className="text-foreground/80 leading-relaxed text-sm flex-grow">
+                  {principle.description}
+                </p>
+              </div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealContainer>
       </div>
     </section>
   );

@@ -8,15 +8,21 @@ import Breadcrumb from "../Components/Navigation/Breadcrumb";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true, // Preload for better performance
+  adjustFontFallback: true, // Minimize layout shift
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false, // Don't preload mono font (used less frequently)
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
-  title: "TechnoTroids - Innovative Technology Solutions",
+  title: "Techamplers - Innovative Technology Solutions",
   description: "Transform your business with cutting-edge technology solutions. We specialize in web development, mobile apps, cloud solutions, and AI/ML services.",
 };
 
@@ -27,12 +33,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to Google Fonts for faster font loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <Header />
         <Breadcrumb />
-        <main className="min-h-screen bg-gray-50">
+        <main className="min-h-screen bg-background">
           {children}
         </main>
         <Footer />

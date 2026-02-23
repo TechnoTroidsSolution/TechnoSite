@@ -1,192 +1,279 @@
 "use client";
+import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-
 import React from "react";
 
-export default function ServiceDetailPage({ service }: any) {
-  const title = service.title;
-  const heroSubtitle = service.subtitle;
-  const description = service.description;
+interface ServiceDetail {
+  readonly title: string;
+  readonly subtitle: string;
+  readonly overview_image?: string;
+  readonly description: string;
 
-  const process = service.process ?? [];
-  const deliverables = service.deliverables ?? [];
-  const tools = service.tech_stack ?? [];
-  const whoIsItFor = service.ideal_for ?? [];
+  readonly process_intro?: string;
+  readonly category_description?: string;
+  readonly ideal_intro?: string;
+  readonly tech_intro?: string;
+  readonly technologies_intro?: string;
+  readonly last_para?: string;
 
+  readonly category?: string;
+  readonly process?: readonly string[];
+  readonly deliverables?: readonly string[];
+  readonly tech_stack?: readonly string[];
+readonly technologies?: {
+  name: string;
+  icon: string;
+}[];
+  readonly ideal_for?: readonly string[];
+}
+
+interface ServiceDetailPageProps {
+  readonly service: ServiceDetail;
+}
+
+export default function ServiceDetailPage({
+  service,
+}: ServiceDetailPageProps) {
   const router = useRouter();
 
+  const {
+    title,
+    subtitle,
+    description,
+    category = "General",
+    process_intro = "",
+    category_description = "",
+    ideal_intro = "",
+    tech_intro = "",
+    last_para = "",
+    process = [],
+    deliverables = [],
+    tech_stack = [],
+    technologies = [],
+    ideal_for = [],
+  } = service;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white text-black">
+      {/* ================= HERO ================= */}
+      <section className="relative w-full h-[550px] flex items-center">
 
-      {/* ✅ HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-teal-600 via-teal-500 to-cyan-500 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute -top-1/2 -left-1/4 w-[400px] h-[400px] bg-white rounded-full blur-3xl animate-pulse"></div>
-          <div
-            className="absolute -bottom-1/2 -right-1/4 w-[400px] h-[400px] bg-white rounded-full blur-3xl animate-pulse"
-            style={{ animationDelay: "1s" }}
-          />
-        </div>
+      {/* Common Background Image */}
+      <img
+        src="/Images/serviceDetail/common.webp"   // <-- same image for all services
+        alt="Service Background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <p className="text-white/80 mb-3 tracking-wide text-sm uppercase">
-            Our Service
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-            {title}
-          </h1>
-          <p className="text-xl text-white/90 max-w-3xl">{heroSubtitle}</p>
-        </div>
-      </section>
+      {/* Black Overlay */}
+      <div className="absolute inset-0 bg-black/65"></div>
 
-      {/* ✅ MAIN CONTENT */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-3 gap-10">
+      {/* Content */}
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-white z-10">
+        <h1 className="text-4xl md:text-5xl font-bold mb-5">
+          {title}
+        </h1>
 
-        {/* ✅ LEFT SIDEBAR (Quick Summary) */}
-        <aside className="lg:col-span-1 space-y-6 h-fit sticky top-28">
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
+        <p className="text-xl font-medium mb-8 max-w-2xl">
+          {subtitle}
+        </p>
 
-            <h3 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-2">
-              Service Summary
-            </h3>
+        <button
+          onClick={() => router.push("/contact")}
+          className="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
+        >
+          Get Started →
+        </button>
+      </div>
+    </section>
 
-            <div className="space-y-6">
+      {/* ================= MAIN CONTENT ================= */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10 grid lg:grid-cols-3 gap-16">
+        {/* ================= LEFT CONTENT ================= */}
+        <div className="lg:col-span-2 space-y-7">
+          {/* ========== OVERVIEW ========== */}
+          <section id="overview">
+            <h2 className="text-3xl xs:text-4xl font-bold mb-4">Overview</h2>
 
-              {/* Category */}
-              <div className="flex items-start gap-3">
-                <div>
-                  <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">Category</p>
-                  <p className="text-gray-800 font-semibold">{service.category ?? "General"}</p>
-                </div>
-              </div>
-
-              <hr className="border-gray-200" />
-
-              {/* Ideal For */}
-              <div className="flex items-start gap-3">
-                <div>
-                  <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">Ideal For</p>
-                  <p className="text-gray-800 font-semibold">{whoIsItFor.join(", ") || "Businesses"}</p>
-                </div>
-              </div>
-
-              <hr className="border-gray-200" />
-
-              {/* Tech Stack */}
-              <div className="flex items-start gap-3">
-                <div>
-                  <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">Tech Stack</p>
-                  <p className="text-gray-800 font-semibold">{tools.join(", ")}</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-teal-600 to-cyan-500 p-6 rounded-xl text-white">
-            <h3 className="text-xl font-bold mb-3">Start Your Project</h3>
-            <p className="text-white/90 text-sm mb-5">
-              Let's build a high-performance digital solution tailored to your business.
+            <p className="text-gray-500 text-md leading-relaxed mb-6">
+              {description}
             </p>
-            <button onClick={() => router.push("/contact")}
-                className="w-full bg-white text-teal-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-              Contact Us
-            </button>
-          </div>
-        </aside>
 
-        {/* ✅ RIGHT MAIN CONTENT */}
-        <div className="lg:col-span-2 space-y-12">
-
-          {/* ✅ Overview */}
-          <section className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Overview</h2>
-            <p className="text-gray-700 leading-relaxed">{description}</p>
+            {service.overview_image && (
+              <img
+                src={service.overview_image}
+                alt="Overview"
+                className="w-full h-auto object-cover rounded-xl"
+              />
+            )}
           </section>
 
-          {/* ✅ Two-column split — Process + Deliverables */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* ========== WHAT WE PROCEED / INCLUDE ========== */}
+          <section id="process" className="mt-15">
+            <h2 className="text-3xl xs:text-4xl font-bold mb-4">
+             How We Proceed 
+            </h2>
 
-            {/* ✅ Process */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                How We Proceed
-              </h2>
-              <ul className="space-y-3">
-                {process.map((item: string, index: number) => (
-                  <li key={index} className="flex gap-3">
-                    <svg
-                      className="w-5 h-5 text-teal-600 mt-1 shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-gray-700">{item}</span>
+            {process_intro && (
+              <p className="text-gray-500 text-md leading-relaxed mb-6">
+                {process_intro}
+              </p>
+            )}
+
+            <ul className="space-y-3.5">
+              {process.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <svg
+                    className="w-5 h-5 text-blue-600 shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <span className="text-gray-600 text-md font-semibold leading-relaxed">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* ========== SERVICE DETAIL ========== */}
+          <section id="details" className="mt-12">
+            <h2 className="text-3xl xs:text-4xl font-bold mb-4">
+              Service Detail
+            </h2>
+            {/* CATEGORY */}
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-2">
+                Category – {category}
+              </h3>
+
+              {category_description && (
+                <p className="text-gray-600 text-md leading-relaxed">
+                  {category_description}
+                </p>
+              )}
+            </div>
+
+            {/* IDEAL FOR */}
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-2">Ideal For</h3>
+
+              {ideal_intro && (
+                <p className="text-gray-600 text-md leading-relaxed mb-4">
+                  {ideal_intro}
+                </p>
+              )}
+
+              <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+                {ideal_for.map((item) => (
+                  <li key={item} className="group flex items-start gap-3">
+                    <ArrowRight className="w-5 h-5 text-blue-600 mt-1 transition-transform duration-300 group-hover:translate-x-1" />
+                    <span className="text-gray-600 text-md font-semibold leading-relaxed">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* ✅ Deliverables */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Deliverables</h2>
-              <div className="flex flex-wrap gap-3">
-                {deliverables.map((item: string, index: number) => (
-                  <span
-                    key={index}
-                    className="px-4 py-2 bg-teal-50 text-teal-700 border border-teal-200 rounded-lg text-sm font-medium"
-                  >
-                    {item}
-                  </span>
+            {/* TECH STACK */}
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
+
+              {tech_intro && (
+                <p className="text-gray-600 text-md leading-relaxed mb-4">
+                  {tech_intro}
+                </p>
+              )}
+
+              <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+                {tech_stack.map((tech) => (
+                  <li key={tech} className="group flex items-start gap-3">
+                    <ArrowRight className="w-4 h-4 text-blue-600 mt-1 transition-transform duration-300 group-hover:translate-x-1" />
+                    <span className="text-gray-600 text-md font-semibold leading-relaxed">
+                      {tech}
+                    </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
+              {last_para && (
+                <p className="text-gray-600 text-md leading-relaxed mb-5 mt-6">
+                  {last_para}
+                </p>
+              )}
             </div>
-
           </section>
+          </div>
 
-          {/* ✅ Technologies */}
-          <section className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Technologies We Use
-            </h2>
-            <div className="flex flex-wrap gap-3">
-              {tools.map((tool: string, index: number) => (
+          
+
+        {/* ================= RIGHT SIDEBAR ================= */}
+        <aside className="space-y-12">
+          {/* Deliverables */}
+          <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+            <h2 className="text-xl font-bold mb-6">Deliverables</h2>
+
+            <div className="flex flex-wrap gap-2">
+              {deliverables.map((item) => (
                 <span
-                  key={index}
-                  className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium"
+                  key={item}
+                  className="px-4 py-2 bg-blue-50 text-blue-600 border border-blue-200 rounded-lg font-medium text-sm"
                 >
-                  {tool}
+                  {item}
                 </span>
               ))}
             </div>
-          </section>
-
-          {/* ✅ Who Is It For */}
-          <section className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Who Is This Service For?
-            </h2>
-            <ul className="space-y-3">
-              {whoIsItFor.map((item: string, index: number) => (
-                <li key={index} className="flex items-center text-gray-700 gap-3">
-                  <span className="w-2 h-2 bg-teal-600 rounded-full"></span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </section>
+          </div>
+          
+          {/* ========== TECHNOLOGIES ========== */}
+          <section id="technologies" className="mt-12">
+            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+              <h2 className="text-xl font-bold mb-8">
+                Technologies Used
+              </h2>
+              <div className="flex flex-wrap gap-10">
+                {technologies.map((tech) => (
+        <div key={tech.name} className="text-center">
+          <img
+            src={tech.icon}
+            alt={tech.name}
+            className="w-14 h-14 object-contain mx-auto"
+          />
+          <p className="mt-2 text-sm font-medium">
+            {tech.name}
+          </p>
         </div>
+      ))}
+              </div>
+            </div>
+          </section>
 
-      </div>
+        
+          {/* CTA */}
+          <div className="bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl p-6 text-white shadow-lg">
+            <h3 className="text-xl font-bold mb-2">
+              Ready to get started?
+            </h3>
+            <p className="text-white/90 text-sm mb-4">
+              Let&apos;s build a high-performance digital solution tailored
+              to your business.
+            </p>
+
+            <button
+              onClick={() => router.push("/contact")}
+              className="w-full bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+            >
+              Get a Quote
+            </button>
+          </div>
+        </aside>
+      </section>
     </div>
   );
 }
-

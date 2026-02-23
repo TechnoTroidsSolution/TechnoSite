@@ -1,2 +1,2 @@
 # TechnoSite
-Official TechnoTroids Solution website
+Official Techamplers Solution website

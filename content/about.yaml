@@ -1,6 +1,6 @@
 about:
-  section_title: "Our Philosophy"
-  section_subtitle: "How we think about software, clients, and doing work that matters."
+  section_title: "Driven by Innovation"
+  section_subtitle: "Building smart software that solves real problems and creates impact."
 
   core_belief:
     headline: "Software Should Serve, Not Complicate"
@@ -11,10 +11,10 @@ about:
       description: "Launching on time means nothing if the software doesn't achieve your business objectives. We measure success by whether your investment generated returns—more revenue, lower costs, happier customers, competitive advantage. The code is a means, not the end."
 
     - title: "Honesty Over Agreement"
-      description: "We're not here to tell you what you want to hear. If your idea has flaws, we'll point them out—constructively. If a simpler solution exists, we'll recommend it even if it means less revenue for us. Trust is built on truth, not on pleasantness."
+      description: "We're not here to simply agree or nod along. If an idea carries risks, hidden costs, or long-term consequences, we'll raise them—clearly and respectfully. If a more practical path exists, we'll recommend it, even when it's not the most profitable option for us. Clear expectations, realistic timelines, and straightforward advice create better outcomes."
 
     - title: "Craftsmanship Over Convenience"
-      description: "There's always a faster way to build something. Usually, it involves cutting corners, accumulating technical debt, or shipping something that barely works. We choose the path that results in software you can build on for years—even if it takes a bit longer."
+      description: "There's always a faster way to build something. Often, it means cutting corners, accumulating technical debt, or delivering solutions that only work for today. We choose the approach that prioritizes quality, scalability, and long-term stability. Thoughtful architecture, clean code, and careful execution ensure your software remains reliable and adaptable for years to come."
 
     - title: "Clarity Over Jargon"
       description: "Technology is complex enough without drowning you in acronyms and buzzwords. We explain things in plain language. If we can't make a technical decision understandable to you, we probably haven't thought it through clearly enough ourselves."

@@ -5,7 +5,9 @@ hero_section:
 
 services_grid:
   - icon: "education"
-    title: "Education Site Building"
+    title: "EdTech Solutions"
+    imageLarge: "/Images/services/image2.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "Custom e-learning platforms and LMS solutions tailored for educational institutions."
     tags:
       - "LMS Development"
@@ -16,6 +18,8 @@ services_grid:
 
   - icon: "n8n"
     title: "N8N Automation"
+    imageLarge: "/Images/services/image4.webp"
+    imageSmall: "/Images/services/image3.webp"
     description: "Powerful workflow automation to streamline your business processes."
     tags:
       - "Workflow Design"
@@ -25,17 +29,21 @@ services_grid:
     slug: "n8n-automation"
 
   - icon: "sap"
-    title: "SAP Automation"
-    description: "Enterprise-grade SAP integration and automation solutions."
+    title: "ERP Automation"
+    imageLarge: "/Images/services/image6.webp"
+    imageSmall: "/Images/services/image5.webp"
+    description: "Enterprise-grade ERP integration and automation solutions across multiple platforms."
     tags:
-      - "SAP Fiori"
-      - "ABAP Development"
+      - "ERP Integration"
+      - "Workflow Automation"
       - "RPA Integration"
-      - "Business Process"
-    slug: "sap-automation"
+      - "Business Processes"
+    slug: "erp-automation"
 
   - icon: "fullstack"
     title: "Full-Stack Web Development"
+    imageLarge: "/Images/services/image8.webp"
+    imageSmall: "/Images/services/image7.webp"
     description: "End-to-end web applications with modern frameworks and scalable architecture."
     tags:
       - "React/Next.js"
@@ -46,6 +54,8 @@ services_grid:
 
   - icon: "mobile"
     title: "Mobile Applications"
+    imageLarge: "/Images/services/image10.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "Native and cross-platform mobile apps for iOS and Android."
     tags:
       - "React Native"
@@ -56,6 +66,8 @@ services_grid:
 
   - icon: "blockchain"
     title: "Blockchain Solutions"
+    imageLarge: "/Images/services/image12.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "Decentralized applications and smart contract development."
     tags:
       - "Smart Contracts"
@@ -66,6 +78,8 @@ services_grid:
 
   - icon: "uiux"
     title: "UI/UX Design"
+    imageLarge: "/Images/services/image14.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "User-centered design that converts visitors into loyal customers."
     tags:
       - "Wireframing"
@@ -76,6 +90,8 @@ services_grid:
 
   - icon: "devops"
     title: "Cloud & DevOps"
+    imageLarge: "/Images/services/image16.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "Scalable cloud infrastructure with CI/CD pipelines and monitoring."
     tags:
       - "AWS/Azure/GCP"
@@ -86,6 +102,8 @@ services_grid:
 
   - icon: "ai"
     title: "AI/ML Integration"
+    imageLarge: "/Images/services/image18.webp"
+    imageSmall: "/Images/services/image1.webp"
     description: "Intelligent solutions powered by machine learning and AI."
     tags:
       - "ChatGPT Integration"
@@ -93,6 +111,18 @@ services_grid:
       - "Predictive Analytics"
       - "NLP"
     slug: "ai-ml-integration"
+
+  - icon: "marketing"
+    title: "Digital Marketing"
+    imageLarge: "/Images/services/image20.webp"
+    imageSmall: "/Images/services/image1.webp"
+    description: "Strategic digital marketing solutions to grow your brand and reach your target audience."
+    tags:
+      - "SEO Optimization"
+      - "Social Media"
+      - "Content Strategy"
+      - "PPC Campaigns"
+    slug: "digital-marketing"
 cta_section:
   title: "Ready to Transform Your Ideas Into Reality?"
   subtitle: "Let's discuss your project and craft a digital experience that stands out."

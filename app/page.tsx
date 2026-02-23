@@ -1,121 +1,102 @@
-import Link from 'next/link';
+import IntroSection from "@/Components/HomePage/IntroSectionNew";
+import Image from "next/image";
+// import CompanyStatsSection from "@/Components/HomePage/stats/CompanyStatsSection";
+// import { TestimonialsSection } from "@/Components/HomePage/Testimonials/TestimonialsSection";
+import Services from "@/Components/HomePage/services/Services";
+import HighlightsSection from "@/Components/HomePage/HighlightsSection";
+// import ProcessPreview from "@/Components/HomePage/ProcessPreview";
+import InsightsSection from "@/Components/HomePage/InsightsSection";
+import CompanyOverviewSection from "@/Components/HomePage/CompanyOverviewSection";
+import TechStackSection from "@/Components/HomePage/TechStackSection";
+// import RoadmapSection from "@/Components/HomePage/RoadmapSection";
+import WhyChooseUsSection from "@/Components/HomePage/WhyChooseUsSection";
+import CTASection from "@/Components/HomePage/CTASection";
+import HeroDecorations from "@/Components/HomePage/HeroDecorations";
 
 export default function Home() {
   return (
-    <div className="bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-linear-to-br from-teal-400 to-teal-500 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Transform Your Business with
-            <span className="block text-yellow-300">Innovative Technology</span>
-          </h1>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto">
-            We build cutting-edge solutions that drive growth, enhance efficiency, and create exceptional user experiences.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-teal-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-200 shadow-lg hover:shadow-xl"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white hover:bg-white hover:text-teal-600 font-semibold py-3 px-8 rounded-lg transition duration-200"
-            >
-              Explore Services
-            </Link>
+    <main className="bg-background text-foreground">
+      {/* Hero Section with Vibrant Gradient Background */}
+      <section className="relative min-h-[20vh] bg-gradient-to-br from-background via-background to-primary/5 overflow-hidden text-foreground">
+        {/* Client-side decorative elements */}
+        <HeroDecorations />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center min-h-[60vh] lg:min-h-[70vh]">
+            {/* Left Column - Content (Server-rendered for fast LCP) */}
+            <IntroSection />
+
+            {/* Right Column - Illustration (Server-rendered) */}
+            <div className="relative flex items-center justify-center mt-16 lg:mt-20 group">
+              <Image
+                src="/Images/homepage/Pc.png"
+                alt="Modern workspace illustration showing cloud platforms and analytics dashboard"
+                width={700}
+                height={540}
+                className="w-full h-auto max-w-lg lg:max-w-2lg relative z-10 scale-110 lg:scale-125 transition-all duration-700 ease-in-out group-hover:scale-[1.15] lg:group-hover:scale-[1.35] group-hover:rotate-1 group-hover:drop-shadow-2xl contrast-110"
+                priority
+                sizes="(min-width: 1024px) 700px, 95vw"
+              />
+
+              {/* Floating Tech Bubble Icons Around Illustration - COLORFUL */}
+              {/* Rocket Icon - Top Left - BLUE GRADIENT */}
+              <div className="absolute top-[-30%] left-[12%] hidden md:flex w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] rounded-full flex-col items-center justify-center shadow-2xl shadow-[var(--primary)]/20 animate-float border-2 border-[var(--primary-light)]/30">
+                <div className="text-white text-2xl lg:text-3xl">🚀</div>
+              </div>
+
+              {/* Charts & Analytics Icon - Top Center - CYAN GRADIENT */}
+              <div className="absolute top-[-35%] left-[42%] hidden md:flex w-20 h-16 lg:w-24 lg:h-20 bg-gradient-to-br from-[var(--accent)] to-[var(--accent-dark)] rounded-3xl items-center justify-center shadow-2xl shadow-[var(--accent)]/20 animate-float border-2 border-[var(--accent-light)]/30" style={{ animationDelay: '0.5s' }}>
+                <div className="flex items-center justify-center">
+                  <div className="text-lg lg:text-2xl">💰</div>
+                  <div className="text-lg lg:text-2xl">📊</div>
+                  <div className="text-lg lg:text-2xl">🔥</div>
+                </div>
+              </div>
+
+              {/* Success/Analytics Icon - Top Right - BLUE TO CYAN GRADIENT */}
+              <div className="absolute top-[-30%] right-[8%] hidden md:flex w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[var(--primary)] via-[var(--accent)] to-[var(--accent-dark)] rounded-full items-center justify-center shadow-2xl shadow-[var(--accent)]/20 animate-float border-2 border-white/20" style={{ animationDelay: '1s' }}>
+                <div className="grid grid-cols-2 items-center">
+                  <div className="text-sm lg:text-lg">🌐</div>
+                  <div className="text-sm lg:text-lg">✓</div>
+                  <div className="text-sm lg:text-lg">⚙️</div>
+                  <div className="text-sm lg:text-lg">💲</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      {/* Why Choose Us - Our differentiators */}
+      <WhyChooseUsSection />
 
-      {/* Services Overview */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From web development to AI solutions, we provide comprehensive technology services
-            </p>
-          </div>
+      {/* Company Overview - Who we are */}
+      <CompanyOverviewSection />
+      {/* Services - What we offer */}
+      <Services />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Web Development */}
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-teal-200 transition-colors">
-                <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Web Development</h3>
-              <p className="text-gray-600">Modern, responsive websites and web applications</p>
-            </div>
+      {/* Tech Stack - Technologies we use */}
+      <TechStackSection />
 
-            {/* Mobile Apps */}
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Mobile Apps</h3>
-              <p className="text-gray-600">Native and cross-platform mobile applications</p>
-            </div>
+      {/* Process - How we work */}
+      {/* <ProcessPreview /> */}
 
-            {/* Cloud Solutions */}
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud Solutions</h3>
-              <p className="text-gray-600">Scalable cloud infrastructure and migration</p>
-            </div>
+      {/* Stats - Our achievements and credibility */}
+      {/* <CompanyStatsSection /> */}
 
-            {/* AI & ML */}
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
-                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">AI & ML</h3>
-              <p className="text-gray-600">Artificial intelligence and machine learning solutions</p>
-            </div>
-          </div>
+      {/* Highlights - Key features and benefits */}
+      <HighlightsSection />
 
-          <div className="text-center mt-12">
-            <Link
-              href="/services"
-              className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-200 shadow-md hover:shadow-lg"
-            >
-              View All Services
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Roadmap - Our vision and future */}
+      {/* <RoadmapSection /> */}
+
+      {/* Testimonials - Social proof */}
+      {/* <TestimonialsSection /> */}
+
+      {/* Insights - Thought leadership */}
+      <InsightsSection />
 
       {/* CTA Section */}
-      <section className="py-16 bg-linear-to-r from-teal-600 to-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how we can help transform your business with the right technology solutions.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-white text-teal-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-200 shadow-lg hover:shadow-xl inline-block"
-          >
-            Contact Us Today
-          </Link>
-        </div>
-      </section>
-    </div>
+      <CTASection />
+    </main>
   );
 }
