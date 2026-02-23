@@ -452,7 +452,7 @@ export default function CareersPage({ careersData }: CareersPageProps) {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] w-full">
               <Image
-                src="/images/careers/team.png"
+                src="/Images/careers/Team.png"
                 alt="Team"
                 fill
                 className="rounded-2xl shadow-xl object-cover"
